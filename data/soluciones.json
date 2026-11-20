@@ -1,0 +1,7017 @@
+[
+ {
+  "id": "deploy-alternative-insulation-materials",
+  "nombre_es": "Aislamientos alternativos",
+  "nombre_en": "Deploy Alternative Insulation Materials",
+  "sector_drawdown": "Buildings & Industry",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.05,
+  "potencial_gt_max": 0.12,
+  "costo_usd_t": -121.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.085,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fábrica de aislantes de fibra vegetal"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Aislamientos alternativos (Drawdown)",
+  "pdf": "Deploy Alternative Insulation Materials _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Gutex (Alemania)",
+   "IsoHemp (Bélgica)",
+   "Aerogel Technologies (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-alternative-refrigerants",
+  "nombre_es": "Refrigerantes alternativos",
+  "nombre_en": "Deploy Alternative Refrigerants",
+  "sector_drawdown": "Buildings & Industry",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 2.5,
+  "potencial_gt_max": 2.7,
+  "costo_usd_t": 50.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 2.6,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 9,
+    "materiales": 22
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Planta de refrigeración natural"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Refrigerantes alternativos (Drawdown)",
+  "pdf": "Deploy Alternative Refrigerants _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Danfoss (Dinamarca)",
+   "Carel (Italia)",
+   "Tecumseh (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-building-automation-systems",
+  "nombre_es": "Edificios automatizados",
+  "nombre_en": "Deploy Building Automation Systems",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.18,
+  "potencial_gt_max": 0.36,
+  "costo_usd_t": 0.01,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.27,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cerebro del edificio (domótica)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Edificios automatizados (Drawdown)",
+  "pdf": "Deploy Building Automation Systems _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "BrainBox AI (Canadá)",
+   "75F (EE. UU.)",
+   "Siemens Building X (Alemania)"
+  ]
+ },
+ {
+  "id": "improve-district-heating-buildings",
+  "nombre_es": "Calefacción distrital (edificios)",
+  "nombre_en": "Improve District Heating: Buildings",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.06,
+  "potencial_gt_max": 0.12,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.09,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 8
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Red de calor distrital"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Calefacción distrital (edificios) (Drawdown)",
+  "pdf": "Improve District Heating_ Buildings _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Vattenfall (Suecia)",
+   "Fortum (Finlandia)",
+   "Kyoto Group (Noruega)"
+  ]
+ },
+ {
+  "id": "use-heat-pumps",
+  "nombre_es": "Bombas de calor",
+  "nombre_en": "Use Heat Pumps",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.58,
+  "potencial_gt_max": 0.93,
+  "costo_usd_t": -200.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.755,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Bomba de calor"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Bombas de calor (Drawdown)",
+  "pdf": "Use Heat Pumps _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Quilt (EE. UU.)",
+   "Aira (Reino Unido/Suecia)",
+   "Octopus Energy (Reino Unido)"
+  ]
+ },
+ {
+  "id": "use-smart-programmable-thermostats-heating",
+  "nombre_es": "Termostatos inteligentes (calefacción)",
+  "nombre_en": "Use Smart & Programmable Thermostats: Heating",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.07,
+  "potencial_gt_max": 0.12,
+  "costo_usd_t": -370.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.095,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Termostato inteligente"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Termostatos inteligentes (Drawdown)",
+  "pdf": "Use Smart & Programmable Thermostats _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Google Nest (EE. UU.)",
+   "ecobee (Canadá)",
+   "tado° (Alemania)"
+  ]
+ },
+ {
+  "id": "improve-windows-glass",
+  "nombre_es": "Ventanas y vidrios eficientes",
+  "nombre_en": "Improve Windows & Glass",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 2.1,
+  "potencial_gt_max": 2.6,
+  "costo_usd_t": -123.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "pastizal",
+    "ciudad"
+   ],
+   "potencial_gt_usado": 2.35,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 7,
+    "materiales": 16
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fábrica de ventanas eficientes"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Ventanas y vidrios eficientes (Drawdown)",
+  "pdf": "Improve Windows & Glass _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "LuxWall (EE. UU.)",
+   "Ubiquitous Energy (EE. UU., vidrio solar)",
+   "View (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-agrivoltaics",
+  "nombre_es": "Agrovoltaica",
+  "nombre_en": "Deploy Agrivoltaics",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.8,
+  "potencial_gt_max": 4.1,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 2.95,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 10,
+    "materiales": 24
+   },
+   "produce": {
+    "energia": 8,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Granja agrovoltaica"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Agrovoltaica (Drawdown)",
+  "pdf": "Deploy Agrivoltaics _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Sun'Agri (Francia)",
+   "Next2Sun (Alemania)",
+   "Jack's Solar Garden (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-distributed-solar-pv",
+  "nombre_es": "Solar en techos",
+  "nombre_en": "Deploy Distributed Solar PV",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 2.8,
+  "potencial_gt_max": 3.5,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 3.15,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 11,
+    "materiales": 25
+   },
+   "produce": {
+    "energia": 8,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Techo solar comunitario"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Solar en techos (Drawdown)",
+  "pdf": "Deploy Distributed Solar PV _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Erco Energía (Colombia)",
+   "Sunrun (EE. UU.)",
+   "SolarAfrica (Sudáfrica)"
+  ]
+ },
+ {
+  "id": "deploy-led-lighting",
+  "nombre_es": "Iluminación LED",
+  "nombre_en": "Deploy LED Lighting",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.62,
+  "potencial_gt_max": 0.65,
+  "costo_usd_t": -175.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.635,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 8
+   },
+   "produce": {
+    "energia": 6,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fábrica de bombillos LED"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Iluminación LED (Drawdown)",
+  "pdf": "Deploy LED Lighting _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Signify (Países Bajos)",
+   "Ilumínica (Colombia) #por-verificar",
+   "Cree Lighting (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-offshore-wind-turbines",
+  "nombre_es": "Eólica marina",
+  "nombre_en": "Deploy Offshore Wind Turbines",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.9,
+  "potencial_gt_max": 3.04,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "oceano_costero",
+    "pastizal"
+   ],
+   "potencial_gt_usado": 2.47,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 9,
+    "materiales": 21
+   },
+   "produce": {
+    "energia": 7,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Parque eólico marino"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Eólica marina (Drawdown)",
+  "pdf": "Deploy Offshore Wind Turbines _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Ørsted (Dinamarca)",
+   "Principle Power (EE. UU./Portugal, flotante)",
+   "Proyecto eólico marino de Colombia en el Caribe (Ecopetrol-CIP) #por-verificar"
+  ]
+ },
+ {
+  "id": "deploy-onshore-wind-turbines",
+  "nombre_es": "Eólica en tierra",
+  "nombre_en": "Deploy Onshore Wind Turbines",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 5.4,
+  "potencial_gt_max": 7.5,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 6.45,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 15,
+    "materiales": 35
+   },
+   "produce": {
+    "energia": 11,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-utility-scale-solar-pv",
+  "nombre_es": "Granjas solares",
+  "nombre_en": "Deploy Utility-Scale Solar PV",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 9.2,
+  "potencial_gt_max": 11.0,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "desierto"
+   ],
+   "potencial_gt_usado": 10.1,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 15,
+    "materiales": 35
+   },
+   "produce": {
+    "energia": 15,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-cement-production-alternative-fuels",
+  "nombre_es": "Cemento: combustibles alternativos",
+  "nombre_en": "Improve Cement Production: Alternative fuels",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.06,
+  "potencial_gt_max": 0.2,
+  "costo_usd_t": -50.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.13,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cementera limpia"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cemento limpio (Drawdown)",
+  "pdf": "Improve Cement Production _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Brimstone (EE. UU.)",
+   "Sublime Systems (EE. UU.)",
+   "Argos con arcillas calcinadas (Colombia) #por-verificar"
+  ]
+ },
+ {
+  "id": "improve-cement-production-clinker-substitution",
+  "nombre_es": "Cemento: sustitución de clínker",
+  "nombre_en": "Improve Cement Production: Clinker substitution",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.7,
+  "potencial_gt_max": 1.0,
+  "costo_usd_t": -30.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.85,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cementera limpia"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cemento limpio (Drawdown)",
+  "pdf": "Improve Cement Production _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Brimstone (EE. UU.)",
+   "Sublime Systems (EE. UU.)",
+   "Argos con arcillas calcinadas (Colombia) #por-verificar"
+  ]
+ },
+ {
+  "id": "improve-cement-production-efficiency-upgrades",
+  "nombre_es": "Cemento: eficiencia",
+  "nombre_en": "Improve Cement Production: Efficiency upgrades",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.08,
+  "potencial_gt_max": 0.1,
+  "costo_usd_t": -60.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.09,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cementera limpia"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cemento limpio (Drawdown)",
+  "pdf": "Improve Cement Production _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Brimstone (EE. UU.)",
+   "Sublime Systems (EE. UU.)",
+   "Argos con arcillas calcinadas (Colombia) #por-verificar"
+  ]
+ },
+ {
+  "id": "increase-centralized-composting",
+  "nombre_es": "Compostaje municipal",
+  "nombre_en": "Increase Centralized Composting",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.78,
+  "potencial_gt_max": 1.2,
+  "costo_usd_t": 10.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.99,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 5,
+    "materiales": 13
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 5
+   },
+   "efecto_vida": 1,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Planta de compostaje municipal"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Compostaje municipal (Drawdown)",
+  "pdf": "Increase Centralized Composting _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Recology (EE. UU.)",
+   "Compost Now (EE. UU.)",
+   "La Pradera (Medellín) #por-verificar"
+  ]
+ },
+ {
+  "id": "deploy-industrial-green-hydrogen",
+  "nombre_es": "Hidrógeno verde industrial",
+  "nombre_en": "Deploy Industrial Green Hydrogen",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.31,
+  "potencial_gt_max": 0.6,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.455,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 10
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Electrolizador industrial"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Hidrógeno verde industrial (Drawdown)",
+  "pdf": "Deploy Industrial Green Hydrogen _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Electric Hydrogen (EE. UU.)",
+   "Sunfire (Alemania)",
+   "Stegra (Suecia)"
+  ]
+ },
+ {
+  "id": "improve-landfill-management-biocovers",
+  "nombre_es": "Rellenos: biocubiertas",
+  "nombre_en": "Improve Landfill Management: Biocovers",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.98,
+  "potencial_gt_max": 1.59,
+  "costo_usd_t": 0.47,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 1.285,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 6,
+    "materiales": 14
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Captura de metano en el relleno"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Rellenos sanitarios con manejo de metano (Drawdown)",
+  "pdf": "Improve Landfill Management _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Biogás Doña Juana (Colombia)",
+   "Loci Controls (EE. UU.)",
+   "Waste Management RNG (EE. UU.)"
+  ]
+ },
+ {
+  "id": "improve-landfill-management-methane-capture",
+  "nombre_es": "Rellenos: captura de metano",
+  "nombre_en": "Improve Landfill Management: Methane capture",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.13,
+  "potencial_gt_max": 0.97,
+  "costo_usd_t": -6.42,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.55,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 8
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Captura de metano en el relleno"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Rellenos sanitarios con manejo de metano (Drawdown)",
+  "pdf": "Improve Landfill Management _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Biogás Doña Juana (Colombia)",
+   "Loci Controls (EE. UU.)",
+   "Waste Management RNG (EE. UU.)"
+  ]
+ },
+ {
+  "id": "increase-recycling-metals",
+  "nombre_es": "Reciclaje de metales",
+  "nombre_en": "Increase Recycling: Metals",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.9,
+  "potencial_gt_max": 2.1,
+  "costo_usd_t": -100.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 2.0,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 6,
+    "materiales": 15
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 8
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Centro de reciclaje"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reciclaje (Drawdown)",
+  "pdf": "Increase Recycling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Asociación de Recicladores de Bogotá (Colombia)",
+   "AMP Robotics (EE. UU.)",
+   "Greyparrot (Reino Unido)"
+  ]
+ },
+ {
+  "id": "increase-recycling-paper-and-cardboard",
+  "nombre_es": "Reciclaje de papel y cartón",
+  "nombre_en": "Increase Recycling: Paper and Cardboard",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.22,
+  "potencial_gt_max": 0.26,
+  "costo_usd_t": -400.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.24,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 7
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 4
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Centro de reciclaje"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reciclaje (Drawdown)",
+  "pdf": "Increase Recycling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Asociación de Recicladores de Bogotá (Colombia)",
+   "AMP Robotics (EE. UU.)",
+   "Greyparrot (Reino Unido)"
+  ]
+ },
+ {
+  "id": "increase-recycling-plastics",
+  "nombre_es": "Reciclaje de plásticos",
+  "nombre_en": "Increase Recycling: Plastics",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.09,
+  "potencial_gt_max": 0.1,
+  "costo_usd_t": -4.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.095,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 3
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Centro de reciclaje"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reciclaje (Drawdown)",
+  "pdf": "Increase Recycling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Asociación de Recicladores de Bogotá (Colombia)",
+   "AMP Robotics (EE. UU.)",
+   "Greyparrot (Reino Unido)"
+  ]
+ },
+ {
+  "id": "increase-carpooling",
+  "nombre_es": "Carro compartido",
+  "nombre_en": "Increase Carpooling",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.25,
+  "potencial_gt_max": 0.96,
+  "costo_usd_t": -3119.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.605,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 8
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "App de carro compartido"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Carro compartido (Drawdown)",
+  "pdf": "Increase Carpooling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "BlaBlaCar (Francia)",
+   "Waze Carpool (cerró en 2022)",
+   "Wheels/Muvo en universidades de Bogotá #por-verificar"
+  ]
+ },
+ {
+  "id": "mobilize-electric-bicycles-private",
+  "nombre_es": "Bicicletas eléctricas",
+  "nombre_en": "Mobilize Electric Bicycles: Private",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.05,
+  "potencial_gt_max": 0.11,
+  "costo_usd_t": -1748.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.08,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Estación de bicicletas eléctricas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Bicicletas eléctricas (Drawdown)",
+  "pdf": "Mobilize Electric Bicycles _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Tembici (Brasil, opera en Bogotá) #por-verificar",
+   "VanMoof (Países Bajos)",
+   "Rad Power Bikes (EE. UU.)"
+  ]
+ },
+ {
+  "id": "mobilize-electric-cars",
+  "nombre_es": "Carros eléctricos",
+  "nombre_en": "Mobilize Electric Cars",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.26,
+  "potencial_gt_max": 2.3,
+  "costo_usd_t": -1019.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 1.78,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 6,
+    "materiales": 14
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fábrica de carros eléctricos"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Carros eléctricos (Drawdown)",
+  "pdf": "Mobilize Electric Cars _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "BYD (China)",
+   "Tesla (EE. UU.)",
+   "Renault (Francia)"
+  ]
+ },
+ {
+  "id": "mobilize-electric-seated-scooters-motorcycles",
+  "nombre_es": "Motos eléctricas",
+  "nombre_en": "Mobilize Electric Seated Scooters & Motorcycles",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.31,
+  "potencial_gt_max": 0.41,
+  "costo_usd_t": -382.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.36,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 7
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Estación de cambio de baterías de moto"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Motos eléctricas (Drawdown)",
+  "pdf": "Mobilize Electric Seated Scooters & Motorcycles _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Gogoro (Taiwán)",
+   "Ather (India)",
+   "Ampersand (Ruanda)"
+  ]
+ },
+ {
+  "id": "mobilize-hybrid-cars",
+  "nombre_es": "Carros híbridos",
+  "nombre_en": "Mobilize Hybrid Cars",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.34,
+  "potencial_gt_max": 0.86,
+  "costo_usd_t": 247.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 7,
+    "materiales": 16
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Concesionario de híbridos"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Carros híbridos (Drawdown)",
+  "pdf": "Mobilize Hybrid Cars _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Toyota (Japón)",
+   "Honda (Japón)"
+  ]
+ },
+ {
+  "id": "improve-nonmotorized-transportation",
+  "nombre_es": "Caminar y pedalear",
+  "nombre_en": "Improve Nonmotorized Transportation",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.43,
+  "potencial_gt_max": 1.89,
+  "costo_usd_t": -1771.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 1.66,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 6,
+    "materiales": 13
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Ciclorruta"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Caminar y pedalear (Drawdown)",
+  "pdf": "Improve Nonmotorized Transportation _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Ciclovía de Bogotá (Colombia)",
+   "Urban Arrow (Países Bajos)",
+   "Cycling Without Age (Dinamarca, ONG)"
+  ]
+ },
+ {
+  "id": "enhance-public-transit",
+  "nombre_es": "Transporte público",
+  "nombre_en": "Enhance Public Transit",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.7,
+  "potencial_gt_max": 1.03,
+  "costo_usd_t": -3300.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.865,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Línea de bus eléctrico o de metro"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Transporte público (Drawdown)",
+  "pdf": "Enhance Public Transit _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "TransMilenio con buses eléctricos BYD (Colombia)",
+   "Metrocable de Medellín (Colombia)",
+   "Via Transportation (EE. UU., software)"
+  ]
+ },
+ {
+  "id": "reduce-crop-residue-burning",
+  "nombre_es": "No quemar residuos de cosecha",
+  "nombre_en": "Reduce Crop Residue Burning",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.11,
+  "potencial_gt_max": 0.39,
+  "costo_usd_t": -10.2,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.25,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Recolector de residuos de cosecha"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "No quemar residuos de cosecha (Drawdown)",
+  "pdf": "Reduce Crop Residue Burning _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Takachar (India)",
+   "Sirius Regenerative (Colombia, biochar)",
+   "Biodiversal (Colombia)"
+  ]
+ },
+ {
+  "id": "improve-diets",
+  "nombre_es": "Dietas basadas en plantas",
+  "nombre_en": "Improve Diets",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.4,
+  "potencial_gt_max": 2.8,
+  "costo_usd_t": -8.54,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 2.1,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 2,
+    "materiales": 4
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 1,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Mercado campesino de plantas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Dietas basadas en plantas (Drawdown)",
+  "pdf": "Improve Diets _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Impossible Foods (EE. UU.)",
+   "NotCo (Chile)",
+   "Beyond Meat (EE. UU.)"
+  ]
+ },
+ {
+  "id": "reduce-food-loss-waste",
+  "nombre_es": "Cero desperdicio de comida",
+  "nombre_en": "Reduce Food Loss & Waste",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.23,
+  "potencial_gt_max": 2.47,
+  "costo_usd_t": -193.99,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 1.85,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 2,
+    "materiales": 4
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 1,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Banco de alimentos y red de frío"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cero desperdicio de comida (Drawdown)",
+  "pdf": "Reduce Food Loss & Waste _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Too Good To Go (Dinamarca)",
+   "Apeel (EE. UU.)",
+   "ABACO, bancos de alimentos (Colombia)"
+  ]
+ },
+ {
+  "id": "improve-nutrient-management",
+  "nombre_es": "Manejo de nutrientes",
+  "nombre_en": "Improve Nutrient Management",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.42,
+  "potencial_gt_max": 0.54,
+  "costo_usd_t": -85.21,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.48,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Agricultura de precisión"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Manejo de nutrientes (Drawdown)",
+  "pdf": "Improve Nutrient Management _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Pivot Bio (EE. UU.)",
+   "Kula Bio (EE. UU.)",
+   "Yara (Noruega)"
+  ]
+ },
+ {
+  "id": "improve-rice-production",
+  "nombre_es": "Arroz mejorado",
+  "nombre_en": "Improve Rice Production",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.1,
+  "potencial_gt_max": 0.16,
+  "costo_usd_t": -175.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.13,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Arrozal de riego intermitente"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Arroz mejorado (Drawdown)",
+  "pdf": "Improve Rice Production _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rize (Singapur)",
+   "Fedearroz (Colombia, AMTEC)",
+   "Mitti Labs (India)"
+  ]
+ },
+ {
+  "id": "improve-annual-cropping",
+  "nombre_es": "Cultivos anuales regenerativos",
+  "nombre_en": "Improve Annual Cropping",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.43,
+  "potencial_gt_max": 1.09,
+  "costo_usd_t": 47.8,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.76,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 2,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cultivo regenerativo"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cultivos anuales regenerativos (Drawdown)",
+  "pdf": "Improve Annual Cropping _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Indigo Ag (EE. UU.)",
+   "Regen Network (global)",
+   "Agrosavia (Colombia, investigación)"
+  ]
+ },
+ {
+  "id": "protect-coastal-wetlands-mangrove-ecosystems",
+  "nombre_es": "Proteger manglares",
+  "nombre_en": "Protect Coastal Wetlands: Mangrove ecosystems",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.06,
+  "potencial_gt_max": 0.09,
+  "costo_usd_t": 1.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "costa"
+   ],
+   "potencial_gt_usado": 0.075,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de manglar"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger humedales costeros (Drawdown)",
+  "pdf": "Protect Coastal Wetlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Blue Ventures (Madagascar)",
+   "Mikoko Pamoja (Kenia)",
+   "INVEMAR con comunidades de la Ciénaga Grande (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-coastal-wetlands-seagrass-ecosystems",
+  "nombre_es": "Proteger pastos marinos",
+  "nombre_en": "Protect Coastal Wetlands: Seagrass ecosystems",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.06,
+  "potencial_gt_max": 0.08,
+  "costo_usd_t": -6.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "oceano_costero"
+   ],
+   "potencial_gt_usado": 0.07,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de manglar"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger humedales costeros (Drawdown)",
+  "pdf": "Protect Coastal Wetlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Blue Ventures (Madagascar)",
+   "Mikoko Pamoja (Kenia)",
+   "INVEMAR con comunidades de la Ciénaga Grande (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-forests-boreal",
+  "nombre_es": "Proteger bosque boreal",
+  "nombre_en": "Protect Forests: Boreal",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.25,
+  "potencial_gt_max": 0.26,
+  "costo_usd_t": 2.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "boreal"
+   ],
+   "potencial_gt_usado": 0.255,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva forestal o territorio indígena titulado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger bosques (Drawdown)",
+  "pdf": "Protect Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Amazon Conservation Team (Colombia)",
+   "Fondo Patrimonio Natural (Colombia)",
+   "Savimbo (Colombia, créditos de biodiversidad)"
+  ]
+ },
+ {
+  "id": "protect-forests-subtropical",
+  "nombre_es": "Proteger bosque subtropical",
+  "nombre_en": "Protect Forests: Subtropical",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.28,
+  "potencial_gt_max": 0.48,
+  "costo_usd_t": 2.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "bosque_subtropical"
+   ],
+   "potencial_gt_usado": 0.38,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva forestal o territorio indígena titulado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger bosques (Drawdown)",
+  "pdf": "Protect Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Amazon Conservation Team (Colombia)",
+   "Fondo Patrimonio Natural (Colombia)",
+   "Savimbo (Colombia, créditos de biodiversidad)"
+  ]
+ },
+ {
+  "id": "protect-forests-temperate",
+  "nombre_es": "Proteger bosque templado",
+  "nombre_en": "Protect Forests: Temperate",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.29,
+  "potencial_gt_max": 0.53,
+  "costo_usd_t": 2.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "bosque_templado"
+   ],
+   "potencial_gt_usado": 0.41,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva forestal o territorio indígena titulado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger bosques (Drawdown)",
+  "pdf": "Protect Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Amazon Conservation Team (Colombia)",
+   "Fondo Patrimonio Natural (Colombia)",
+   "Savimbo (Colombia, créditos de biodiversidad)"
+  ]
+ },
+ {
+  "id": "protect-forests-tropical",
+  "nombre_es": "Proteger bosque tropical",
+  "nombre_en": "Protect Forests: Tropical",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 1.67,
+  "potencial_gt_max": 2.35,
+  "costo_usd_t": 2.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "selva_tropical"
+   ],
+   "potencial_gt_usado": 2.01,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva forestal o territorio indígena titulado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger bosques (Drawdown)",
+  "pdf": "Protect Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Amazon Conservation Team (Colombia)",
+   "Fondo Patrimonio Natural (Colombia)",
+   "Savimbo (Colombia, créditos de biodiversidad)"
+  ]
+ },
+ {
+  "id": "protect-grasslands-savannas-boreal",
+  "nombre_es": "Proteger pastizales boreales",
+  "nombre_en": "Protect Grasslands & Savannas: Boreal",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.31,
+  "potencial_gt_max": 0.34,
+  "costo_usd_t": -1.58,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "boreal",
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.325,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de sabana"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger pastizales y sabanas (Drawdown)",
+  "pdf": "Protect Grasslands & Savannas _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Reserva El Tuparro y Llanos Orientales (Colombia) #por-verificar",
+   "American Prairie (EE. UU.)"
+  ]
+ },
+ {
+  "id": "protect-grasslands-savannas-temperate",
+  "nombre_es": "Proteger pastizales templados",
+  "nombre_en": "Protect Grasslands & Savannas: Temperate",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.2,
+  "potencial_gt_max": 0.27,
+  "costo_usd_t": -1.58,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "bosque_templado",
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.235,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de sabana"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger pastizales y sabanas (Drawdown)",
+  "pdf": "Protect Grasslands & Savannas _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Reserva El Tuparro y Llanos Orientales (Colombia) #por-verificar",
+   "American Prairie (EE. UU.)"
+  ]
+ },
+ {
+  "id": "protect-grasslands-savannas-subtropical",
+  "nombre_es": "Proteger pastizales subtropicales",
+  "nombre_en": "Protect Grasslands & Savannas: Subtropical",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.04,
+  "potencial_gt_max": 0.06,
+  "costo_usd_t": -1.58,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "bosque_subtropical",
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.05,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de sabana"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger pastizales y sabanas (Drawdown)",
+  "pdf": "Protect Grasslands & Savannas _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Reserva El Tuparro y Llanos Orientales (Colombia) #por-verificar",
+   "American Prairie (EE. UU.)"
+  ]
+ },
+ {
+  "id": "protect-grasslands-savannas-tropical",
+  "nombre_es": "Proteger sabanas tropicales",
+  "nombre_en": "Protect Grasslands & Savannas: Tropical",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.03,
+  "potencial_gt_max": 0.04,
+  "costo_usd_t": -1.58,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "selva_tropical",
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.035,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de sabana"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger pastizales y sabanas (Drawdown)",
+  "pdf": "Protect Grasslands & Savannas _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Reserva El Tuparro y Llanos Orientales (Colombia) #por-verificar",
+   "American Prairie (EE. UU.)"
+  ]
+ },
+ {
+  "id": "protect-peatlands-boreal",
+  "nombre_es": "Proteger turberas boreales",
+  "nombre_en": "Protect Peatlands: Boreal",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.18,
+  "potencial_gt_max": 0.24,
+  "costo_usd_t": 0.25,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "turbera",
+    "boreal"
+   ],
+   "potencial_gt_usado": 0.21,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger turberas (Drawdown)",
+  "pdf": "Protect Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rimba Raya (Indonesia)",
+   "Wetlands International (ONG)",
+   "Páramos y turberas de Chingaza (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-peatlands-temperate",
+  "nombre_es": "Proteger turberas templadas",
+  "nombre_en": "Protect Peatlands: Temperate",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.08,
+  "potencial_gt_max": 0.11,
+  "costo_usd_t": 0.25,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "turbera",
+    "bosque_templado"
+   ],
+   "potencial_gt_usado": 0.095,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger turberas (Drawdown)",
+  "pdf": "Protect Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rimba Raya (Indonesia)",
+   "Wetlands International (ONG)",
+   "Páramos y turberas de Chingaza (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-peatlands-subtropical",
+  "nombre_es": "Proteger turberas subtropicales",
+  "nombre_en": "Protect Peatlands: Subtropical",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.12,
+  "potencial_gt_max": 0.15,
+  "costo_usd_t": 0.25,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "turbera",
+    "bosque_subtropical"
+   ],
+   "potencial_gt_usado": 0.135,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger turberas (Drawdown)",
+  "pdf": "Protect Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rimba Raya (Indonesia)",
+   "Wetlands International (ONG)",
+   "Páramos y turberas de Chingaza (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-peatlands-tropical",
+  "nombre_es": "Proteger turberas tropicales",
+  "nombre_en": "Protect Peatlands: Tropical",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.95,
+  "potencial_gt_max": 1.22,
+  "costo_usd_t": 0.25,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "turbera",
+    "selva_tropical"
+   ],
+   "potencial_gt_usado": 1.085,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 2,
+    "materiales": 4
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger turberas (Drawdown)",
+  "pdf": "Protect Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rimba Raya (Indonesia)",
+   "Wetlands International (ONG)",
+   "Páramos y turberas de Chingaza (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-seaweed-ecosystems",
+  "nombre_es": "Proteger bosques de algas",
+  "nombre_en": "Protect Seaweed Ecosystems",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.07,
+  "potencial_gt_max": 0.1,
+  "costo_usd_t": -72.0,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "oceano_costero"
+   ],
+   "potencial_gt_usado": 0.085,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de bosque de algas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger bosques de algas (Drawdown)",
+  "pdf": "Protect Seaweed Ecosystems _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Kelp Forest Foundation (Países Bajos)",
+   "Urchinomics (Japón, restaura bosques de kelp)"
+  ]
+ },
+ {
+  "id": "restore-forests-boreal",
+  "nombre_es": "Restaurar bosque boreal",
+  "nombre_en": "Restore Forests: Boreal",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.1,
+  "potencial_gt_max": 0.15,
+  "costo_usd_t": 53.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "boreal"
+   ],
+   "potencial_gt_usado": 0.125,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Vivero y restauración de bosque"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar bosques (Drawdown)",
+  "pdf": "Restore Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Terraformation (EE. UU.)",
+   "Restor (Suiza, plataforma)",
+   "Fundación Natura (Colombia)"
+  ]
+ },
+ {
+  "id": "restore-forests-temperate",
+  "nombre_es": "Restaurar bosque templado",
+  "nombre_en": "Restore Forests: Temperate",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.12,
+  "potencial_gt_max": 0.17,
+  "costo_usd_t": 53.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "bosque_templado"
+   ],
+   "potencial_gt_usado": 0.145,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Vivero y restauración de bosque"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar bosques (Drawdown)",
+  "pdf": "Restore Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Terraformation (EE. UU.)",
+   "Restor (Suiza, plataforma)",
+   "Fundación Natura (Colombia)"
+  ]
+ },
+ {
+  "id": "restore-forests-subtropical",
+  "nombre_es": "Restaurar bosque subtropical",
+  "nombre_en": "Restore Forests: Subtropical",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.02,
+  "potencial_gt_max": 0.03,
+  "costo_usd_t": 53.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "bosque_subtropical"
+   ],
+   "potencial_gt_usado": 0.025,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Vivero y restauración de bosque"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar bosques (Drawdown)",
+  "pdf": "Restore Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Terraformation (EE. UU.)",
+   "Restor (Suiza, plataforma)",
+   "Fundación Natura (Colombia)"
+  ]
+ },
+ {
+  "id": "restore-forests-tropical",
+  "nombre_es": "Restaurar bosque tropical",
+  "nombre_en": "Restore Forests: Tropical",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.48,
+  "potencial_gt_max": 0.73,
+  "costo_usd_t": 53.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "selva_tropical"
+   ],
+   "potencial_gt_usado": 0.605,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Vivero y restauración de bosque"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar bosques (Drawdown)",
+  "pdf": "Restore Forests _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Terraformation (EE. UU.)",
+   "Restor (Suiza, plataforma)",
+   "Fundación Natura (Colombia)"
+  ]
+ },
+ {
+  "id": "restore-peatlands-boreal",
+  "nombre_es": "Restaurar turberas boreales",
+  "nombre_en": "Restore Peatlands: Boreal",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.13,
+  "potencial_gt_max": 0.25,
+  "costo_usd_t": 55.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "turbera",
+    "boreal"
+   ],
+   "potencial_gt_usado": 0.19,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Rehumectación de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar turberas (Drawdown)",
+  "pdf": "Restore Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Wetlands International (ONG)",
+   "Peatland Action (Escocia)",
+   "Kasih Hutan / Borneo Nature Foundation"
+  ]
+ },
+ {
+  "id": "restore-peatlands-temperate",
+  "nombre_es": "Restaurar turberas templadas",
+  "nombre_en": "Restore Peatlands: Temperate",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.07,
+  "potencial_gt_max": 0.15,
+  "costo_usd_t": 55.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "turbera",
+    "bosque_templado"
+   ],
+   "potencial_gt_usado": 0.11,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Rehumectación de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar turberas (Drawdown)",
+  "pdf": "Restore Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Wetlands International (ONG)",
+   "Peatland Action (Escocia)",
+   "Kasih Hutan / Borneo Nature Foundation"
+  ]
+ },
+ {
+  "id": "restore-peatlands-subtropical",
+  "nombre_es": "Restaurar turberas subtropicales",
+  "nombre_en": "Restore Peatlands: Subtropical",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.03,
+  "potencial_gt_max": 0.05,
+  "costo_usd_t": 55.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "turbera",
+    "bosque_subtropical"
+   ],
+   "potencial_gt_usado": 0.04,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Rehumectación de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar turberas (Drawdown)",
+  "pdf": "Restore Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Wetlands International (ONG)",
+   "Peatland Action (Escocia)",
+   "Kasih Hutan / Borneo Nature Foundation"
+  ]
+ },
+ {
+  "id": "restore-peatlands-tropical",
+  "nombre_es": "Restaurar turberas tropicales",
+  "nombre_en": "Restore Peatlands: Tropical",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.26,
+  "potencial_gt_max": 0.52,
+  "costo_usd_t": 55.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "turbera",
+    "selva_tropical"
+   ],
+   "potencial_gt_usado": 0.39,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Rehumectación de turbera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar turberas (Drawdown)",
+  "pdf": "Restore Peatlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Wetlands International (ONG)",
+   "Peatland Action (Escocia)",
+   "Kasih Hutan / Borneo Nature Foundation"
+  ]
+ },
+ {
+  "id": "deploy-silvopasture",
+  "nombre_es": "Silvopastoreo",
+  "nombre_en": "Deploy Silvopasture",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.4,
+  "potencial_gt_max": 0.98,
+  "costo_usd_t": 43.25,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.69,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 2,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Finca silvopastoril"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Silvopastoreo (Drawdown)",
+  "pdf": "Deploy Silvopasture _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "CIPAV (Colombia)",
+   "Proyecto Ganadería Colombiana Sostenible (FEDEGÁN, Colombia)",
+   "Pachama/ProForest como compradores #por-verificar"
+  ]
+ },
+ {
+  "id": "use-biochar",
+  "nombre_es": "Biochar",
+  "nombre_en": "Use Biochar",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "altamente_recomendada",
+  "calificacion_drawdown_en": "Highly Recommended",
+  "potencial_gt_min": 0.13,
+  "potencial_gt_max": 0.47,
+  "costo_usd_t": 230.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 6,
+    "materiales": 13
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Pirolizador de biochar"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Biochar (Drawdown)",
+  "pdf": "Use Biochar _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Exomad Green (Bolivia)",
+   "Sirius Regenerative (Colombia)",
+   "Biodiversal (Colombia)",
+   "CarbonU Paloquemao (Colombia)"
+  ]
+ },
+ {
+  "id": "boost-appliance-equipment-efficiency",
+  "nombre_es": "Electrodomésticos eficientes",
+  "nombre_en": "Boost Appliance & Equipment Efficiency",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Tienda de electrodomésticos eficientes"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Electrodomésticos eficientes (Drawdown)",
+  "pdf": "Boost Appliance & Equipment Efficiency _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Blue Frontier (EE. UU., aire acondicionado)",
+   "Gradient (EE. UU., bomba de calor de ventana)"
+  ]
+ },
+ {
+  "id": "improve-building-envelopes",
+  "nombre_es": "Envolventes eficientes",
+  "nombre_en": "Improve Building Envelopes",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Renovación de fachada"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Envolventes eficientes (Drawdown)",
+  "pdf": "Improve Building Envelopes _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Energiesprong (Países Bajos)",
+   "Ecoworks (Alemania)",
+   "Dandelion Energy (EE. UU., geotermia)"
+  ]
+ },
+ {
+  "id": "deploy-green-roofs",
+  "nombre_es": "Techos verdes",
+  "nombre_en": "Deploy Green Roofs",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Techo verde"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Techos verdes (Drawdown)",
+  "pdf": "Deploy Green Roofs _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Groncol (Colombia)",
+   "ZinCo (Alemania)",
+   "Sempergreen (Países Bajos)"
+  ]
+ },
+ {
+  "id": "use-low-flow-fixtures",
+  "nombre_es": "Grifería de bajo flujo",
+  "nombre_en": "Use Low-Flow Fixtures",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Grifería ahorradora"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Grifería de bajo flujo (Drawdown)",
+  "pdf": "Use Low-Flow Fixtures _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Nebia (EE. UU.)",
+   "Altered (Suecia)"
+  ]
+ },
+ {
+  "id": "use-smart-programmable-thermostats-cooling",
+  "nombre_es": "Termostatos inteligentes (enfriamiento)",
+  "nombre_en": "Use Smart & Programmable Thermostats: Cooling",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": 0.02,
+  "potencial_gt_max": 0.05,
+  "costo_usd_t": -230.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.035,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 2,
+    "materiales": 6
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Termostato inteligente"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Termostatos inteligentes (Drawdown)",
+  "pdf": "Use Smart & Programmable Thermostats _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Google Nest (EE. UU.)",
+   "ecobee (Canadá)",
+   "tado° (Alemania)"
+  ]
+ },
+ {
+  "id": "deploy-cool-roofs",
+  "nombre_es": "Techos fríos",
+  "nombre_en": "Deploy Cool Roofs",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Techo frío"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Techos fríos (Drawdown)",
+  "pdf": "Deploy Cool Roofs _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "SkyCool Systems (EE. UU.)",
+   "White Roof Project (EE. UU., ONG)"
+  ]
+ },
+ {
+  "id": "increase-decentralized-composting",
+  "nombre_es": "Compostaje comunitario (pacas)",
+  "nombre_en": "Increase Decentralized Composting",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 4
+   },
+   "efecto_vida": 1,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Paca digestora de barrio"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Compostaje comunitario (pacas) (Drawdown)",
+  "pdf": "Increase Decentralized Composting _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "CarbonU Paloquemao (Colombia)",
+   "Movimiento Paquero de Colombia",
+   "Mill (EE. UU., compostador doméstico)"
+  ]
+ },
+ {
+  "id": "increase-recycling-glass",
+  "nombre_es": "Reciclaje de vidrio",
+  "nombre_en": "Increase Recycling: Glass",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": 0.0,
+  "potencial_gt_max": 0.0,
+  "costo_usd_t": 9000.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.0,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 10
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 3
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Centro de reciclaje"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reciclaje (Drawdown)",
+  "pdf": "Increase Recycling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Asociación de Recicladores de Bogotá (Colombia)",
+   "AMP Robotics (EE. UU.)",
+   "Greyparrot (Reino Unido)"
+  ]
+ },
+ {
+  "id": "mobilize-electric-bicycles-shared",
+  "nombre_es": "Bicicletas eléctricas compartidas",
+  "nombre_en": "Mobilize Electric Bicycles: Shared",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": 0.0,
+  "potencial_gt_max": 0.0,
+  "costo_usd_t": 22860.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.0,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 10
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Estación de bicicletas eléctricas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Bicicletas eléctricas (Drawdown)",
+  "pdf": "Mobilize Electric Bicycles _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Tembici (Brasil, opera en Bogotá) #por-verificar",
+   "VanMoof (Países Bajos)",
+   "Rad Power Bikes (EE. UU.)"
+  ]
+ },
+ {
+  "id": "improve-fishing-vessel-efficiency",
+  "nombre_es": "Barcos pesqueros eficientes",
+  "nombre_en": "Improve Fishing Vessel Efficiency",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "oceano",
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Flota pesquera eficiente"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Barcos pesqueros eficientes (Drawdown)",
+  "pdf": "Improve Fishing Vessel Efficiency _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Navtor (Noruega)",
+   "Wärtsilä (Finlandia)"
+  ]
+ },
+ {
+  "id": "improve-aquaculture",
+  "nombre_es": "Acuicultura mejorada",
+  "nombre_en": "Improve Aquaculture",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Granja acuícola eficiente"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Acuicultura mejorada (Drawdown)",
+  "pdf": "Improve Aquaculture _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "eFishery (Indonesia)",
+   "XpertSea (Canadá)",
+   "Atarraya (México)"
+  ]
+ },
+ {
+  "id": "deploy-electric-irrigation-pumps",
+  "nombre_es": "Bombas de riego eléctricas",
+  "nombre_en": "Deploy Electric Irrigation Pumps",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Bomba de riego solar"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Bombas de riego eléctricas (Drawdown)",
+  "pdf": "Deploy Electric Irrigation Pumps _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "SunCulture (Kenia)",
+   "Claro Energy (India)",
+   "Futurepump (Kenia)"
+  ]
+ },
+ {
+  "id": "improve-manure-management",
+  "nombre_es": "Manejo de estiércol",
+  "nombre_en": "Improve Manure Management",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Compostera de estiércol"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Manejo de estiércol (Drawdown)",
+  "pdf": "Improve Manure Management _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Sistema.bio (México)",
+   "Bion Environmental (EE. UU.)"
+  ]
+ },
+ {
+  "id": "reduce-overfishing",
+  "nombre_es": "Reducir la sobrepesca",
+  "nombre_en": "Reduce Overfishing",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cuota pesquera y área de veda"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reducir la sobrepesca (Drawdown)",
+  "pdf": "Reduce Overfishing _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Global Fishing Watch (ONG)",
+   "Fishtek Marine (Reino Unido)",
+   "Fundación MarViva (Colombia)"
+  ]
+ },
+ {
+  "id": "protect-seafloors",
+  "nombre_es": "Proteger el fondo marino",
+  "nombre_en": "Protect Seafloors",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "proteger",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Área marina protegida del fondo"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger el fondo marino (Drawdown)",
+  "pdf": "Protect Seafloors _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Oceana (ONG)",
+   "Global Fishing Watch (ONG)"
+  ]
+ },
+ {
+  "id": "protect-coastal-wetlands-salt-marsh-ecosystems",
+  "nombre_es": "Proteger marismas",
+  "nombre_en": "Protect Coastal Wetlands: Salt marsh ecosystems",
+  "sector_drawdown": "FALO & Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "proteger",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": 0.02,
+  "potencial_gt_max": 0.03,
+  "costo_usd_t": 2.0,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "costa"
+   ],
+   "potencial_gt_usado": 0.025,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 3,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reserva de manglar"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteger humedales costeros (Drawdown)",
+  "pdf": "Protect Coastal Wetlands _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Blue Ventures (Madagascar)",
+   "Mikoko Pamoja (Kenia)",
+   "INVEMAR con comunidades de la Ciénaga Grande (Colombia)"
+  ]
+ },
+ {
+  "id": "restore-grasslands-savannas",
+  "nombre_es": "Restaurar pastizales y sabanas",
+  "nombre_en": "Restore Grasslands & Savannas",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Restauración de sabana"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar pastizales y sabanas (Drawdown)",
+  "pdf": "Restore Grasslands & Savannas _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Grassroots Carbon (EE. UU.)",
+   "Natura Grasslands #por-verificar"
+  ]
+ },
+ {
+  "id": "restore-mangrove-ecosystems",
+  "nombre_es": "Restaurar manglares",
+  "nombre_en": "Restore Mangrove Ecosystems",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "costa"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Vivero de manglar"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar manglares (Drawdown)",
+  "pdf": "Restore Mangrove Ecosystems _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Mangrove Action Project (ONG)",
+   "Ecosystem Restoration Camps",
+   "Corporación Ecoversa (Colombia) #por-verificar"
+  ]
+ },
+ {
+  "id": "restore-salt-marsh-ecosystems",
+  "nombre_es": "Restaurar marismas",
+  "nombre_en": "Restore Salt Marsh Ecosystems",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "costa"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Restauración de marisma"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar marismas (Drawdown)",
+  "pdf": "Restore Salt Marsh Ecosystems _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Restore America's Estuaries (ONG)"
+  ]
+ },
+ {
+  "id": "restore-seagrass-ecosystems",
+  "nombre_es": "Restaurar pastos marinos",
+  "nombre_en": "Restore Seagrass Ecosystems",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "oceano_costero"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Pradera marina restaurada"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar pastos marinos (Drawdown)",
+  "pdf": "Restore Seagrass Ecosystems _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Project Seagrass (Reino Unido)",
+   "Ocean Conservancy (ONG)"
+  ]
+ },
+ {
+  "id": "restore-seaweed-ecosystems",
+  "nombre_es": "Restaurar bosques de algas",
+  "nombre_en": "Restore Seaweed Ecosystems",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "valiosa",
+  "calificacion_drawdown_en": "Worthwhile",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 2,
+   "biomas": [
+    "oceano_costero"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Restauración de bosque de algas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar bosques de algas (Drawdown)",
+  "pdf": "Restore Seaweed Ecosystems _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Urchinomics (Japón)",
+   "SeaForester (Portugal)"
+  ]
+ },
+ {
+  "id": "improve-fuel-burning-cooking-equipment",
+  "nombre_es": "Estufas mejoradas",
+  "nombre_en": "Improve Fuel-Burning Cooking Equipment",
+  "sector_drawdown": "Buildings",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Estufa mejorada"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Estufas mejoradas (Drawdown)",
+  "pdf": "Improve Fuel-Burning Cooking Equipment _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "BURN Manufacturing (Kenia)",
+   "Envirofit (EE. UU.)",
+   "Fundación Natura, estufas eficientes (Colombia)"
+  ]
+ },
+ {
+  "id": "deploy-electric-cooking-equipment",
+  "nombre_es": "Cocinas eléctricas",
+  "nombre_en": "Deploy Electric Cooking Equipment",
+  "sector_drawdown": "Buildings & Electricity",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Cocina de inducción"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cocinas eléctricas (Drawdown)",
+  "pdf": "Deploy Electric Cooking Equipment _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Impact Induction (EE. UU.)",
+   "Burn Manufacturing (Kenia, ollas eléctricas)",
+   "PowerUp / Copper (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-district-cooling",
+  "nombre_es": "Enfriamiento distrital",
+  "nombre_en": "Deploy District Cooling",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Red de frío distrital"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Enfriamiento distrital (Drawdown)",
+  "pdf": "Deploy District Cooling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Empresas Públicas de Medellín (Colombia, distrito térmico La Alpujarra)",
+   "Tabreed (Emiratos)",
+   "Engie (Francia)"
+  ]
+ },
+ {
+  "id": "deploy-micro-wind-turbines",
+  "nombre_es": "Microturbinas eólicas",
+  "nombre_en": "Deploy Micro Wind Turbines",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Microturbina eólica"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Microturbinas eólicas (Drawdown)",
+  "pdf": "Deploy Micro Wind Turbines _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Aeromine Technologies (EE. UU.)",
+   "Ryse Energy (Reino Unido)",
+   "Bladeless/Vortex (España)"
+  ]
+ },
+ {
+  "id": "deploy-nuclear-fusion",
+  "nombre_es": "Fusión nuclear",
+  "nombre_en": "Deploy Nuclear Fusion",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 5,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reactor de fusión (era 5)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Fusión nuclear (Drawdown)",
+  "pdf": "Deploy Nuclear Fusion _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Commonwealth Fusion Systems (EE. UU.)",
+   "Helion (EE. UU.)",
+   "Tokamak Energy (Reino Unido)"
+  ]
+ },
+ {
+  "id": "deploy-small-modular-nuclear-reactors",
+  "nombre_es": "Reactores nucleares modulares",
+  "nombre_en": "Deploy Small Modular Nuclear Reactors",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reactor modular pequeño"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reactores nucleares modulares (Drawdown)",
+  "pdf": "Deploy Small Modular Nuclear Reactors _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "NuScale (EE. UU.)",
+   "Kairos Power (EE. UU.)",
+   "X-energy (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-advanced-geothermal-energy",
+  "nombre_es": "Geotermia avanzada",
+  "nombre_en": "Deploy Advanced Geothermal Energy",
+  "sector_drawdown": "Electricity & Industry",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "montaña"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Pozo geotérmico mejorado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Geotermia avanzada (Drawdown)",
+  "pdf": "Deploy Advanced Geothermal Energy _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Fervo Energy (EE. UU.)",
+   "Eavor (Canadá)",
+   "Quaise Energy (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-methane-digesters",
+  "nombre_es": "Biodigestores",
+  "nombre_en": "Deploy Methane Digesters",
+  "sector_drawdown": "Electricity & Industry",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Biodigestor"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Biodigestores (Drawdown)",
+  "pdf": "Deploy Methane Digesters _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Sistema.bio (México)",
+   "HomeBiogas (Israel)",
+   "Biogás Doña Juana (Colombia)"
+  ]
+ },
+ {
+  "id": "improve-district-heating-industry",
+  "nombre_es": "Calefacción distrital (industria)",
+  "nombre_en": "Improve District Heating: Industry",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Red de calor industrial"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Calefacción distrital (industria) (Drawdown)",
+  "pdf": "Improve District Heating_ Industry _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rondo Energy (EE. UU., baterías térmicas)",
+   "Antora Energy (EE. UU.)",
+   "Kyoto Group (Noruega)"
+  ]
+ },
+ {
+  "id": "deploy-plastic-alternatives-bioplastics",
+  "nombre_es": "Bioplásticos",
+  "nombre_en": "Deploy Plastic Alternatives / Bioplastics",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fábrica de bioplásticos"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Bioplásticos (Drawdown)",
+  "pdf": "Deploy Plastic Alternatives _ Bioplastics _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Notpla (Reino Unido, algas)",
+   "Danimer Scientific (EE. UU.)",
+   "Sulapac (Finlandia)"
+  ]
+ },
+ {
+  "id": "improve-steel-production",
+  "nombre_es": "Acero limpio",
+  "nombre_en": "Improve Steel Production",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Acería verde"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Acero limpio (Drawdown)",
+  "pdf": "Improve Steel Production _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Stegra (Suecia)",
+   "Boston Metal (EE. UU.)",
+   "Electra (EE. UU.)"
+  ]
+ },
+ {
+  "id": "reduce-airplane-contrails",
+  "nombre_es": "Reducir estelas de aviones",
+  "nombre_en": "Reduce Airplane Contrails",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Centro de rutas sin estelas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Reducir estelas de aviones (Drawdown)",
+  "pdf": "Reduce Airplane Contrails _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Breakthrough Energy contrails (EE. UU.)",
+   "SATAVIA (Reino Unido)",
+   "Google + American Airlines (piloto)"
+  ]
+ },
+ {
+  "id": "mobilize-green-hydrogen-for-aviation-and-trucking",
+  "nombre_es": "Hidrógeno verde para aviones y camiones",
+  "nombre_en": "Mobilize Green Hydrogen for Aviation and Trucking",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Hidrogenera"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Hidrógeno verde para aviones y camiones (Drawdown)",
+  "pdf": "Mobilize Green Hydrogen for Aviation and Trucking _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "ZeroAvia (Reino Unido)",
+   "Universal Hydrogen (EE. UU., cerró en 2024)",
+   "Hyzon (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-sustainable-aviation-fuel",
+  "nombre_es": "Combustible sostenible de aviación",
+  "nombre_en": "Deploy Sustainable Aviation Fuel",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Refinería de combustible sostenible de aviación"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Combustible sostenible de aviación (Drawdown)",
+  "pdf": "Deploy Sustainable Aviation Fuel _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Neste (Finlandia)",
+   "LanzaJet (EE. UU.)",
+   "Twelve (EE. UU., e-fuel)"
+  ]
+ },
+ {
+  "id": "advance-cultivated-meat",
+  "nombre_es": "Carne cultivada",
+  "nombre_en": "Advance Cultivated Meat",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Biorreactor de carne cultivada"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Carne cultivada (Drawdown)",
+  "pdf": "Advance Cultivated Meat _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "UPSIDE Foods (EE. UU.)",
+   "Mosa Meat (Países Bajos)",
+   "Aleph Farms (Israel)"
+  ]
+ },
+ {
+  "id": "use-feed-additives",
+  "nombre_es": "Aditivos para el ganado",
+  "nombre_en": "Use Feed Additives",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fábrica de aditivos para ganado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Aditivos para el ganado (Drawdown)",
+  "pdf": "Use Feed Additives _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "CH4 Global (EE. UU./Australia)",
+   "Rumin8 (Australia)",
+   "dsm-firmenich Bovaer (Países Bajos)"
+  ]
+ },
+ {
+  "id": "improve-irrigation-water-use-efficiency",
+  "nombre_es": "Riego eficiente",
+  "nombre_en": "Improve Irrigation Water Use Efficiency",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Riego por goteo inteligente"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Riego eficiente (Drawdown)",
+  "pdf": "Improve Irrigation Water Use Efficiency _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Netafim (Israel)",
+   "CropX (Israel)",
+   "Rivulis (Israel)"
+  ]
+ },
+ {
+  "id": "deploy-leaf-protein-concentrates",
+  "nombre_es": "Proteína de hojas",
+  "nombre_en": "Deploy Leaf Protein Concentrates",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Prensa de proteína de hojas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Proteína de hojas (Drawdown)",
+  "pdf": "Deploy Leaf Protein Concentrates _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Plantible Foods (EE. UU., lenteja de agua)",
+   "Leaft Foods (Nueva Zelanda)",
+   "Parabel (EE. UU.)"
+  ]
+ },
+ {
+  "id": "improve-ruminant-breeding",
+  "nombre_es": "Mejoramiento de rumiantes",
+  "nombre_en": "Improve Ruminant Breeding",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Programa genético de ganado"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Mejoramiento de rumiantes (Drawdown)",
+  "pdf": "Improve Ruminant Breeding _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Genus ABS (Reino Unido)",
+   "Semex (Canadá)"
+  ]
+ },
+ {
+  "id": "deploy-seaweed-farming-for-food",
+  "nombre_es": "Cultivo de algas para comer",
+  "nombre_en": "Deploy Seaweed Farming for Food",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "oceano_costero",
+    "cultivo",
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Granja de algas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Cultivo de algas para comer (Drawdown)",
+  "pdf": "Deploy Seaweed Farming for Food _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "GreenWave (EE. UU., ONG)",
+   "Kelp Blue (Namibia)",
+   "Atlantic Sea Farms (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-alternative-grazing",
+  "nombre_es": "Pastoreo alternativo",
+  "nombre_en": "Deploy Alternative Grazing",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Potreros rotativos (pastoreo regenerativo)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Pastoreo alternativo (Drawdown)",
+  "pdf": "Deploy Alternative Grazing _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Land to Market / Savory Institute (EE. UU.)",
+   "Grasslands LLC (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-enhanced-rock-weathering",
+  "nombre_es": "Meteorización mejorada de rocas",
+  "nombre_en": "Deploy Enhanced Rock Weathering",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Molino de basalto para cultivos"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Meteorización mejorada de rocas (Drawdown)",
+  "pdf": "Deploy Enhanced Rock Weathering _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "UNDO (Reino Unido)",
+   "Eion (EE. UU.)",
+   "Terradot (EE. UU./Brasil)"
+  ]
+ },
+ {
+  "id": "reduce-grazing-intensity",
+  "nombre_es": "Pastoreo menos intensivo",
+  "nombre_en": "Reduce Grazing Intensity",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Potrero en descanso"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Pastoreo menos intensivo (Drawdown)",
+  "pdf": "Reduce Grazing Intensity _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Programa Ganadería Colombiana Sostenible (Colombia)"
+  ]
+ },
+ {
+  "id": "restore-large-herbivores",
+  "nombre_es": "Restaurar grandes herbívoros",
+  "nombre_en": "Restore Large Herbivores",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Reintroducción de herbívoros"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar grandes herbívoros (Drawdown)",
+  "pdf": "Restore Large Herbivores _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Rewilding Europe (ONG)",
+   "Pleistocene Park (Rusia)",
+   "Knepp Estate (Reino Unido)"
+  ]
+ },
+ {
+  "id": "deploy-ocean-alkalinity-enhancement",
+  "nombre_es": "Alcalinizar el océano",
+  "nombre_en": "Deploy Ocean Alkalinity Enhancement",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Planta de alcalinización oceánica"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Alcalinizar el océano (Drawdown)",
+  "pdf": "Deploy Ocean Alkalinity Enhancement _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Planetary Technologies (Canadá)",
+   "Vesta (EE. UU., arena de olivino)",
+   "Ebb Carbon (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-ocean-electrochemistry",
+  "nombre_es": "Electroquímica oceánica",
+  "nombre_en": "Deploy Ocean Electrochemistry",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Planta electroquímica marina"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Electroquímica oceánica (Drawdown)",
+  "pdf": "Deploy Ocean Electrochemistry _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Captura (EE. UU.)",
+   "Equatic (EE. UU.)",
+   "Ebb Carbon (EE. UU.)"
+  ]
+ },
+ {
+  "id": "restore-whale-populations",
+  "nombre_es": "Restaurar ballenas",
+  "nombre_en": "Restore Whale Populations",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Santuario de ballenas"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Restaurar ballenas (Drawdown)",
+  "pdf": "Restore Whale Populations _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Whale and Dolphin Conservation (ONG)",
+   "Fundación Macuáticos (Colombia, Pacífico)"
+  ]
+ },
+ {
+  "id": "bury-biomass",
+  "nombre_es": "Enterrar biomasa",
+  "nombre_en": "Bury Biomass",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Bóveda de biomasa enterrada"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Enterrar biomasa (Drawdown)",
+  "pdf": "Bury Biomass _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Graphyte (EE. UU.)",
+   "Kodama Systems (EE. UU.)",
+   "Carbon Lockdown (EE. UU.)"
+  ]
+ },
+ {
+  "id": "use-methane-oxidizing-coatings",
+  "nombre_es": "Recubrimientos que oxidan metano",
+  "nombre_en": "Use Methane-Oxidizing Coatings",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "seguir_mirando",
+  "calificacion_drawdown_en": "Keep Watching",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 4,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Recubrimiento oxidante de metano"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Recubrimientos que oxidan metano (Drawdown)",
+  "pdf": "Use Methane-Oxidizing Coatings _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Spark Climate Solutions (EE. UU.)",
+   "Methane-oxidizing paint pilots #por-verificar"
+  ]
+ },
+ {
+  "id": "carbon-capture-storage-on-fossil-fuel-power-plants",
+  "nombre_es": "Captura de carbono en térmicas fósiles",
+  "nombre_en": "Carbon Capture & Storage on Fossil Fuel Power Plants",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 1,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Térmica con captura (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Captura de carbono en térmicas fósiles (Drawdown)",
+  "pdf": "Use Carbon Capture & Storage on Fossil Fuel Power Plants _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Petra Nova (EE. UU., cerrada en 2020 y reabierta)",
+   "Boundary Dam (Canadá)"
+  ]
+ },
+ {
+  "id": "deploy-waste-to-energy",
+  "nombre_es": "Incineración de basura con energía",
+  "nombre_en": "Deploy Waste to Energy",
+  "sector_drawdown": "Electricity & Industry",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 1,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Incineradora (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Incineración de basura con energía (Drawdown)",
+  "pdf": "Deploy Waste to Energy _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Covanta (EE. UU.)",
+   "Hitachi Zosen Inova (Suiza)"
+  ]
+ },
+ {
+  "id": "produce-blue-hydrogen",
+  "nombre_es": "Hidrógeno azul",
+  "nombre_en": "Produce Blue Hydrogen",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 1,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Planta de hidrógeno azul (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Hidrógeno azul (Drawdown)",
+  "pdf": "Produce Blue Hydrogen _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Air Products (EE. UU.)",
+   "Shell Quest (Canadá)"
+  ]
+ },
+ {
+  "id": "use-corn-ethanol",
+  "nombre_es": "Etanol de maíz",
+  "nombre_en": "Use Corn Ethanol",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 1,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Destilería de etanol de maíz (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Etanol de maíz (Drawdown)",
+  "pdf": "Use Corn Ethanol _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "POET (EE. UU.)",
+   "ADM (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-grass-finished-beef",
+  "nombre_es": "Carne de res de pastoreo",
+  "nombre_en": "Deploy Grass-Finished Beef",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Hacienda de res de pastoreo (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Carne de res de pastoreo (Drawdown)",
+  "pdf": "Deploy Grass-Finished Beef _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "White Oak Pastures (EE. UU.)",
+   "Verde Farms (EE. UU./Uruguay)"
+  ]
+ },
+ {
+  "id": "deploy-insect-farming-for-food-and-feed",
+  "nombre_es": "Granjas de insectos",
+  "nombre_en": "Deploy Insect Farming for Food and Feed",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "pastizal",
+    "cultivo",
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Granja de insectos (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Granjas de insectos (Drawdown)",
+  "pdf": "Deploy Insect Farming for Food and Feed _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Ÿnsect (Francia, en liquidación en 2025 #por-verificar)",
+   "Protix (Países Bajos)",
+   "InnovaFeed (Francia)"
+  ]
+ },
+ {
+  "id": "deploy-vertical-farms",
+  "nombre_es": "Granjas verticales",
+  "nombre_en": "Deploy Vertical Farms",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Granja vertical (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Granjas verticales (Drawdown)",
+  "pdf": "Deploy Vertical Farms _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "AeroFarms (EE. UU., quebró en 2023)",
+   "Infarm (Alemania, se retiró de casi todos sus mercados)",
+   "Plenty (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-artificial-upwelling",
+  "nombre_es": "Surgencia artificial",
+  "nombre_en": "Deploy Artificial Upwelling",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Bomba oceánica de surgencia (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Surgencia artificial (Drawdown)",
+  "pdf": "Deploy Artificial Upwelling _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Ocean-based Climate Solutions (EE. UU.)",
+   "Kelp Blue (Namibia, usa surgencia en sus granjas de algas)"
+  ]
+ },
+ {
+  "id": "expand-livestock-grazing",
+  "nombre_es": "Expandir la ganadería",
+  "nombre_en": "Expand Livestock Grazing",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Potrero nuevo (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Expandir la ganadería (Drawdown)",
+  "pdf": "Expand Livestock Grazing _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "(Es el modelo dominante; ver la ganadería extensiva en la Amazonía y la Orinoquía)"
+  ]
+ },
+ {
+  "id": "deploy-ocean-biomass-sinking",
+  "nombre_es": "Hundir biomasa en el océano",
+  "nombre_en": "Deploy Ocean Biomass Sinking",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Hundidor de algas (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Hundir biomasa en el océano (Drawdown)",
+  "pdf": "Deploy Ocean Biomass Sinking _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Running Tide (EE. UU., cerró en 2024)",
+   "Seafields (Reino Unido, sargazo)"
+  ]
+ },
+ {
+  "id": "deploy-ocean-fertilization",
+  "nombre_es": "Fertilizar el océano",
+  "nombre_en": "Deploy Ocean Fertilization",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 3
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Fertilizador oceánico (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Fertilizar el océano (Drawdown)",
+  "pdf": "Deploy Ocean Fertilization _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "(Ninguna empresa seria activa; el caso de Haida Salmon Restoration, Canadá 2012, es el ejemplo de lo que no hacer)"
+  ]
+ },
+ {
+  "id": "use-atmospheric-oxidation-enhancement",
+  "nombre_es": "Oxidación atmosférica",
+  "nombre_en": "Use Atmospheric Oxidation Enhancement",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -2,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "efecto aparente rápido; costos ocultos que se revelan con los años"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Rociador atmosférico (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Oxidación atmosférica (Drawdown)",
+  "pdf": "Use Atmospheric Oxidation Enhancement _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Blue Dot Change (EE. UU.)",
+   "AMR (Autonomous Methane Removal) #por-verificar"
+  ]
+ },
+ {
+  "id": "deploy-direct-air-capture",
+  "nombre_es": "Captura directa del aire",
+  "nombre_en": "Deploy Direct Air Capture",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": 0,
+    "comunidad": 0,
+    "lock_in_fosil": 0,
+    "riesgo": "muy cara en energía; compite con la electrificación"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Torre de captura directa del aire (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Captura directa del aire (Drawdown)",
+  "pdf": "Deploy Direct Air Capture _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Climeworks (Suiza)",
+   "Heirloom (EE. UU.)",
+   "1PointFive / Occidental (EE. UU.)"
+  ]
+ },
+ {
+  "id": "deploy-stratospheric-aerosol-injection",
+  "nombre_es": "Aerosoles en la estratósfera",
+  "nombre_en": "Deploy Stratospheric Aerosol Injection",
+  "sector_drawdown": "Geoengineering",
+  "categoria_juego": "geoingenieria",
+  "tipo": "reducir",
+  "calificacion_drawdown": "no_recomendada",
+  "calificacion_drawdown_en": "Not Recommended",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 1,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.6,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 3,
+    "materiales": 5
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": true,
+   "efectos_ocultos": {
+    "vida": -3,
+    "comunidad": -1,
+    "lock_in_fosil": 0,
+    "riesgo": "enfría rápido pero no baja el CO₂; si se suspende, choque de terminación"
+   },
+   "niveles": 5,
+   "adopcion": "curva_s",
+   "objeto_juego": "Avión de aerosoles (trampa)"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
+  "ficha": "Aerosoles en la estratósfera (Drawdown)",
+  "pdf": "Deploy Stratospheric Aerosol Injection _ Project Drawdown®.pdf",
+  "emprendimientos": [
+   "Make Sunsets (EE. UU.)",
+   "Stardust Solutions (Israel)"
+  ]
+ },
+ {
+  "id": "manage-coal-mine-methane",
+  "nombre_es": "Metano de minas de carbón",
+  "nombre_en": "Manage Coal Mine Methane",
+  "sector_drawdown": "Other Energy",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "en_revision",
+  "calificacion_drawdown_en": "Under Revision",
+  "potencial_gt_min": 0.28,
+  "potencial_gt_max": 0.59,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.435,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "manage-oil-gas-methane",
+  "nombre_es": "Metano de petróleo y gas",
+  "nombre_en": "Manage Oil & Gas Methane",
+  "sector_drawdown": "Other Energy",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "en_revision",
+  "calificacion_drawdown_en": "Under Revision",
+  "potencial_gt_min": 0.09,
+  "potencial_gt_max": 0.25,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.17,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 3,
+    "materiales": 8
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "use-nitrous-oxide-removal",
+  "nombre_es": "Remoción de óxido nitroso",
+  "nombre_en": "Use Nitrous Oxide Removal",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "en_revision",
+  "calificacion_drawdown_en": "Under Revision",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-refrigerant-management-end-of-life-management",
+  "nombre_es": "Refrigerantes: fin de vida",
+  "nombre_en": "Improve Refrigerant Management: End-of-life management",
+  "sector_drawdown": "Buildings & Industry",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": 0.34,
+  "potencial_gt_max": 0.52,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.43,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-refrigerant-management-leak-reduction",
+  "nombre_es": "Refrigerantes: menos fugas",
+  "nombre_en": "Improve Refrigerant Management: Leak reduction",
+  "sector_drawdown": "Buildings & Industry",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": 0.3,
+  "potencial_gt_max": 0.5,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.4,
+   "potencial_es_supuesto": false,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-heat-pump-water-heaters",
+  "nombre_es": "Calentadores con bomba de calor",
+  "nombre_en": "Deploy Heat Pump Water Heaters",
+  "sector_drawdown": "Buildings",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-solar-hot-water-heaters",
+  "nombre_es": "Calentadores solares",
+  "nombre_en": "Deploy Solar Hot Water Heaters",
+  "sector_drawdown": "Buildings",
+  "categoria_juego": "edificios",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-concentrated-solar",
+  "nombre_es": "Solar de concentración",
+  "nombre_en": "Deploy Concentrated Solar",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "desierto"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-geothermal-power",
+  "nombre_es": "Geotermia",
+  "nombre_en": "Deploy Geothermal Power",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "montaña"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-grid-efficiency",
+  "nombre_es": "Red eléctrica eficiente",
+  "nombre_en": "Improve Grid Efficiency",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-nuclear-power",
+  "nombre_es": "Nuclear",
+  "nombre_en": "Deploy Nuclear Power",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-ocean-power",
+  "nombre_es": "Energía de las olas y mareas",
+  "nombre_en": "Deploy Ocean Power",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "oceano"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-small-hydropower",
+  "nombre_es": "Pequeñas hidroeléctricas",
+  "nombre_en": "Deploy Small Hydropower",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "rio"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-utility-scale-hydropower",
+  "nombre_es": "Grandes hidroeléctricas",
+  "nombre_en": "Deploy Utility-Scale Hydropower",
+  "sector_drawdown": "Electricity",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "rio"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "boost-industrial-efficiency",
+  "nombre_es": "Industria eficiente",
+  "nombre_en": "Boost Industrial Efficiency",
+  "sector_drawdown": "Electricity & Industry",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-bioelectricity-with-carbon-capture-storage",
+  "nombre_es": "Bioenergía con captura (BECCS)",
+  "nombre_en": "Deploy Bioelectricity With Carbon Capture & Storage",
+  "sector_drawdown": "Electricity & Industry",
+  "categoria_juego": "energia",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 5,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "increase-industrial-electrification",
+  "nombre_es": "Electrificar la industria",
+  "nombre_en": "Increase Industrial Electrification",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-low-emission-industrial-feedstocks",
+  "nombre_es": "Insumos industriales limpios",
+  "nombre_en": "Deploy Low-Emission Industrial Feedstocks",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "pastizal"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-other-building-materials",
+  "nombre_es": "Materiales de construcción limpios",
+  "nombre_en": "Improve Other Building Materials",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "increase-building-deconstruction-recycling",
+  "nombre_es": "Desconstrucción y reciclaje de edificios",
+  "nombre_en": "Increase Building Deconstruction & Recycling",
+  "sector_drawdown": "Industry, Materials & Waste",
+  "categoria_juego": "industria_y_residuos",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 4
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-aviation-efficiency",
+  "nombre_es": "Aviones eficientes",
+  "nombre_en": "Improve Aviation Efficiency",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "mobilize-electric-buses",
+  "nombre_es": "Buses eléctricos",
+  "nombre_en": "Mobilize Electric Buses",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "mobilize-electric-trains",
+  "nombre_es": "Trenes eléctricos",
+  "nombre_en": "Mobilize Electric Trains",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "mobilize-electric-trucks",
+  "nombre_es": "Camiones eléctricos",
+  "nombre_en": "Mobilize Electric Trucks",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "enhance-high-speed-rail",
+  "nombre_es": "Tren de alta velocidad",
+  "nombre_en": "Enhance High-Speed Rail",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-ocean-shipping-efficiency",
+  "nombre_es": "Barcos de carga eficientes",
+  "nombre_en": "Improve Ocean Shipping Efficiency",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "oceano",
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-supply-chain-efficiency",
+  "nombre_es": "Cadenas de suministro eficientes",
+  "nombre_en": "Improve Supply Chain Efficiency",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-truck-efficiency",
+  "nombre_es": "Camiones eficientes",
+  "nombre_en": "Improve Truck Efficiency",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "hold-virtual-meetings",
+  "nombre_es": "Reuniones virtuales",
+  "nombre_en": "Hold Virtual Meetings",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-advanced-biofuels",
+  "nombre_es": "Biocombustibles avanzados",
+  "nombre_en": "Deploy Advanced Biofuels",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-routing-logistics",
+  "nombre_es": "Logística inteligente",
+  "nombre_en": "Improve Routing & Logistics",
+  "sector_drawdown": "Transportation",
+  "categoria_juego": "movilidad",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-forest-management-integrated-fire-management",
+  "nombre_es": "Manejo del fuego",
+  "nombre_en": "Improve Forest Management: Integrated Fire Management",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "improve-forest-management-sustainable-forest-management",
+  "nombre_es": "Manejo forestal sostenible",
+  "nombre_en": "Improve Forest Management: Sustainable Forest Management",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-precision-fermentation",
+  "nombre_es": "Fermentación de precisión",
+  "nombre_en": "Deploy Precision Fermentation",
+  "sector_drawdown": "FALO",
+  "categoria_juego": "comida_y_tierra",
+  "tipo": "reducir",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "manage-increase-urban-trees",
+  "nombre_es": "Árboles urbanos",
+  "nombre_en": "Manage & Increase Urban Trees",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "ciudad"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 1,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "restore-abandoned-farmland",
+  "nombre_es": "Restaurar tierras abandonadas",
+  "nombre_en": "Restore Abandoned Farmland",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-agroforestry-trees-on-cropland",
+  "nombre_es": "Agroforestería: árboles en cultivos",
+  "nombre_en": "Deploy Agroforestry: Trees on Cropland",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-agroforestry-multi-strata",
+  "nombre_es": "Agroforestería multiestrato (chagra)",
+  "nombre_en": "Deploy Agroforestry: Multi-strata",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-biomass-crops-on-degraded-land",
+  "nombre_es": "Cultivos de biomasa en tierra degradada",
+  "nombre_en": "Deploy Biomass Crops on Degraded Land",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "deploy-perennial-crops",
+  "nombre_es": "Cultivos perennes",
+  "nombre_en": "Deploy Perennial Crops",
+  "sector_drawdown": "Nature-Based CR",
+  "categoria_juego": "naturaleza",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cultivo"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 1,
+    "materiales": 2
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 2,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ },
+ {
+  "id": "produce-bio-oils",
+  "nombre_es": "Bioaceites",
+  "nombre_en": "Produce Bio Oils",
+  "sector_drawdown": "Industrial CR",
+  "categoria_juego": "remocion_tecnologica",
+  "tipo": "secuestrar",
+  "calificacion_drawdown": "proximamente",
+  "calificacion_drawdown_en": "Coming Soon",
+  "potencial_gt_min": null,
+  "potencial_gt_max": null,
+  "costo_usd_t": null,
+  "juego": {
+   "era": 3,
+   "biomas": [
+    "cualquiera"
+   ],
+   "potencial_gt_usado": 0.3,
+   "potencial_es_supuesto": true,
+   "costo": {
+    "energia": 4,
+    "materiales": 9
+   },
+   "produce": {
+    "energia": 0,
+    "materiales": 0
+   },
+   "efecto_vida": 0,
+   "efecto_comunidad": 0,
+   "es_trampa": false,
+   "efectos_ocultos": {},
+   "niveles": 5,
+   "adopcion": "curva_s"
+  },
+  "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial"
+ }
+]

@@ -1,0 +1,166 @@
+HR|Deploy Alternative Insulation Materials|Buildings & Industry|0.05|0.12|-121
+HR|Deploy Alternative Refrigerants|Buildings & Industry|2.50|2.70|50
+HR|Deploy Building Automation Systems|Buildings & Electricity|0.18|0.36|0.01
+HR|Improve District Heating: Buildings|Buildings & Electricity|0.06|0.12|
+HR|Use Heat Pumps|Buildings & Electricity|0.58|0.93|-200
+HR|Use Smart & Programmable Thermostats: Heating|Buildings & Electricity|0.07|0.12|-370
+HR|Improve Windows & Glass|Buildings & Electricity|2.10|2.60|-123
+HR|Deploy Agrivoltaics|Electricity|1.80|4.10|
+HR|Deploy Distributed Solar PV|Electricity|2.80|3.50|
+HR|Deploy LED Lighting|Electricity|0.62|0.65|-175
+HR|Deploy Offshore Wind Turbines|Electricity|1.90|3.04|
+HR|Deploy Onshore Wind Turbines|Electricity|5.40|7.50|
+HR|Deploy Utility-Scale Solar PV|Electricity|9.20|11.00|
+HR|Improve Cement Production: Alternative fuels|Industry, Materials & Waste|0.06|0.20|-50
+HR|Improve Cement Production: Clinker substitution|Industry, Materials & Waste|0.70|1.00|-30
+HR|Improve Cement Production: Efficiency upgrades|Industry, Materials & Waste|0.08|0.10|-60
+HR|Increase Centralized Composting|Industry, Materials & Waste|0.78|1.20|10
+HR|Deploy Industrial Green Hydrogen|Industry, Materials & Waste|0.31|0.60|
+HR|Improve Landfill Management: Biocovers|Industry, Materials & Waste|0.98|1.59|0.47
+HR|Improve Landfill Management: Methane capture|Industry, Materials & Waste|0.13|0.97|-6.42
+HR|Increase Recycling: Metals|Industry, Materials & Waste|1.90|2.10|-100
+HR|Increase Recycling: Paper and Cardboard|Industry, Materials & Waste|0.22|0.26|-400
+HR|Increase Recycling: Plastics|Industry, Materials & Waste|0.09|0.10|-4
+HR|Increase Carpooling|Transportation|0.25|0.96|-3119
+HR|Mobilize Electric Bicycles: Private|Transportation|0.05|0.11|-1748
+HR|Mobilize Electric Cars|Transportation|1.26|2.30|-1019
+HR|Mobilize Electric Seated Scooters & Motorcycles|Transportation|0.31|0.41|-382
+HR|Mobilize Hybrid Cars|Transportation|0.34|0.86|247
+HR|Improve Nonmotorized Transportation|Transportation|1.43|1.89|-1771
+HR|Enhance Public Transit|Transportation|0.70|1.03|-3300
+HR|Reduce Crop Residue Burning|FALO|0.11|0.39|-10.20
+HR|Improve Diets|FALO|1.40|2.80|-8.54
+HR|Reduce Food Loss & Waste|FALO|1.23|2.47|-193.99
+HR|Improve Nutrient Management|FALO|0.42|0.54|-85.21
+HR|Improve Rice Production|FALO|0.10|0.16|-175
+HR|Improve Annual Cropping|FALO & Nature-Based CR|0.43|1.09|47.80
+HR|Protect Coastal Wetlands: Mangrove ecosystems|FALO & Nature-Based CR|0.06|0.09|1.00
+HR|Protect Coastal Wetlands: Seagrass ecosystems|FALO & Nature-Based CR|0.06|0.08|-6
+HR|Protect Forests: Boreal|FALO & Nature-Based CR|0.25|0.26|2.00
+HR|Protect Forests: Subtropical|FALO & Nature-Based CR|0.28|0.48|2.00
+HR|Protect Forests: Temperate|FALO & Nature-Based CR|0.29|0.53|2.00
+HR|Protect Forests: Tropical|FALO & Nature-Based CR|1.67|2.35|2.00
+HR|Protect Grasslands & Savannas: Boreal|FALO & Nature-Based CR|0.31|0.34|-1.58
+HR|Protect Grasslands & Savannas: Temperate|FALO & Nature-Based CR|0.20|0.27|-1.58
+HR|Protect Grasslands & Savannas: Subtropical|FALO & Nature-Based CR|0.04|0.06|-1.58
+HR|Protect Grasslands & Savannas: Tropical|FALO & Nature-Based CR|0.03|0.04|-1.58
+HR|Protect Peatlands: Boreal|FALO & Nature-Based CR|0.18|0.24|0.25
+HR|Protect Peatlands: Temperate|FALO & Nature-Based CR|0.08|0.11|0.25
+HR|Protect Peatlands: Subtropical|FALO & Nature-Based CR|0.12|0.15|0.25
+HR|Protect Peatlands: Tropical|FALO & Nature-Based CR|0.95|1.22|0.25
+HR|Protect Seaweed Ecosystems|FALO & Nature-Based CR|0.07|0.10|-72
+HR|Restore Forests: Boreal|Nature-Based CR|0.10|0.15|53
+HR|Restore Forests: Temperate|Nature-Based CR|0.12|0.17|53
+HR|Restore Forests: Subtropical|Nature-Based CR|0.02|0.03|53
+HR|Restore Forests: Tropical|Nature-Based CR|0.48|0.73|53
+HR|Restore Peatlands: Boreal|Nature-Based CR|0.13|0.25|55
+HR|Restore Peatlands: Temperate|Nature-Based CR|0.07|0.15|55
+HR|Restore Peatlands: Subtropical|Nature-Based CR|0.03|0.05|55
+HR|Restore Peatlands: Tropical|Nature-Based CR|0.26|0.52|55
+HR|Deploy Silvopasture|Nature-Based CR|0.40|0.98|43.25
+HR|Use Biochar|Industrial CR|0.13|0.47|230
+WO|Boost Appliance & Equipment Efficiency|Buildings & Electricity|||
+WO|Improve Building Envelopes|Buildings & Electricity|||
+WO|Deploy Green Roofs|Buildings & Electricity|||
+WO|Use Low-Flow Fixtures|Buildings & Electricity|||
+WO|Use Smart & Programmable Thermostats: Cooling|Buildings & Electricity|0.02|0.05|-230
+WO|Deploy Cool Roofs|Electricity|||
+WO|Increase Decentralized Composting|Industry, Materials & Waste|||
+WO|Increase Recycling: Glass|Industry, Materials & Waste|0.00|0.00|9000
+WO|Mobilize Electric Bicycles: Shared|Transportation|0.00|0.00|22860
+WO|Improve Fishing Vessel Efficiency|Transportation|||
+WO|Improve Aquaculture|FALO|||
+WO|Deploy Electric Irrigation Pumps|FALO|||
+WO|Improve Manure Management|FALO|||
+WO|Reduce Overfishing|FALO|||
+WO|Protect Seafloors|FALO|||
+WO|Protect Coastal Wetlands: Salt marsh ecosystems|FALO & Nature-Based CR|0.02|0.03|2
+WO|Restore Grasslands & Savannas|Nature-Based CR|||
+WO|Restore Mangrove Ecosystems|Nature-Based CR|||
+WO|Restore Salt Marsh Ecosystems|Nature-Based CR|||
+WO|Restore Seagrass Ecosystems|Nature-Based CR|||
+WO|Restore Seaweed Ecosystems|Nature-Based CR|||
+KW|Improve Fuel-Burning Cooking Equipment|Buildings|||
+KW|Deploy Electric Cooking Equipment|Buildings & Electricity|||
+KW|Deploy District Cooling|Electricity|||
+KW|Deploy Micro Wind Turbines|Electricity|||
+KW|Deploy Nuclear Fusion|Electricity|||
+KW|Deploy Small Modular Nuclear Reactors|Electricity|||
+KW|Deploy Advanced Geothermal Energy|Electricity & Industry|||
+KW|Deploy Methane Digesters|Electricity & Industry|||
+KW|Improve District Heating: Industry|Industry, Materials & Waste|||
+KW|Deploy Plastic Alternatives / Bioplastics|Industry, Materials & Waste|||
+KW|Improve Steel Production|Industry, Materials & Waste|||
+KW|Reduce Airplane Contrails|Transportation|||
+KW|Mobilize Green Hydrogen for Aviation and Trucking|Transportation|||
+KW|Deploy Sustainable Aviation Fuel|Transportation|||
+KW|Advance Cultivated Meat|FALO|||
+KW|Use Feed Additives|FALO|||
+KW|Improve Irrigation Water Use Efficiency|FALO|||
+KW|Deploy Leaf Protein Concentrates|FALO|||
+KW|Improve Ruminant Breeding|FALO|||
+KW|Deploy Seaweed Farming for Food|FALO|||
+KW|Deploy Alternative Grazing|Nature-Based CR|||
+KW|Deploy Enhanced Rock Weathering|Nature-Based CR|||
+KW|Reduce Grazing Intensity|Nature-Based CR|||
+KW|Restore Large Herbivores|Nature-Based CR|||
+KW|Deploy Ocean Alkalinity Enhancement|Nature-Based CR|||
+KW|Deploy Ocean Electrochemistry|Nature-Based CR|||
+KW|Restore Whale Populations|Nature-Based CR|||
+KW|Bury Biomass|Industrial CR|||
+KW|Use Methane-Oxidizing Coatings|Industrial CR|||
+NR|Carbon Capture & Storage on Fossil Fuel Power Plants|Electricity|||
+NR|Deploy Waste to Energy|Electricity & Industry|||
+NR|Produce Blue Hydrogen|Industry, Materials & Waste|||
+NR|Use Corn Ethanol|Transportation|||
+NR|Deploy Grass-Finished Beef|FALO|||
+NR|Deploy Insect Farming for Food and Feed|FALO|||
+NR|Deploy Vertical Farms|FALO|||
+NR|Deploy Artificial Upwelling|Nature-Based CR|||
+NR|Expand Livestock Grazing|Nature-Based CR|||
+NR|Deploy Ocean Biomass Sinking|Nature-Based CR|||
+NR|Deploy Ocean Fertilization|Nature-Based CR|||
+NR|Use Atmospheric Oxidation Enhancement|Industrial CR|||
+NR|Deploy Direct Air Capture|Industrial CR|||
+NR|Deploy Stratospheric Aerosol Injection|Geoengineering|||
+UR|Manage Coal Mine Methane|Other Energy|0.28|0.59|
+UR|Manage Oil & Gas Methane|Other Energy|0.09|0.25|
+UR|Use Nitrous Oxide Removal|Industrial CR|||
+CS|Improve Refrigerant Management: End-of-life management|Buildings & Industry|0.34|0.52|
+CS|Improve Refrigerant Management: Leak reduction|Buildings & Industry|0.30|0.50|
+CS|Deploy Heat Pump Water Heaters|Buildings|||
+CS|Deploy Solar Hot Water Heaters|Buildings|||
+CS|Deploy Concentrated Solar|Electricity|||
+CS|Deploy Geothermal Power|Electricity|||
+CS|Improve Grid Efficiency|Electricity|||
+CS|Deploy Nuclear Power|Electricity|||
+CS|Deploy Ocean Power|Electricity|||
+CS|Deploy Small Hydropower|Electricity|||
+CS|Deploy Utility-Scale Hydropower|Electricity|||
+CS|Boost Industrial Efficiency|Electricity & Industry|||
+CS|Deploy Bioelectricity With Carbon Capture & Storage|Electricity & Industry|||
+CS|Increase Industrial Electrification|Industry, Materials & Waste|||
+CS|Deploy Low-Emission Industrial Feedstocks|Industry, Materials & Waste|||
+CS|Improve Other Building Materials|Industry, Materials & Waste|||
+CS|Increase Building Deconstruction & Recycling|Industry, Materials & Waste|||
+CS|Improve Aviation Efficiency|Transportation|||
+CS|Mobilize Electric Buses|Transportation|||
+CS|Mobilize Electric Trains|Transportation|||
+CS|Mobilize Electric Trucks|Transportation|||
+CS|Enhance High-Speed Rail|Transportation|||
+CS|Improve Ocean Shipping Efficiency|Transportation|||
+CS|Improve Supply Chain Efficiency|Transportation|||
+CS|Improve Truck Efficiency|Transportation|||
+CS|Hold Virtual Meetings|Transportation|||
+CS|Deploy Advanced Biofuels|Transportation|||
+CS|Improve Routing & Logistics|Transportation|||
+CS|Improve Forest Management: Integrated Fire Management|FALO|||
+CS|Improve Forest Management: Sustainable Forest Management|FALO|||
+CS|Deploy Precision Fermentation|FALO|||
+CS|Manage & Increase Urban Trees|Nature-Based CR|||
+CS|Restore Abandoned Farmland|Nature-Based CR|||
+CS|Deploy Agroforestry: Trees on Cropland|Nature-Based CR|||
+CS|Deploy Agroforestry: Multi-strata|Nature-Based CR|||
+CS|Deploy Biomass Crops on Degraded Land|Nature-Based CR|||
+CS|Deploy Perennial Crops|Nature-Based CR|||
+CS|Produce Bio Oils|Industrial CR|||

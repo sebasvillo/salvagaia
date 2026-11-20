@@ -1,0 +1,167 @@
+id,nombre_es,nombre_en,sector_drawdown,calificacion,potencial_min,potencial_max,costo_usd_t,era,biomas,es_trampa
+deploy-alternative-insulation-materials,Aislamientos alternativos,Deploy Alternative Insulation Materials,Buildings & Industry,altamente_recomendada,0.05,0.12,-121.0,1,ciudad,False
+deploy-alternative-refrigerants,Refrigerantes alternativos,Deploy Alternative Refrigerants,Buildings & Industry,altamente_recomendada,2.5,2.7,50.0,2,ciudad,False
+deploy-building-automation-systems,Edificios automatizados,Deploy Building Automation Systems,Buildings & Electricity,altamente_recomendada,0.18,0.36,0.01,1,ciudad,False
+improve-district-heating-buildings,Calefacción distrital (edificios),Improve District Heating: Buildings,Buildings & Electricity,altamente_recomendada,0.06,0.12,,2,ciudad,False
+use-heat-pumps,Bombas de calor,Use Heat Pumps,Buildings & Electricity,altamente_recomendada,0.58,0.93,-200.0,1,ciudad,False
+use-smart-programmable-thermostats-heating,Termostatos inteligentes (calefacción),Use Smart & Programmable Thermostats: Heating,Buildings & Electricity,altamente_recomendada,0.07,0.12,-370.0,1,ciudad,False
+improve-windows-glass,Ventanas y vidrios eficientes,Improve Windows & Glass,Buildings & Electricity,altamente_recomendada,2.1,2.6,-123.0,1,pastizal;ciudad,False
+deploy-agrivoltaics,Agrovoltaica,Deploy Agrivoltaics,Electricity,altamente_recomendada,1.8,4.1,,2,cultivo,False
+deploy-distributed-solar-pv,Solar en techos,Deploy Distributed Solar PV,Electricity,altamente_recomendada,2.8,3.5,,2,ciudad,False
+deploy-led-lighting,Iluminación LED,Deploy LED Lighting,Electricity,altamente_recomendada,0.62,0.65,-175.0,1,ciudad,False
+deploy-offshore-wind-turbines,Eólica marina,Deploy Offshore Wind Turbines,Electricity,altamente_recomendada,1.9,3.04,,2,oceano_costero;pastizal,False
+deploy-onshore-wind-turbines,Eólica en tierra,Deploy Onshore Wind Turbines,Electricity,altamente_recomendada,5.4,7.5,,2,pastizal,False
+deploy-utility-scale-solar-pv,Granjas solares,Deploy Utility-Scale Solar PV,Electricity,altamente_recomendada,9.2,11.0,,2,desierto,False
+improve-cement-production-alternative-fuels,Cemento: combustibles alternativos,Improve Cement Production: Alternative fuels,"Industry, Materials & Waste",altamente_recomendada,0.06,0.2,-50.0,1,ciudad,False
+improve-cement-production-clinker-substitution,Cemento: sustitución de clínker,Improve Cement Production: Clinker substitution,"Industry, Materials & Waste",altamente_recomendada,0.7,1.0,-30.0,1,ciudad,False
+improve-cement-production-efficiency-upgrades,Cemento: eficiencia,Improve Cement Production: Efficiency upgrades,"Industry, Materials & Waste",altamente_recomendada,0.08,0.1,-60.0,1,ciudad,False
+increase-centralized-composting,Compostaje municipal,Increase Centralized Composting,"Industry, Materials & Waste",altamente_recomendada,0.78,1.2,10.0,1,ciudad,False
+deploy-industrial-green-hydrogen,Hidrógeno verde industrial,Deploy Industrial Green Hydrogen,"Industry, Materials & Waste",altamente_recomendada,0.31,0.6,,2,ciudad,False
+improve-landfill-management-biocovers,Rellenos: biocubiertas,Improve Landfill Management: Biocovers,"Industry, Materials & Waste",altamente_recomendada,0.98,1.59,0.47,1,ciudad,False
+improve-landfill-management-methane-capture,Rellenos: captura de metano,Improve Landfill Management: Methane capture,"Industry, Materials & Waste",altamente_recomendada,0.13,0.97,-6.42,1,ciudad,False
+increase-recycling-metals,Reciclaje de metales,Increase Recycling: Metals,"Industry, Materials & Waste",altamente_recomendada,1.9,2.1,-100.0,1,ciudad,False
+increase-recycling-paper-and-cardboard,Reciclaje de papel y cartón,Increase Recycling: Paper and Cardboard,"Industry, Materials & Waste",altamente_recomendada,0.22,0.26,-400.0,1,ciudad,False
+increase-recycling-plastics,Reciclaje de plásticos,Increase Recycling: Plastics,"Industry, Materials & Waste",altamente_recomendada,0.09,0.1,-4.0,1,ciudad,False
+increase-carpooling,Carro compartido,Increase Carpooling,Transportation,altamente_recomendada,0.25,0.96,-3119.0,1,ciudad,False
+mobilize-electric-bicycles-private,Bicicletas eléctricas,Mobilize Electric Bicycles: Private,Transportation,altamente_recomendada,0.05,0.11,-1748.0,1,ciudad,False
+mobilize-electric-cars,Carros eléctricos,Mobilize Electric Cars,Transportation,altamente_recomendada,1.26,2.3,-1019.0,1,ciudad,False
+mobilize-electric-seated-scooters-motorcycles,Motos eléctricas,Mobilize Electric Seated Scooters & Motorcycles,Transportation,altamente_recomendada,0.31,0.41,-382.0,1,ciudad,False
+mobilize-hybrid-cars,Carros híbridos,Mobilize Hybrid Cars,Transportation,altamente_recomendada,0.34,0.86,247.0,2,ciudad,False
+improve-nonmotorized-transportation,Caminar y pedalear,Improve Nonmotorized Transportation,Transportation,altamente_recomendada,1.43,1.89,-1771.0,1,ciudad,False
+enhance-public-transit,Transporte público,Enhance Public Transit,Transportation,altamente_recomendada,0.7,1.03,-3300.0,1,ciudad,False
+reduce-crop-residue-burning,No quemar residuos de cosecha,Reduce Crop Residue Burning,FALO,altamente_recomendada,0.11,0.39,-10.2,1,cultivo,False
+improve-diets,Dietas basadas en plantas,Improve Diets,FALO,altamente_recomendada,1.4,2.8,-8.54,1,ciudad,False
+reduce-food-loss-waste,Cero desperdicio de comida,Reduce Food Loss & Waste,FALO,altamente_recomendada,1.23,2.47,-193.99,1,ciudad,False
+improve-nutrient-management,Manejo de nutrientes,Improve Nutrient Management,FALO,altamente_recomendada,0.42,0.54,-85.21,1,cultivo,False
+improve-rice-production,Arroz mejorado,Improve Rice Production,FALO,altamente_recomendada,0.1,0.16,-175.0,1,cultivo,False
+improve-annual-cropping,Cultivos anuales regenerativos,Improve Annual Cropping,FALO & Nature-Based CR,altamente_recomendada,0.43,1.09,47.8,2,cultivo,False
+protect-coastal-wetlands-mangrove-ecosystems,Proteger manglares,Protect Coastal Wetlands: Mangrove ecosystems,FALO & Nature-Based CR,altamente_recomendada,0.06,0.09,1.0,1,costa,False
+protect-coastal-wetlands-seagrass-ecosystems,Proteger pastos marinos,Protect Coastal Wetlands: Seagrass ecosystems,FALO & Nature-Based CR,altamente_recomendada,0.06,0.08,-6.0,1,oceano_costero,False
+protect-forests-boreal,Proteger bosque boreal,Protect Forests: Boreal,FALO & Nature-Based CR,altamente_recomendada,0.25,0.26,2.0,1,boreal,False
+protect-forests-subtropical,Proteger bosque subtropical,Protect Forests: Subtropical,FALO & Nature-Based CR,altamente_recomendada,0.28,0.48,2.0,1,bosque_subtropical,False
+protect-forests-temperate,Proteger bosque templado,Protect Forests: Temperate,FALO & Nature-Based CR,altamente_recomendada,0.29,0.53,2.0,1,bosque_templado,False
+protect-forests-tropical,Proteger bosque tropical,Protect Forests: Tropical,FALO & Nature-Based CR,altamente_recomendada,1.67,2.35,2.0,1,selva_tropical,False
+protect-grasslands-savannas-boreal,Proteger pastizales boreales,Protect Grasslands & Savannas: Boreal,FALO & Nature-Based CR,altamente_recomendada,0.31,0.34,-1.58,1,boreal;pastizal,False
+protect-grasslands-savannas-temperate,Proteger pastizales templados,Protect Grasslands & Savannas: Temperate,FALO & Nature-Based CR,altamente_recomendada,0.2,0.27,-1.58,1,bosque_templado;pastizal,False
+protect-grasslands-savannas-subtropical,Proteger pastizales subtropicales,Protect Grasslands & Savannas: Subtropical,FALO & Nature-Based CR,altamente_recomendada,0.04,0.06,-1.58,1,bosque_subtropical;pastizal,False
+protect-grasslands-savannas-tropical,Proteger sabanas tropicales,Protect Grasslands & Savannas: Tropical,FALO & Nature-Based CR,altamente_recomendada,0.03,0.04,-1.58,1,selva_tropical;pastizal,False
+protect-peatlands-boreal,Proteger turberas boreales,Protect Peatlands: Boreal,FALO & Nature-Based CR,altamente_recomendada,0.18,0.24,0.25,1,turbera;boreal,False
+protect-peatlands-temperate,Proteger turberas templadas,Protect Peatlands: Temperate,FALO & Nature-Based CR,altamente_recomendada,0.08,0.11,0.25,1,turbera;bosque_templado,False
+protect-peatlands-subtropical,Proteger turberas subtropicales,Protect Peatlands: Subtropical,FALO & Nature-Based CR,altamente_recomendada,0.12,0.15,0.25,1,turbera;bosque_subtropical,False
+protect-peatlands-tropical,Proteger turberas tropicales,Protect Peatlands: Tropical,FALO & Nature-Based CR,altamente_recomendada,0.95,1.22,0.25,1,turbera;selva_tropical,False
+protect-seaweed-ecosystems,Proteger bosques de algas,Protect Seaweed Ecosystems,FALO & Nature-Based CR,altamente_recomendada,0.07,0.1,-72.0,1,oceano_costero,False
+restore-forests-boreal,Restaurar bosque boreal,Restore Forests: Boreal,Nature-Based CR,altamente_recomendada,0.1,0.15,53.0,2,boreal,False
+restore-forests-temperate,Restaurar bosque templado,Restore Forests: Temperate,Nature-Based CR,altamente_recomendada,0.12,0.17,53.0,2,bosque_templado,False
+restore-forests-subtropical,Restaurar bosque subtropical,Restore Forests: Subtropical,Nature-Based CR,altamente_recomendada,0.02,0.03,53.0,2,bosque_subtropical,False
+restore-forests-tropical,Restaurar bosque tropical,Restore Forests: Tropical,Nature-Based CR,altamente_recomendada,0.48,0.73,53.0,2,selva_tropical,False
+restore-peatlands-boreal,Restaurar turberas boreales,Restore Peatlands: Boreal,Nature-Based CR,altamente_recomendada,0.13,0.25,55.0,2,turbera;boreal,False
+restore-peatlands-temperate,Restaurar turberas templadas,Restore Peatlands: Temperate,Nature-Based CR,altamente_recomendada,0.07,0.15,55.0,2,turbera;bosque_templado,False
+restore-peatlands-subtropical,Restaurar turberas subtropicales,Restore Peatlands: Subtropical,Nature-Based CR,altamente_recomendada,0.03,0.05,55.0,2,turbera;bosque_subtropical,False
+restore-peatlands-tropical,Restaurar turberas tropicales,Restore Peatlands: Tropical,Nature-Based CR,altamente_recomendada,0.26,0.52,55.0,2,turbera;selva_tropical,False
+deploy-silvopasture,Silvopastoreo,Deploy Silvopasture,Nature-Based CR,altamente_recomendada,0.4,0.98,43.25,2,pastizal,False
+use-biochar,Biochar,Use Biochar,Industrial CR,altamente_recomendada,0.13,0.47,230.0,2,cultivo,False
+boost-appliance-equipment-efficiency,Electrodomésticos eficientes,Boost Appliance & Equipment Efficiency,Buildings & Electricity,valiosa,,,,2,ciudad,False
+improve-building-envelopes,Envolventes eficientes,Improve Building Envelopes,Buildings & Electricity,valiosa,,,,2,ciudad,False
+deploy-green-roofs,Techos verdes,Deploy Green Roofs,Buildings & Electricity,valiosa,,,,2,ciudad,False
+use-low-flow-fixtures,Grifería de bajo flujo,Use Low-Flow Fixtures,Buildings & Electricity,valiosa,,,,2,ciudad,False
+use-smart-programmable-thermostats-cooling,Termostatos inteligentes (enfriamiento),Use Smart & Programmable Thermostats: Cooling,Buildings & Electricity,valiosa,0.02,0.05,-230.0,2,ciudad,False
+deploy-cool-roofs,Techos fríos,Deploy Cool Roofs,Electricity,valiosa,,,,2,ciudad,False
+increase-decentralized-composting,Compostaje comunitario (pacas),Increase Decentralized Composting,"Industry, Materials & Waste",valiosa,,,,2,ciudad,False
+increase-recycling-glass,Reciclaje de vidrio,Increase Recycling: Glass,"Industry, Materials & Waste",valiosa,0.0,0.0,9000.0,2,ciudad,False
+mobilize-electric-bicycles-shared,Bicicletas eléctricas compartidas,Mobilize Electric Bicycles: Shared,Transportation,valiosa,0.0,0.0,22860.0,2,ciudad,False
+improve-fishing-vessel-efficiency,Barcos pesqueros eficientes,Improve Fishing Vessel Efficiency,Transportation,valiosa,,,,2,oceano;ciudad,False
+improve-aquaculture,Acuicultura mejorada,Improve Aquaculture,FALO,valiosa,,,,2,cualquiera,False
+deploy-electric-irrigation-pumps,Bombas de riego eléctricas,Deploy Electric Irrigation Pumps,FALO,valiosa,,,,2,cultivo,False
+improve-manure-management,Manejo de estiércol,Improve Manure Management,FALO,valiosa,,,,2,cultivo,False
+reduce-overfishing,Reducir la sobrepesca,Reduce Overfishing,FALO,valiosa,,,,2,oceano,False
+protect-seafloors,Proteger el fondo marino,Protect Seafloors,FALO,valiosa,,,,2,oceano,False
+protect-coastal-wetlands-salt-marsh-ecosystems,Proteger marismas,Protect Coastal Wetlands: Salt marsh ecosystems,FALO & Nature-Based CR,valiosa,0.02,0.03,2.0,2,costa,False
+restore-grasslands-savannas,Restaurar pastizales y sabanas,Restore Grasslands & Savannas,Nature-Based CR,valiosa,,,,2,pastizal,False
+restore-mangrove-ecosystems,Restaurar manglares,Restore Mangrove Ecosystems,Nature-Based CR,valiosa,,,,2,costa,False
+restore-salt-marsh-ecosystems,Restaurar marismas,Restore Salt Marsh Ecosystems,Nature-Based CR,valiosa,,,,2,costa,False
+restore-seagrass-ecosystems,Restaurar pastos marinos,Restore Seagrass Ecosystems,Nature-Based CR,valiosa,,,,2,oceano_costero,False
+restore-seaweed-ecosystems,Restaurar bosques de algas,Restore Seaweed Ecosystems,Nature-Based CR,valiosa,,,,2,oceano_costero,False
+improve-fuel-burning-cooking-equipment,Estufas mejoradas,Improve Fuel-Burning Cooking Equipment,Buildings,seguir_mirando,,,,4,ciudad,False
+deploy-electric-cooking-equipment,Cocinas eléctricas,Deploy Electric Cooking Equipment,Buildings & Electricity,seguir_mirando,,,,4,ciudad,False
+deploy-district-cooling,Enfriamiento distrital,Deploy District Cooling,Electricity,seguir_mirando,,,,4,ciudad,False
+deploy-micro-wind-turbines,Microturbinas eólicas,Deploy Micro Wind Turbines,Electricity,seguir_mirando,,,,4,pastizal,False
+deploy-nuclear-fusion,Fusión nuclear,Deploy Nuclear Fusion,Electricity,seguir_mirando,,,,5,ciudad,False
+deploy-small-modular-nuclear-reactors,Reactores nucleares modulares,Deploy Small Modular Nuclear Reactors,Electricity,seguir_mirando,,,,4,ciudad,False
+deploy-advanced-geothermal-energy,Geotermia avanzada,Deploy Advanced Geothermal Energy,Electricity & Industry,seguir_mirando,,,,4,montaña,False
+deploy-methane-digesters,Biodigestores,Deploy Methane Digesters,Electricity & Industry,seguir_mirando,,,,4,ciudad,False
+improve-district-heating-industry,Calefacción distrital (industria),Improve District Heating: Industry,"Industry, Materials & Waste",seguir_mirando,,,,4,ciudad,False
+deploy-plastic-alternatives-bioplastics,Bioplásticos,Deploy Plastic Alternatives / Bioplastics,"Industry, Materials & Waste",seguir_mirando,,,,4,ciudad,False
+improve-steel-production,Acero limpio,Improve Steel Production,"Industry, Materials & Waste",seguir_mirando,,,,4,ciudad,False
+reduce-airplane-contrails,Reducir estelas de aviones,Reduce Airplane Contrails,Transportation,seguir_mirando,,,,4,ciudad,False
+mobilize-green-hydrogen-for-aviation-and-trucking,Hidrógeno verde para aviones y camiones,Mobilize Green Hydrogen for Aviation and Trucking,Transportation,seguir_mirando,,,,4,ciudad,False
+deploy-sustainable-aviation-fuel,Combustible sostenible de aviación,Deploy Sustainable Aviation Fuel,Transportation,seguir_mirando,,,,4,ciudad,False
+advance-cultivated-meat,Carne cultivada,Advance Cultivated Meat,FALO,seguir_mirando,,,,4,cualquiera,False
+use-feed-additives,Aditivos para el ganado,Use Feed Additives,FALO,seguir_mirando,,,,4,pastizal,False
+improve-irrigation-water-use-efficiency,Riego eficiente,Improve Irrigation Water Use Efficiency,FALO,seguir_mirando,,,,4,cultivo,False
+deploy-leaf-protein-concentrates,Proteína de hojas,Deploy Leaf Protein Concentrates,FALO,seguir_mirando,,,,4,cualquiera,False
+improve-ruminant-breeding,Mejoramiento de rumiantes,Improve Ruminant Breeding,FALO,seguir_mirando,,,,4,pastizal,False
+deploy-seaweed-farming-for-food,Cultivo de algas para comer,Deploy Seaweed Farming for Food,FALO,seguir_mirando,,,,4,oceano_costero;cultivo;ciudad,False
+deploy-alternative-grazing,Pastoreo alternativo,Deploy Alternative Grazing,Nature-Based CR,seguir_mirando,,,,4,pastizal,False
+deploy-enhanced-rock-weathering,Meteorización mejorada de rocas,Deploy Enhanced Rock Weathering,Nature-Based CR,seguir_mirando,,,,4,cultivo,False
+reduce-grazing-intensity,Pastoreo menos intensivo,Reduce Grazing Intensity,Nature-Based CR,seguir_mirando,,,,4,pastizal,False
+restore-large-herbivores,Restaurar grandes herbívoros,Restore Large Herbivores,Nature-Based CR,seguir_mirando,,,,4,pastizal,False
+deploy-ocean-alkalinity-enhancement,Alcalinizar el océano,Deploy Ocean Alkalinity Enhancement,Nature-Based CR,seguir_mirando,,,,4,oceano,False
+deploy-ocean-electrochemistry,Electroquímica oceánica,Deploy Ocean Electrochemistry,Nature-Based CR,seguir_mirando,,,,4,oceano,False
+restore-whale-populations,Restaurar ballenas,Restore Whale Populations,Nature-Based CR,seguir_mirando,,,,4,oceano,False
+bury-biomass,Enterrar biomasa,Bury Biomass,Industrial CR,seguir_mirando,,,,4,cualquiera,False
+use-methane-oxidizing-coatings,Recubrimientos que oxidan metano,Use Methane-Oxidizing Coatings,Industrial CR,seguir_mirando,,,,4,cualquiera,False
+carbon-capture-storage-on-fossil-fuel-power-plants,Captura de carbono en térmicas fósiles,Carbon Capture & Storage on Fossil Fuel Power Plants,Electricity,no_recomendada,,,,1,ciudad,True
+deploy-waste-to-energy,Incineración de basura con energía,Deploy Waste to Energy,Electricity & Industry,no_recomendada,,,,1,ciudad,True
+produce-blue-hydrogen,Hidrógeno azul,Produce Blue Hydrogen,"Industry, Materials & Waste",no_recomendada,,,,1,ciudad,True
+use-corn-ethanol,Etanol de maíz,Use Corn Ethanol,Transportation,no_recomendada,,,,1,ciudad,True
+deploy-grass-finished-beef,Carne de res de pastoreo,Deploy Grass-Finished Beef,FALO,no_recomendada,,,,1,pastizal,True
+deploy-insect-farming-for-food-and-feed,Granjas de insectos,Deploy Insect Farming for Food and Feed,FALO,no_recomendada,,,,1,pastizal;cultivo;ciudad,True
+deploy-vertical-farms,Granjas verticales,Deploy Vertical Farms,FALO,no_recomendada,,,,1,cultivo,True
+deploy-artificial-upwelling,Surgencia artificial,Deploy Artificial Upwelling,Nature-Based CR,no_recomendada,,,,1,oceano,True
+expand-livestock-grazing,Expandir la ganadería,Expand Livestock Grazing,Nature-Based CR,no_recomendada,,,,1,pastizal,True
+deploy-ocean-biomass-sinking,Hundir biomasa en el océano,Deploy Ocean Biomass Sinking,Nature-Based CR,no_recomendada,,,,1,oceano,True
+deploy-ocean-fertilization,Fertilizar el océano,Deploy Ocean Fertilization,Nature-Based CR,no_recomendada,,,,1,oceano,True
+use-atmospheric-oxidation-enhancement,Oxidación atmosférica,Use Atmospheric Oxidation Enhancement,Industrial CR,no_recomendada,,,,1,cualquiera,True
+deploy-direct-air-capture,Captura directa del aire,Deploy Direct Air Capture,Industrial CR,no_recomendada,,,,1,cualquiera,True
+deploy-stratospheric-aerosol-injection,Aerosoles en la estratósfera,Deploy Stratospheric Aerosol Injection,Geoengineering,no_recomendada,,,,1,cualquiera,True
+manage-coal-mine-methane,Metano de minas de carbón,Manage Coal Mine Methane,Other Energy,en_revision,0.28,0.59,,3,ciudad,False
+manage-oil-gas-methane,Metano de petróleo y gas,Manage Oil & Gas Methane,Other Energy,en_revision,0.09,0.25,,3,ciudad,False
+use-nitrous-oxide-removal,Remoción de óxido nitroso,Use Nitrous Oxide Removal,Industrial CR,en_revision,,,,3,cualquiera,False
+improve-refrigerant-management-end-of-life-management,Refrigerantes: fin de vida,Improve Refrigerant Management: End-of-life management,Buildings & Industry,proximamente,0.34,0.52,,3,ciudad,False
+improve-refrigerant-management-leak-reduction,Refrigerantes: menos fugas,Improve Refrigerant Management: Leak reduction,Buildings & Industry,proximamente,0.3,0.5,,3,ciudad,False
+deploy-heat-pump-water-heaters,Calentadores con bomba de calor,Deploy Heat Pump Water Heaters,Buildings,proximamente,,,,3,ciudad,False
+deploy-solar-hot-water-heaters,Calentadores solares,Deploy Solar Hot Water Heaters,Buildings,proximamente,,,,3,ciudad,False
+deploy-concentrated-solar,Solar de concentración,Deploy Concentrated Solar,Electricity,proximamente,,,,3,desierto,False
+deploy-geothermal-power,Geotermia,Deploy Geothermal Power,Electricity,proximamente,,,,3,montaña,False
+improve-grid-efficiency,Red eléctrica eficiente,Improve Grid Efficiency,Electricity,proximamente,,,,3,ciudad,False
+deploy-nuclear-power,Nuclear,Deploy Nuclear Power,Electricity,proximamente,,,,3,ciudad,False
+deploy-ocean-power,Energía de las olas y mareas,Deploy Ocean Power,Electricity,proximamente,,,,3,oceano,False
+deploy-small-hydropower,Pequeñas hidroeléctricas,Deploy Small Hydropower,Electricity,proximamente,,,,3,rio,False
+deploy-utility-scale-hydropower,Grandes hidroeléctricas,Deploy Utility-Scale Hydropower,Electricity,proximamente,,,,3,rio,False
+boost-industrial-efficiency,Industria eficiente,Boost Industrial Efficiency,Electricity & Industry,proximamente,,,,3,ciudad,False
+deploy-bioelectricity-with-carbon-capture-storage,Bioenergía con captura (BECCS),Deploy Bioelectricity With Carbon Capture & Storage,Electricity & Industry,proximamente,,,,3,ciudad,False
+increase-industrial-electrification,Electrificar la industria,Increase Industrial Electrification,"Industry, Materials & Waste",proximamente,,,,3,ciudad,False
+deploy-low-emission-industrial-feedstocks,Insumos industriales limpios,Deploy Low-Emission Industrial Feedstocks,"Industry, Materials & Waste",proximamente,,,,3,pastizal,False
+improve-other-building-materials,Materiales de construcción limpios,Improve Other Building Materials,"Industry, Materials & Waste",proximamente,,,,3,ciudad,False
+increase-building-deconstruction-recycling,Desconstrucción y reciclaje de edificios,Increase Building Deconstruction & Recycling,"Industry, Materials & Waste",proximamente,,,,3,ciudad,False
+improve-aviation-efficiency,Aviones eficientes,Improve Aviation Efficiency,Transportation,proximamente,,,,3,ciudad,False
+mobilize-electric-buses,Buses eléctricos,Mobilize Electric Buses,Transportation,proximamente,,,,3,ciudad,False
+mobilize-electric-trains,Trenes eléctricos,Mobilize Electric Trains,Transportation,proximamente,,,,3,ciudad,False
+mobilize-electric-trucks,Camiones eléctricos,Mobilize Electric Trucks,Transportation,proximamente,,,,3,ciudad,False
+enhance-high-speed-rail,Tren de alta velocidad,Enhance High-Speed Rail,Transportation,proximamente,,,,3,ciudad,False
+improve-ocean-shipping-efficiency,Barcos de carga eficientes,Improve Ocean Shipping Efficiency,Transportation,proximamente,,,,3,oceano;ciudad,False
+improve-supply-chain-efficiency,Cadenas de suministro eficientes,Improve Supply Chain Efficiency,Transportation,proximamente,,,,3,ciudad,False
+improve-truck-efficiency,Camiones eficientes,Improve Truck Efficiency,Transportation,proximamente,,,,3,ciudad,False
+hold-virtual-meetings,Reuniones virtuales,Hold Virtual Meetings,Transportation,proximamente,,,,3,ciudad,False
+deploy-advanced-biofuels,Biocombustibles avanzados,Deploy Advanced Biofuels,Transportation,proximamente,,,,3,ciudad,False
+improve-routing-logistics,Logística inteligente,Improve Routing & Logistics,Transportation,proximamente,,,,3,ciudad,False
+improve-forest-management-integrated-fire-management,Manejo del fuego,Improve Forest Management: Integrated Fire Management,FALO,proximamente,,,,3,cualquiera,False
+improve-forest-management-sustainable-forest-management,Manejo forestal sostenible,Improve Forest Management: Sustainable Forest Management,FALO,proximamente,,,,3,cualquiera,False
+deploy-precision-fermentation,Fermentación de precisión,Deploy Precision Fermentation,FALO,proximamente,,,,3,cualquiera,False
+manage-increase-urban-trees,Árboles urbanos,Manage & Increase Urban Trees,Nature-Based CR,proximamente,,,,3,ciudad,False
+restore-abandoned-farmland,Restaurar tierras abandonadas,Restore Abandoned Farmland,Nature-Based CR,proximamente,,,,3,cultivo,False
+deploy-agroforestry-trees-on-cropland,Agroforestería: árboles en cultivos,Deploy Agroforestry: Trees on Cropland,Nature-Based CR,proximamente,,,,3,cultivo,False
+deploy-agroforestry-multi-strata,Agroforestería multiestrato (chagra),Deploy Agroforestry: Multi-strata,Nature-Based CR,proximamente,,,,3,cultivo,False
+deploy-biomass-crops-on-degraded-land,Cultivos de biomasa en tierra degradada,Deploy Biomass Crops on Degraded Land,Nature-Based CR,proximamente,,,,3,cultivo,False
+deploy-perennial-crops,Cultivos perennes,Deploy Perennial Crops,Nature-Based CR,proximamente,,,,3,cultivo,False
+produce-bio-oils,Bioaceites,Produce Bio Oils,Industrial CR,proximamente,,,,3,cualquiera,False
