@@ -1,0 +1,298 @@
+{
+  "_nota": "Todos los números del modelo. Cada uno lleva fuente o la marca SUPUESTO (ver data/supuestos.md).",
+  "anio_inicio": 2026,
+  "anio_fin": 2150,
+  "emisiones_inicio_gt": {
+    "valor": 57,
+    "fuente": "UNEP, Emissions Gap Report 2024: 57,1 GtCO2e en 2023, con cambio de uso del suelo"
+  },
+  "temperatura_inicio": {
+    "valor": 1.35,
+    "fuente": "SUPUESTO #por-verificar: calentamiento de largo plazo ~1,3-1,4 °C sobre 1850-1900 hacia 2026 (WMO, State of the Global Climate)"
+  },
+  "tcre": {
+    "facil": 0.35,
+    "medio": 0.45,
+    "dificil": 0.6,
+    "fuente": "IPCC AR6 GT1 cap. 5: 0,27-0,63 °C por 1.000 GtCO2, central 0,45"
+  },
+  "tendencia_emisiones": {
+    "facil": 0.0,
+    "medio": 0.005,
+    "dificil": 0.012,
+    "fuente": "SUPUESTO: tendencia anual sin acción"
+  },
+  "sectores": {
+    "_fuente": "IPCC AR6 GT3, SPM (2022), participación por sector en 2019: energía 34 %, industria 24 %, AFOLU 22 %, transporte 15 %, edificios 6 %. SUPUESTO: pasé 6 puntos de energía (y quité 1 para que sume 100) a edificios (sus emisiones indirectas) y partí AFOLU en agricultura (12) y bosques (10). 'slcf' es la fracción de gases de vida corta (sobre todo metano), SUPUESTO",
+    "energia": {
+      "participacion": 0.27,
+      "slcf": 0.1
+    },
+    "edificios": {
+      "participacion": 0.12,
+      "slcf": 0.0
+    },
+    "industria_y_residuos": {
+      "participacion": 0.24,
+      "slcf": 0.15
+    },
+    "movilidad": {
+      "participacion": 0.15,
+      "slcf": 0.0
+    },
+    "comida_y_tierra": {
+      "participacion": 0.12,
+      "slcf": 0.45
+    },
+    "naturaleza": {
+      "participacion": 0.1,
+      "slcf": 0.0
+    }
+  },
+  "residuo_minimo_sector": {
+    "valor": 0.03,
+    "fuente": "SUPUESTO: ningún sector baja de 3 % de su línea base solo con soluciones"
+  },
+  "slcf": {
+    "c_por_gt": 0.075,
+    "tau_anios": 10,
+    "fuente": "SUPUESTO calibrado para que los gases de vida corta expliquen ~0,5 °C al inicio (IPCC AR6 GT1 SPM: el metano aporta ~0,5 °C del calentamiento observado); vida media del metano ~12 años"
+  },
+  "adopcion": {
+    "niveles_saturacion": 5,
+    "r": 0.9,
+    "arranque": 0.25,
+    "fuente": "SUPUESTO: curva en S; 5 niveles construidos de una solución llevan su adopción global al 100 % del potencial de Drawdown"
+  },
+  "aprendizaje_b": {
+    "valor": 0.15,
+    "fuente": "SUPUESTO inspirado en la ley de Wright (la solar se abarata ~20 % por cada duplicación)"
+  },
+  "costo_mejora_factor": 0.7,
+  "recursos": {
+    "energia": {
+      "inicio": 30,
+      "tope": 150,
+      "base": 22
+    },
+    "materiales": {
+      "inicio": 45,
+      "tope": 200,
+      "base": 40
+    },
+    "fuente": "SUPUESTO de juego"
+  },
+  "vida": {
+    "inicio": {
+      "facil": 65,
+      "medio": 60,
+      "dificil": 55
+    },
+    "degradacion_anual": 0.8,
+    "k_efecto": 0.12,
+    "tope_ganancia_anual": 4,
+    "calor_umbral": 1.5,
+    "calor_k": 3,
+    "fuente": "SUPUESTO de juego"
+  },
+  "esperanza": {
+    "inicio": 55,
+    "k_efecto": 0.15,
+    "tope_ganancia_anual": 3,
+    "erosion_anual": 0.3,
+    "si_bajan_emisiones": 1.5,
+    "si_suben_emisiones": -1.0,
+    "si_baja_temperatura": 2,
+    "injusticia_umbral": 0.5,
+    "injusticia_castigo": 1,
+    "por_edificio_danado": -1.5,
+    "fuente": "SUPUESTO de juego"
+  },
+  "sumideros": {
+    "vida_ref": 50,
+    "extra_max_gt": 4,
+    "fuente": "SUPUESTO: con poca Vida los sumideros naturales (que hoy absorben cerca de la mitad del CO2, Global Carbon Budget) capturan menos"
+  },
+  "inflexion": {
+    "_fuente": "Armstrong McKay et al. (2022), Science: umbrales centrales (#por-verificar); los efectos son SUPUESTO",
+    "permafrost": {
+      "umbral": {
+        "facil": 1.8,
+        "medio": 1.6,
+        "dificil": 1.5
+      },
+      "extra_gt": 0.8
+    },
+    "corales": {
+      "umbral": {
+        "facil": 1.7,
+        "medio": 1.5,
+        "dificil": 1.4
+      },
+      "vida": -8
+    },
+    "amazonia": {
+      "umbral": {
+        "facil": 3.2,
+        "medio": 2.8,
+        "dificil": 2.5
+      },
+      "vida_minima": 30,
+      "extra_gt": 1.5
+    }
+  },
+  "eventos": {
+    "_fuente": "SUPUESTO: la probabilidad sube con la temperatura (IPCC AR6 GT1 cap. 11, más extremos con más calor), salvo los terremotos",
+    "multiplicador": {
+      "facil": 0.6,
+      "medio": 1,
+      "dificil": 1.5
+    },
+    "calor_k": 1.5,
+    "tipos": {
+      "huracan": {
+        "prob": 0.35,
+        "biomas": [
+          "costa",
+          "ciudad",
+          "oceano_costero",
+          "selva_tropical"
+        ],
+        "lat_max": 35
+      },
+      "sequia": {
+        "prob": 0.3,
+        "biomas": [
+          "pastizal",
+          "cultivo",
+          "selva_tropical",
+          "bosque_subtropical"
+        ]
+      },
+      "incendio": {
+        "prob": 0.3,
+        "biomas": [
+          "boreal",
+          "bosque_templado",
+          "bosque_subtropical",
+          "selva_tropical"
+        ]
+      },
+      "inundacion": {
+        "prob": 0.3,
+        "biomas": [
+          "rio",
+          "ciudad",
+          "costa",
+          "cultivo"
+        ]
+      },
+      "terremoto": {
+        "prob": 0.15,
+        "biomas": [
+          "montaña",
+          "ciudad"
+        ],
+        "sin_calor": true
+      }
+    },
+    "dano_base": 0.6,
+    "proteccion_adaptacion": 0.5
+  },
+  "trampas": {
+    "revelacion_min": 3,
+    "revelacion_max": 8,
+    "eficacia_real": 0.15,
+    "esperanza_al_revelar": -5,
+    "vida_por_nivel_revelada": 0.5,
+    "aerosol_enfriamiento_por_nivel": 0.12,
+    "choque_vida": -10,
+    "lock_in_costo": 0.08
+  },
+  "eras": {
+    "era2_anio": 2031,
+    "era2_niveles": 12
+  },
+  "politicas": {
+    "_fuente": "(IA) acciones grandes que se pagan con Esperanza, como 'cerrar el carbón' en la v0. Efectos SUPUESTO",
+    "cerrar_carbon": {
+      "esperanza": 12,
+      "veces": 5,
+      "multiplica": {
+        "energia": 0.85
+      },
+      "vida": 2
+    },
+    "fin_subsidios": {
+      "esperanza": 20,
+      "veces": 1,
+      "tendencia": -0.02
+    },
+    "moratoria_deforestacion": {
+      "esperanza": 15,
+      "veces": 1,
+      "multiplica": {
+        "naturaleza": 0.6
+      },
+      "vida": 5,
+      "degradacion_mult": 0.3
+    },
+    "industria_circular": {
+      "esperanza": 12,
+      "veces": 4,
+      "multiplica": {
+        "industria_y_residuos": 0.8
+      }
+    },
+    "ciudades_caminables": {
+      "esperanza": 10,
+      "veces": 3,
+      "multiplica": {
+        "movilidad": 0.85
+      }
+    }
+  },
+  "victoria": {
+    "anios_bajando": 10,
+    "requiere_emisiones_netas_negativas": true
+  },
+  "derrota": {
+    "temperatura_max": 3.0
+  },
+  "dificultad_puntaje": {
+    "facil": 0.7,
+    "medio": 1,
+    "dificil": 1.5
+  },
+  "poblacion_region": {
+    "fuente": "ONU, World Population Prospects 2024 (aprox., #por-verificar)",
+    "asia": 0.59,
+    "africa": 0.185,
+    "europa": 0.09,
+    "latinoamerica": 0.082,
+    "norteamerica": 0.047,
+    "oceania": 0.006
+  },
+  "soluciones_mvp": {
+    "_nota": "Al inicio: la era 1 sin trampas, más estas extras de la era 2 (sin energía limpia no hay juego), más 5 trampas. El resto de la era 2 se desbloquea después",
+    "extras_inicio": [
+      "deploy-distributed-solar-pv",
+      "deploy-onshore-wind-turbines",
+      "use-biochar",
+      "restore-forests-tropical"
+    ],
+    "trampas": [
+      "carbon-capture-storage-on-fossil-fuel-power-plants",
+      "use-corn-ethanol",
+      "deploy-ocean-fertilization",
+      "deploy-direct-air-capture",
+      "deploy-stratospheric-aerosol-injection",
+      "expand-livestock-grazing"
+    ]
+  },
+  "adaptacion_ids": [
+    "protect-coastal-wetlands-mangrove-ecosystems",
+    "restore-mangrove-ecosystems",
+    "restore-salt-marsh-ecosystems"
+  ]
+}

@@ -1,0 +1,336 @@
+// El estado de la partida y las acciones del jugador. TypeScript puro, sin DOM, determinista con semilla.
+import { CELDAS, CELDA_POR_ID, P, SOL_POR_ID, compatible, sectorDe, solucionesMvp, type Dificultad, type Solucion } from './datos';
+import { entre, semillaDeTexto, siguiente } from './rng';
+
+export const SECTORES = Object.keys(P.sectores).filter((k) => !k.startsWith('_'));
+
+export interface Edificio {
+  sol: string;
+  nivel: number;
+  anio: number;
+  revelaAnio?: number;
+}
+
+export interface Punto {
+  anio: number;
+  emisiones: number;
+  temperatura: number;
+  vida: number;
+  esperanza: number;
+}
+
+export type Fin = null | 'victoria' | 'derrota_vida' | 'derrota_esperanza' | 'derrota_calor' | 'derrota_tiempo';
+
+export interface Estado {
+  version: 1;
+  semilla: string;
+  dificultad: Dificultad;
+  rng: number;
+  anio: number;
+  energia: number;
+  materiales: number;
+  vida: number;
+  esperanza: number;
+  temperatura: number;
+  tCo2Base: number;
+  tSlcf: number;
+  aerosol: number;
+  cumCo2: number;
+  base: Record<string, number>;
+  tendenciaExtra: number;
+  degradacionMult: number;
+  adopcion: Record<string, number>;
+  edificios: Record<string, Edificio>;
+  nivelesHistoricos: Record<string, number>;
+  reveladas: string[];
+  degradadas: string[];
+  era2: boolean;
+  politicas: Record<string, number>;
+  inflexiones: Record<string, boolean>;
+  historia: Punto[];
+  tPico: number;
+  racha: number;
+  ultimaEmision: number;
+  fin: Fin;
+  acciones: number;
+}
+
+export interface EventoAnio {
+  tipo: string;
+  celda: string;
+  region: string;
+  danados: string[];
+}
+
+export interface ResumenDelAnio {
+  anio: number;
+  emisiones: number;
+  deltaEmisiones: number;
+  temperatura: number;
+  deltaTemperatura: number;
+  energia: number;
+  materiales: number;
+  vida: number;
+  esperanza: number;
+  eventos: EventoAnio[];
+  reveladas: string[];
+  inflexiones: string[];
+  choqueAerosoles: boolean;
+  desbloqueoEra2: boolean;
+  dato: string | null;
+  fin: Fin;
+}
+
+const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
+const d = (e: Estado) => e.dificultad;
+
+export function nuevaPartida(semilla: string, dificultad: Dificultad): Estado {
+  const e0 = P.emisiones_inicio_gt.valor as number;
+  const base: Record<string, number> = {};
+  for (const s of SECTORES) base[s] = e0 * P.sectores[s].participacion;
+  const e: Estado = {
+    version: 1, semilla, dificultad, rng: semillaDeTexto(semilla + dificultad), anio: P.anio_inicio,
+    energia: P.recursos.energia.inicio, materiales: P.recursos.materiales.inicio,
+    vida: P.vida.inicio[dificultad], esperanza: P.esperanza.inicio,
+    temperatura: P.temperatura_inicio.valor, tCo2Base: 0, tSlcf: 0, aerosol: 0, cumCo2: 0,
+    base, tendenciaExtra: 0, degradacionMult: 1, adopcion: {}, edificios: {}, nivelesHistoricos: {},
+    reveladas: [], degradadas: [], era2: false, politicas: {}, inflexiones: {}, historia: [],
+    tPico: P.temperatura_inicio.valor, racha: 0, ultimaEmision: 0, fin: null, acciones: 0,
+  };
+  // La semilla perturba el estado inicial, no la geografía: qué celdas de tierra arrancan degradadas.
+  for (const c of CELDAS) {
+    if (c.bioma === 'oceano' || c.bioma === 'oceano_costero' || c.bioma === 'hielo' || c.bioma === 'ciudad') continue;
+    if (siguiente(e) < 0.25) e.degradadas.push(c.id);
+  }
+  e.vida = clamp(e.vida + entre(e, -4, 4), 1, 100);
+  const em = calcularEmisiones(e);
+  e.tSlcf = P.slcf.c_por_gt * em.slcf;
+  e.tCo2Base = e.temperatura - e.tSlcf; // SUPUESTO: el resto del calentamiento inicial se atribuye al CO2 acumulado
+  e.ultimaEmision = em.neta;
+  e.historia.push({ anio: e.anio, emisiones: em.neta, temperatura: e.temperatura, vida: e.vida, esperanza: e.esperanza });
+  return e;
+}
+
+// ---------- Consultas ----------
+
+export function solucionesDisponibles(e: Estado): Solucion[] {
+  const { inicio, era2 } = solucionesMvp();
+  return e.era2 ? [...inicio, ...era2] : inicio;
+}
+
+export function esTrampa(id: string) {
+  return SOL_POR_ID.get(id)!.juego.es_trampa;
+}
+
+export function nivelesDe(e: Estado, sol: string): number {
+  let n = 0;
+  for (const b of Object.values(e.edificios)) if (b.sol === sol) n += b.nivel;
+  return n;
+}
+
+export function lockIn(e: Estado): number {
+  let n = 0;
+  for (const b of Object.values(e.edificios)) n += (SOL_POR_ID.get(b.sol)!.juego.efectos_ocultos.lock_in_fosil ?? 0) * b.nivel;
+  return n;
+}
+
+function multiplicadorCosto(e: Estado, s: Solucion): number {
+  const esp = 1.3 - 0.6 * (e.esperanza / 100); // SUPUESTO: con Esperanza alta se construye más barato
+  const aprendizaje = Math.pow(1 + (e.nivelesHistoricos[s.id] ?? 0), -P.aprendizaje_b.valor);
+  const lock = s.categoria_juego === 'energia' && !s.juego.es_trampa ? 1 + P.trampas.lock_in_costo * lockIn(e) : 1;
+  return esp * aprendizaje * lock;
+}
+
+export interface Costo { energia: number; materiales: number }
+
+export function costoConstruir(e: Estado, solId: string): Costo {
+  const s = SOL_POR_ID.get(solId)!;
+  const m = multiplicadorCosto(e, s);
+  return { energia: Math.max(1, Math.round(s.juego.costo.energia * m)), materiales: Math.max(1, Math.round(s.juego.costo.materiales * m)) };
+}
+
+export function costoMejorar(e: Estado, celdaId: string): Costo | null {
+  const b = e.edificios[celdaId];
+  if (!b) return null;
+  const s = SOL_POR_ID.get(b.sol)!;
+  if (b.nivel >= s.juego.niveles) return null;
+  const m = multiplicadorCosto(e, s) * (b.nivel + 1) * P.costo_mejora_factor;
+  return { energia: Math.max(1, Math.round(s.juego.costo.energia * m)), materiales: Math.max(1, Math.round(s.juego.costo.materiales * m)) };
+}
+
+const alcanza = (e: Estado, c: Costo) => e.energia >= c.energia && e.materiales >= c.materiales;
+
+export function puedeConstruir(e: Estado, celdaId: string, solId: string): string | null {
+  if (e.fin) return 'fin';
+  const c = CELDA_POR_ID.get(celdaId);
+  const s = SOL_POR_ID.get(solId);
+  if (!c || !s) return 'no_existe';
+  if (e.edificios[celdaId]) return 'ocupada';
+  if (!solucionesDisponibles(e).some((x) => x.id === solId)) return 'bloqueada';
+  if (!compatible(s, c.bioma)) return 'bioma';
+  if (!alcanza(e, costoConstruir(e, solId))) return 'recursos';
+  return null;
+}
+
+// ---------- Acciones ----------
+
+export function construir(e: Estado, celdaId: string, solId: string): string | null {
+  const err = puedeConstruir(e, celdaId, solId);
+  if (err) return err;
+  const c = costoConstruir(e, solId);
+  e.energia -= c.energia; e.materiales -= c.materiales;
+  const b: Edificio = { sol: solId, nivel: 1, anio: e.anio };
+  if (esTrampa(solId)) b.revelaAnio = e.anio + entre(e, P.trampas.revelacion_min, P.trampas.revelacion_max);
+  e.edificios[celdaId] = b;
+  e.nivelesHistoricos[solId] = (e.nivelesHistoricos[solId] ?? 0) + 1;
+  e.acciones++;
+  return null;
+}
+
+export function mejorar(e: Estado, celdaId: string): string | null {
+  if (e.fin) return 'fin';
+  const c = costoMejorar(e, celdaId);
+  if (!c) return 'maximo';
+  if (!alcanza(e, c)) return 'recursos';
+  const b = e.edificios[celdaId];
+  e.energia -= c.energia; e.materiales -= c.materiales;
+  b.nivel++;
+  e.nivelesHistoricos[b.sol] = (e.nivelesHistoricos[b.sol] ?? 0) + 1;
+  e.acciones++;
+  return null;
+}
+
+/** Demoler: no devuelve recursos. Si eran aerosoles, se viene el choque de terminación el próximo año. */
+export function demoler(e: Estado, celdaId: string): string | null {
+  if (e.fin) return 'fin';
+  if (!e.edificios[celdaId]) return 'vacia';
+  delete e.edificios[celdaId];
+  e.acciones++;
+  return null;
+}
+
+export const POLITICAS = Object.keys(P.politicas).filter((k) => !k.startsWith('_'));
+
+export function costoPolitica(e: Estado, id: string): number | null {
+  const p = P.politicas[id];
+  if (!p) return null;
+  if ((e.politicas[id] ?? 0) >= p.veces) return null;
+  return id === 'cerrar_carbon' ? p.esperanza + 3 * lockIn(e) : p.esperanza;
+}
+
+export function aplicarPolitica(e: Estado, id: string): string | null {
+  if (e.fin) return 'fin';
+  const costo = costoPolitica(e, id);
+  if (costo === null) return 'agotada';
+  if (e.esperanza - costo < 5) return 'esperanza';
+  const p = P.politicas[id];
+  e.esperanza -= costo;
+  e.politicas[id] = (e.politicas[id] ?? 0) + 1;
+  for (const [k, m] of Object.entries((p.multiplica ?? {}) as Record<string, number>)) e.base[k] *= m;
+  if (p.tendencia) e.tendenciaExtra += p.tendencia;
+  if (p.degradacion_mult) e.degradacionMult *= p.degradacion_mult;
+  if (p.vida) e.vida = clamp(e.vida + p.vida, 0, 100);
+  e.acciones++;
+  return null;
+}
+
+// ---------- El modelo de emisiones ----------
+
+export interface Emisiones {
+  porSector: Record<string, number>;
+  reduccion: Record<string, number>;
+  secuestro: number;
+  retro: number;
+  neta: number;
+  slcf: number;
+}
+
+function eficacia(e: Estado, s: Solucion): number {
+  return s.juego.es_trampa && e.reveladas.includes(s.id) ? P.trampas.eficacia_real : 1;
+}
+
+export function calcularEmisiones(e: Estado): Emisiones {
+  const red: Record<string, number> = {};
+  for (const k of SECTORES) red[k] = 0;
+  let secuestro = 0;
+  for (const [id, a] of Object.entries(e.adopcion)) {
+    const s = SOL_POR_ID.get(id)!;
+    if (s.categoria_juego === 'geoingenieria') continue; // los aerosoles no bajan emisiones
+    const g = a * s.juego.potencial_gt_usado * eficacia(e, s);
+    const sec = sectorDe(s);
+    if (sec && sec in red) red[sec] += g;
+    else secuestro += g * (s.categoria_juego === 'naturaleza' ? 0.5 + e.vida / 100 : 1);
+  }
+  const porSector: Record<string, number> = {};
+  let bruta = 0, slcf = 0;
+  for (const k of SECTORES) {
+    const tope = e.base[k] * (1 - P.residuo_minimo_sector.valor);
+    red[k] = Math.min(red[k], tope);
+    porSector[k] = e.base[k] - red[k];
+    bruta += porSector[k];
+    slcf += porSector[k] * P.sectores[k].slcf;
+  }
+  let retro = P.sumideros.extra_max_gt * Math.max(0, (P.sumideros.vida_ref - e.vida) / P.sumideros.vida_ref);
+  if (e.inflexiones.permafrost) retro += P.inflexion.permafrost.extra_gt;
+  if (e.inflexiones.amazonia) retro += P.inflexion.amazonia.extra_gt;
+  return { porSector, reduccion: red, secuestro, retro, neta: bruta - secuestro + retro, slcf };
+}
+
+// ---------- Indicadores para el puntaje ----------
+
+/** Justicia: 1 − Gini (ponderado por población) de la inversión per cápita entre regiones. */
+export function justicia(e: Estado): number {
+  const pob = P.poblacion_region as Record<string, number>;
+  const regiones = Object.keys(pob).filter((k) => k !== 'fuente');
+  const inv: Record<string, number> = {};
+  let total = 0;
+  for (const [cid, b] of Object.entries(e.edificios)) {
+    const r = CELDA_POR_ID.get(cid)!.region;
+    if (!(r in pob)) continue;
+    inv[r] = (inv[r] ?? 0) + b.nivel; total += b.nivel;
+  }
+  if (total === 0) return 1;
+  const x = regiones.map((r) => ({ p: pob[r], v: (inv[r] ?? 0) / total / pob[r] }));
+  const media = x.reduce((s, a) => s + a.p * a.v, 0);
+  let g = 0;
+  for (const a of x) for (const b of x) g += a.p * b.p * Math.abs(a.v - b.v);
+  return clamp(1 - g / (2 * media), 0, 1);
+}
+
+/** Diversidad: índice de Shannon de los niveles por solución, normalizado entre 0 y 1. */
+export function diversidad(e: Estado): number {
+  const n: Record<string, number> = {};
+  let t = 0;
+  for (const b of Object.values(e.edificios)) { n[b.sol] = (n[b.sol] ?? 0) + b.nivel; t += b.nivel; }
+  const k = Object.keys(n).length;
+  if (t === 0 || k < 2) return 0;
+  const h = -Object.values(n).reduce((s, v) => s + (v / t) * Math.log(v / t), 0);
+  return h / Math.log(Math.max(k, 20)); // SUPUESTO: se normaliza contra al menos 20 soluciones
+}
+
+export function huella(e: Estado): string[] {
+  const n: Record<string, number> = {};
+  for (const b of Object.values(e.edificios)) n[b.sol] = (n[b.sol] ?? 0) + b.nivel;
+  return Object.entries(n).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([id]) => id);
+}
+
+export interface Puntaje {
+  rapidez: number; pico: number; vida: number; esperanza: number; justicia: number; diversidad: number;
+  multiplicador: number; total: number;
+}
+
+export function puntaje(e: Estado): Puntaje {
+  const gano = e.fin === 'victoria';
+  const p = {
+    rapidez: gano ? Math.max(0, P.anio_fin - e.anio) * 4 : 0,
+    pico: Math.max(0, 3 - e.tPico) * 200,
+    vida: e.vida * 2,
+    esperanza: e.esperanza * 2,
+    justicia: justicia(e) * 200,
+    diversidad: diversidad(e) * 200,
+    multiplicador: P.dificultad_puntaje[d(e)] * (gano ? 1 : 0.5),
+    total: 0,
+  };
+  p.total = Math.round((p.rapidez + p.pico + p.vida + p.esperanza + p.justicia + p.diversidad) * p.multiplicador);
+  return p;
+}
