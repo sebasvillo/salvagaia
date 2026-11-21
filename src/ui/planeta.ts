@@ -1,25 +1,31 @@
-// El planeta: proyección ortográfica de las celdas H3, dibujada a baja resolución y escalada sin suavizado (pixel-art).
+// El planeta: proyección ortográfica de las celdas H3, dibujada a baja resolución y escalada sin suavizado.
+// Estilo: ilustración de cuaderno impresa en riso — tinta, tramado en el lado de noche, sin brillos ni halos.
 import { CELDAS, CELDA_POR_ID, SOL_POR_ID, type Celda } from '../sim/datos';
 import type { Estado } from '../sim/juego';
+import { imagen } from './sprites';
 
 const RAD = Math.PI / 180;
 
+// Paleta riso: pocas tintas, un poco desaturadas, como impresas.
 const COLOR_BIOMA: Record<string, [number, number, number]> = {
-  selva_tropical: [38, 140, 76], bosque_subtropical: [86, 156, 84], bosque_templado: [64, 128, 72],
-  boreal: [46, 98, 74], turbera: [110, 92, 62], pastizal: [190, 178, 92], desierto: [222, 190, 128],
-  'montaña': [140, 128, 118], cultivo: [214, 196, 84], ciudad: [226, 132, 92], rio: [70, 170, 200],
-  costa: [120, 196, 150], oceano_costero: [52, 150, 172], oceano: [28, 92, 140], hielo: [236, 244, 246],
+  selva_tropical: [62, 128, 74], bosque_subtropical: [104, 148, 82], bosque_templado: [82, 124, 78],
+  boreal: [60, 96, 80], turbera: [120, 98, 70], pastizal: [196, 172, 96], desierto: [228, 196, 138],
+  'montaña': [150, 136, 120], cultivo: [222, 182, 80], ciudad: [210, 108, 74], rio: [74, 150, 168],
+  costa: [134, 182, 136], oceano_costero: [76, 146, 160], oceano: [44, 96, 128], hielo: [246, 240, 226],
 };
+const TINTA = '#25211c';
 
-export const ICONO_CATEGORIA: Record<string, string> = {
-  movilidad: '🚲', edificios: '🏠', comida_y_tierra: '🌾', energia: '☀️', naturaleza: '🌳',
-  industria_y_residuos: '♻️', remocion_tecnologica: '🏭', geoingenieria: '🌫️',
+export const SPRITE_CATEGORIA: Record<string, string> = {
+  movilidad: 'movilidad', edificios: 'edificios', comida_y_tierra: 'comida_y_tierra', energia: 'energia',
+  naturaleza: 'naturaleza', industria_y_residuos: 'industria_y_residuos', remocion_tecnologica: 'remocion_tecnologica',
+  geoingenieria: 'geoingenieria',
 };
 
 export class Planeta {
-  lon0 = -60;
-  lat0 = 10;
-  private vel = 0.04;
+  lon0 = -74;
+  lat0 = 8;
+  private vel = 0.03;
+  private meta: { lon: number; lat: number } | null = null;
   private arrastrando = false;
   private ultimo: { x: number; y: number } | null = null;
   private movido = 0;
@@ -27,6 +33,7 @@ export class Planeta {
   private bctx: CanvasRenderingContext2D;
   private ctx: CanvasRenderingContext2D;
   seleccion: string | null = null;
+  resaltar = new Set<string>();
   onTocar: (id: string | null) => void = () => {};
   private t = 0;
 
@@ -35,7 +42,7 @@ export class Planeta {
     this.bajo = document.createElement('canvas');
     this.bctx = this.bajo.getContext('2d')!;
     canvas.addEventListener('pointerdown', (ev) => {
-      this.arrastrando = true; this.movido = 0; this.ultimo = { x: ev.clientX, y: ev.clientY };
+      this.arrastrando = true; this.movido = 0; this.meta = null; this.ultimo = { x: ev.clientX, y: ev.clientY };
       canvas.setPointerCapture(ev.pointerId);
     });
     canvas.addEventListener('pointermove', (ev) => {
@@ -43,11 +50,11 @@ export class Planeta {
       const dx = ev.clientX - this.ultimo.x, dy = ev.clientY - this.ultimo.y;
       this.movido += Math.abs(dx) + Math.abs(dy);
       const k = 160 / this.radio();
-      this.lon0 -= dx * k; this.lat0 = Math.max(-80, Math.min(80, this.lat0 + dy * k));
+      this.lon0 -= dx * k; this.lat0 = Math.max(-75, Math.min(75, this.lat0 + dy * k));
       this.vel = -dx * k * 0.3;
       this.ultimo = { x: ev.clientX, y: ev.clientY };
     });
-    const soltar = (ev: PointerEvent) => {
+    canvas.addEventListener('pointerup', (ev) => {
       if (!this.arrastrando) return;
       this.arrastrando = false;
       if (this.movido < 8) {
@@ -57,17 +64,25 @@ export class Planeta {
         this.vel = 0;
         this.onTocar(id);
       }
-    };
-    canvas.addEventListener('pointerup', soltar);
+    });
     canvas.addEventListener('pointercancel', () => (this.arrastrando = false));
     const loop = () => { requestAnimationFrame(loop); try { this.dibujar(); } catch (err) { console.error(err); } };
     requestAnimationFrame(loop);
   }
 
-  private radio() {
+  /** El planeta ocupa el hueco entre la barra de arriba y el cajón de abajo. */
+  portada = false;
+  private centro(): { x: number; y: number; R: number } {
     const w = this.canvas.clientWidth, h = this.canvas.clientHeight;
-    return Math.min(w, h) * 0.44;
+    if (this.portada) {
+      const R = Math.min(w * 0.3, h * 0.15, 150);
+      return { x: w / 2 + R * 0.55, y: R + 28, R };
+    }
+    const arriba = 118, abajo = Math.min(300, h * 0.36);
+    const alto = h - arriba - abajo;
+    return { x: w / 2, y: arriba + alto / 2, R: Math.max(80, Math.min(w * 0.44, alto * 0.48)) };
   }
+  private radio() { return this.centro().R; }
 
   private proyectar(lat: number, lng: number, R: number): [number, number, number] {
     const f = lat * RAD, l = (lng - this.lon0) * RAD, f0 = this.lat0 * RAD;
@@ -75,15 +90,29 @@ export class Planeta {
     return [R * Math.cos(f) * Math.sin(l), -R * (Math.cos(f0) * Math.sin(f) - Math.sin(f0) * Math.cos(f) * Math.cos(l)), cosc];
   }
 
+  /** Gira suavemente hasta dejar la celda de frente. */
   centrarEn(id: string) {
-    const c = CELDAS.find((x) => x.id === id);
-    if (c) { this.lon0 = c.lng; this.lat0 = Math.max(-60, Math.min(60, c.lat)); this.vel = 0; }
+    const c = CELDA_POR_ID.get(id);
+    if (!c) return;
+    let lon = c.lng;
+    while (lon - this.lon0 > 180) lon -= 360;
+    while (lon - this.lon0 < -180) lon += 360;
+    this.meta = { lon, lat: Math.max(-55, Math.min(55, c.lat)) };
+    this.vel = 0;
+  }
+
+  /** Posición en pantalla (px CSS) de una celda, o null si está detrás. */
+  posicion(id: string): { x: number; y: number } | null {
+    const c = CELDA_POR_ID.get(id);
+    if (!c) return null;
+    const { x, y, R } = this.centro();
+    const [px, py, cc] = this.proyectar(c.lat, c.lng, R);
+    return cc > 0.1 ? { x: x + px, y: y + py } : null;
   }
 
   celdaEn(x: number, y: number): string | null {
-    const w = this.canvas.clientWidth, h = this.canvas.clientHeight;
-    const R = this.radio();
-    const px = (x - w / 2) / R, py = -(y - h / 2) / R;
+    const { x: cx, y: cy, R } = this.centro();
+    const px = (x - cx) / R, py = -(y - cy) / R;
     const rho = Math.hypot(px, py);
     if (rho > 1) return null;
     const c = Math.asin(rho), f0 = this.lat0 * RAD;
@@ -106,52 +135,80 @@ export class Planeta {
     if (this.canvas.width !== Math.round(w * dpr) || this.canvas.height !== Math.round(h * dpr)) {
       this.canvas.width = Math.round(w * dpr); this.canvas.height = Math.round(h * dpr);
     }
-    const ESC = 3; // tamaño del píxel grande
+    const ESC = 3;
     const bw = Math.ceil(w / ESC), bh = Math.ceil(h / ESC);
     if (this.bajo.width !== bw || this.bajo.height !== bh) { this.bajo.width = bw; this.bajo.height = bh; }
-    if (!this.arrastrando) { this.lon0 += this.vel; this.vel = this.vel * 0.96 + (this.seleccion ? 0 : 0.04) * 0.04; }
+    if (this.meta) {
+      this.lon0 += (this.meta.lon - this.lon0) * 0.12; this.lat0 += (this.meta.lat - this.lat0) * 0.12;
+      if (Math.abs(this.meta.lon - this.lon0) < 0.2 && Math.abs(this.meta.lat - this.lat0) < 0.2) this.meta = null;
+    } else if (!this.arrastrando) {
+      this.lon0 += this.vel; this.vel = this.vel * 0.95 + (this.seleccion ? 0 : 0.03) * 0.05;
+    }
 
+    const { x: CX, y: CY, R: RR } = this.centro();
     const b = this.bctx;
     b.clearRect(0, 0, bw, bh);
-    const R = this.radio() / ESC;
-    const cx = bw / 2, cy = bh / 2;
-    const calor = e ? Math.max(0, Math.min(1, (e.temperatura - 1.1) / 1.6)) : 0.2;
+    const R = RR / ESC, cx = CX / ESC, cy = CY / ESC;
+    const calor = e ? Math.max(0, Math.min(1, (e.temperatura - 1.2) / 1.5)) : 0.1;
     const vida = e ? e.vida / 100 : 0.6;
     const degradadas = new Set(e?.degradadas ?? []);
 
-    // Atmósfera: turquesa si está sano, naranja si se calienta.
-    const halo = b.createRadialGradient(cx, cy, R * 0.9, cx, cy, R * 1.15);
-    halo.addColorStop(0, `rgba(${Math.round(120 + 130 * calor)},${Math.round(220 - 100 * calor)},${Math.round(210 - 150 * calor)},0.55)`);
-    halo.addColorStop(1, 'rgba(0,0,0,0)');
-    b.fillStyle = halo; b.beginPath(); b.arc(cx, cy, R * 1.15, 0, Math.PI * 2); b.fill();
+    // Sombra dura del planeta sobre el papel (como un sello desplazado).
+    b.fillStyle = 'rgba(37,33,28,0.18)';
+    b.beginPath(); b.arc(cx + 3, cy + 3, R + 1, 0, Math.PI * 2); b.fill();
 
+    const pulso = (Math.sin(this.t * 0.12) + 1) / 2;
     for (const c of CELDAS) {
       const [, , cc] = this.proyectar(c.lat, c.lng, R);
-      if (cc < 0.02) continue;
+      if (cc < 0.0) continue;
       let [r, g, bl] = COLOR_BIOMA[c.bioma] ?? [128, 128, 128];
       const tierra = c.bioma !== 'oceano' && c.bioma !== 'oceano_costero' && c.bioma !== 'hielo';
       if (tierra) {
-        const seco = calor * 0.5 + (1 - vida) * 0.35 + (degradadas.has(c.id) ? 0.2 : 0);
-        r = r + (170 - r) * seco; g = g + (110 - g) * seco; bl = bl + (60 - bl) * seco;
+        const seco = calor * 0.55 + (1 - vida) * 0.35 + (degradadas.has(c.id) ? 0.22 : 0);
+        r += (176 - r) * seco; g += (112 - g) * seco; bl += (62 - bl) * seco;
       }
-      const luz = 0.55 + 0.45 * cc;
-      b.fillStyle = `rgb(${Math.round(r * luz)},${Math.round(g * luz)},${Math.round(bl * luz)})`;
+      if (this.resaltar.has(c.id)) { r += (255 - r) * pulso * 0.6; g += (236 - g) * pulso * 0.6; bl += (150 - bl) * pulso * 0.6; }
+      b.fillStyle = `rgb(${Math.round(r)},${Math.round(g)},${Math.round(bl)})`;
       b.beginPath();
       c.contorno.forEach(([la, lo], i) => {
         const [x, y] = this.proyectar(la, lo, R);
         i ? b.lineTo(cx + x, cy + y) : b.moveTo(cx + x, cy + y);
       });
       b.closePath(); b.fill();
-      if (c.id === this.seleccion) { b.strokeStyle = '#fff6c8'; b.lineWidth = 1; b.stroke(); }
     }
-
-    // Aves: aparecen cuando la Vida está alta.
-    if (vida > 0.65) {
-      b.fillStyle = '#fffbe8';
-      const n = Math.round((vida - 0.65) * 30);
+    // Tramado del lado de noche (luz desde arriba a la izquierda), píxel a píxel.
+    b.fillStyle = 'rgba(37,33,28,0.55)';
+    const lx = -0.55, ly = -0.6, lz = 0.58;
+    for (let py = Math.floor(cy - R); py <= cy + R; py++) {
+      for (let px = Math.floor(cx - R); px <= cx + R; px++) {
+        const nx = (px - cx) / R, ny = (py - cy) / R, n2 = nx * nx + ny * ny;
+        if (n2 > 1) continue;
+        const luz = nx * lx + ny * ly + Math.sqrt(1 - n2) * lz;
+        if (luz < -0.15 || (luz < 0.12 && (px + py) % 2 === 0) || (luz < 0.3 && px % 2 === 0 && py % 2 === 0)) b.fillRect(px, py, 1, 1);
+      }
+    }
+    // Contorno de tinta.
+    b.strokeStyle = TINTA; b.lineWidth = 1;
+    b.beginPath(); b.arc(cx, cy, R + 0.5, 0, Math.PI * 2); b.stroke();
+    // Selección: contorno de la celda en tinta.
+    if (this.seleccion) {
+      const c = CELDA_POR_ID.get(this.seleccion);
+      if (c && this.proyectar(c.lat, c.lng, R)[2] > 0) {
+        b.strokeStyle = '#fafaf0'; b.lineWidth = 1;
+        b.beginPath();
+        c.contorno.forEach(([la, lo], i) => { const [x, y] = this.proyectar(la, lo, R); i ? b.lineTo(cx + x, cy + y) : b.moveTo(cx + x, cy + y); });
+        b.closePath(); b.stroke();
+      }
+    }
+    // Aves cuando la Vida está alta.
+    if (vida > 0.62) {
+      b.fillStyle = TINTA;
+      const n = Math.round((vida - 0.62) * 24);
       for (let i = 0; i < n; i++) {
-        const a = this.t * 0.01 + i * 2.1;
-        b.fillRect(Math.round(cx + Math.cos(a) * R * (1.05 + (i % 3) * 0.04)), Math.round(cy + Math.sin(a * 1.3) * R * 0.7), 1, 1);
+        const a = this.t * 0.006 + i * 2.4;
+        const x = Math.round(cx + Math.cos(a) * R * (1.12 + (i % 3) * 0.05)), y = Math.round(cy + Math.sin(a * 1.4) * R * 0.75);
+        const ala = (this.t >> 4) % 2;
+        b.fillRect(x - 1, y - ala, 1, 1); b.fillRect(x, y, 1, 1); b.fillRect(x + 1, y - ala, 1, 1);
       }
     }
 
@@ -161,22 +218,23 @@ export class Planeta {
     ctx.imageSmoothingEnabled = false;
     ctx.drawImage(this.bajo, 0, 0, bw * ESC * dpr, bh * ESC * dpr);
 
-    // Edificios: íconos encima, a resolución normal.
     if (!e) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const Rr = this.radio();
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.imageSmoothingEnabled = false;
     for (const [cid, ed] of Object.entries(e.edificios)) {
       const c = CELDA_POR_ID.get(cid)!;
-      const [x, y, cc] = this.proyectar(c.lat, c.lng, Rr);
-      if (cc < 0.25) continue;
+      const [x, y, cc] = this.proyectar(c.lat, c.lng, RR);
+      if (cc < 0.2) continue;
       const s = SOL_POR_ID.get(ed.sol)!;
-      const tam = 9 + 6 * cc;
-      ctx.font = `${tam}px system-ui, "Apple Color Emoji", "Segoe UI Emoji"`;
-      const icono = e.reveladas.includes(ed.sol) ? '⚠️' : ICONO_CATEGORIA[s.categoria_juego] ?? '•';
-      ctx.fillText(icono, w / 2 + x, h / 2 + y);
-      ctx.fillStyle = '#fff6c8';
-      for (let i = 0; i < ed.nivel; i++) ctx.fillRect(w / 2 + x - 6 + i * 3, h / 2 + y + tam * 0.6, 2, 2);
+      const img = imagen(e.reveladas.includes(ed.sol) ? 'trampa' : SPRITE_CATEGORIA[s.categoria_juego] ?? 'trampa');
+      const tam = Math.round(14 + 6 * cc);
+      ctx.fillStyle = '#fafaf0';
+      ctx.fillRect(Math.round(CX + x - tam / 2 - 2), Math.round(CY + y - tam / 2 - 2), tam + 4, tam + 4);
+      ctx.strokeStyle = TINTA; ctx.lineWidth = 1.5;
+      ctx.strokeRect(Math.round(CX + x - tam / 2 - 2), Math.round(CY + y - tam / 2 - 2), tam + 4, tam + 4);
+      if (img.complete) ctx.drawImage(img, Math.round(CX + x - tam / 2), Math.round(CY + y - tam / 2), tam, tam);
+      ctx.fillStyle = TINTA;
+      for (let i = 0; i < ed.nivel; i++) ctx.fillRect(Math.round(CX + x - tam / 2 + i * 4), Math.round(CY + y + tam / 2 + 4), 3, 3);
     }
   }
 }
