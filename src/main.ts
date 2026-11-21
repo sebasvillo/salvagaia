@@ -170,7 +170,8 @@ function cajon() {
   const id = planeta.seleccion;
   if (!id) { caj.innerHTML = `<p class="vacio">${mensaje || t('toca_celda')}</p>`; return; }
   const c = CELDA_POR_ID.get(id)!;
-  const titulo = `<div class="cab"><b>${t('b_' + c.bioma)}</b> · ${t('r_' + c.region)}${e.degradadas.includes(id) ? ` · <em>${t('degradada')}</em>` : ''}</div>`;
+  const mar = c.bioma === 'oceano' || c.bioma === 'oceano_costero';
+  const titulo = `<div class="cab"><b>${t('b_' + c.bioma)}</b>${mar ? '' : ' · ' + t('r_' + c.region)}${e.degradadas.includes(id) ? ` · <em>${t('degradada')}</em>` : ''}</div>`;
   const msg = mensaje ? `<p class="msg">${mensaje}</p>` : '';
   const b = e.edificios[id];
   if (b) {

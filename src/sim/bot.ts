@@ -24,7 +24,7 @@ function jugarAnio(e: Estado, estilo: Estilo) {
   if (estilo === 'bueno') {
     for (const id of POLITICAS) {
       const c = costoPolitica(e, id);
-      if (c !== null && e.esperanza > c + 40) aplicarPolitica(e, id);
+      if (c !== null && e.esperanza > c + (id === 'fin_subsidios' ? 15 : 35)) aplicarPolitica(e, id);
     }
   }
   for (let paso = 0; paso < 40; paso++) {
@@ -62,7 +62,7 @@ function jugarAnio(e: Estado, estilo: Estilo) {
         if (df > mejorDef) { mejorDef = df; celda = x.id; }
       }
       if (!celda) continue;
-      const v = (gan / (c.energia + c.materiales)) * 1.05;
+      const v = (gan / (c.energia + c.materiales)) * (niveles > 0 ? 0.6 : 1.05);
       const cc = celda;
       if (!mejor || v > mejor.valor) mejor = { valor: v, hacer: () => construir(e, cc, s.id) };
     }
