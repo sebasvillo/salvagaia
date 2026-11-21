@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { CELDAS, P, SOLUCIONES, solucionesMvp } from '../datos';
+import { CELDAS, P, SOLUCIONES, solucionesIniciales } from '../datos';
 import { aplicarPolitica, calcularEmisiones, construir, demoler, nuevaPartida, puntaje, type Estado } from '../juego';
 import { siguienteAnio } from '../turno';
 import { simular } from '../bot';
@@ -15,7 +15,7 @@ describe('datos', () => {
     for (const s of SOLUCIONES) { expect(s.juego.era).toBeGreaterThan(0); expect(s.juego.biomas.length).toBeGreaterThan(0); }
   });
   it('el MVP trae energía limpia y algunas trampas desde el inicio', () => {
-    const { inicio } = solucionesMvp();
+    const inicio = solucionesIniciales();
     expect(inicio.some((s) => s.juego.produce.energia > 0 && !s.juego.es_trampa)).toBe(true);
     expect(inicio.filter((s) => s.juego.es_trampa).length).toBe(P.soluciones_mvp.trampas.length);
     for (const id of [...P.soluciones_mvp.extras_inicio, ...P.adaptacion_ids]) expect(SOLUCIONES.some((s) => s.id === id)).toBe(true);
@@ -75,11 +75,11 @@ describe('reglas', () => {
     const c = libre(e, 'desierto');
     construir(e, c, 'deploy-stratospheric-aerosol-injection');
     siguienteAnio(e);
-    const t = e.temperatura;
+    const t = e.tBase;
     demoler(e, c);
     const r = siguienteAnio(e);
     expect(r.choqueAerosoles).toBe(true);
-    expect(e.temperatura).toBeGreaterThan(t);
+    expect(e.tBase).toBeGreaterThan(t);
   });
   it('las políticas cuestan Esperanza', () => {
     const e = nuevaPartida('x', 'medio');
@@ -91,6 +91,19 @@ describe('reglas', () => {
     const e = simular('x', 'medio', 'nada');
     expect(e.fin).toMatch(/^derrota/);
     expect(puntaje(e).total).toBeGreaterThan(0);
+  });
+  it('cada año se desbloquean soluciones nuevas', () => {
+    const e = nuevaPartida('x', 'medio');
+    const n = e.desbloqueadas.length;
+    const r = siguienteAnio(e);
+    expect(r.desbloqueadas.length).toBe(P.desbloqueo.por_anio.medio);
+    expect(e.desbloqueadas.length).toBe(n + r.desbloqueadas.length);
+  });
+  it('El Niño y La Niña mueven la temperatura alrededor de la tendencia', () => {
+    const e = nuevaPartida('enso', 'medio');
+    const fases = new Set<string>();
+    for (let i = 0; i < 60 && !e.fin; i++) { siguienteAnio(e); fases.add(e.enso.fase); expect(Math.abs(e.temperatura - e.tBase - e.enso.anom)).toBeLessThan(1e-9); }
+    expect(fases.has('nino') && fases.has('nina')).toBe(true);
   });
   it('derrota por Vida: llenar el mundo de trampas mata la Vida', () => {
     expect(simular('x', 'medio', 'trampas').fin).toBe('derrota_vida');

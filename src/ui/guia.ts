@@ -139,7 +139,8 @@ export class Guia {
     const nuevo = (id: string, cond: boolean) => { if (cond && !this.vistos.has(id) && !this.cola.includes(id) && this.actual !== id) this.cola.push(id); };
     if (r) {
       nuevo('a_trampa', r.reveladas.length > 0);
-      nuevo('a_era2', r.desbloqueoEra2);
+      nuevo('a_desbloqueo', r.desbloqueadas.length > 0);
+      nuevo('a_enso', r.enso.fase !== 'neutro');
       nuevo('a_evento', r.eventos.some((x) => x.danados.length > 0));
       nuevo('a_inflexion', r.inflexiones.length > 0);
     }

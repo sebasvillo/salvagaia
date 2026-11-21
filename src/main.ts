@@ -4,7 +4,7 @@ import es from './i18n/es.json';
 import en from './i18n/en.json';
 import fichasJson from '../data/fichas.json';
 import faunaJson from '../data/fauna.json';
-import { CELDAS, CELDA_POR_ID, P, SOL_POR_ID, compatible, type Dificultad, type Solucion } from './sim/datos';
+import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID, compatible, type Dificultad, type Solucion } from './sim/datos';
 import {
   POLITICAS, aplicarPolitica, calcularEmisiones, comerciar, construir, costoConstruir, costoMejorar, costoPolitica,
   demoler, huella, mejorar, nuevaPartida, puntaje, solucionesDisponibles, tasaComercio, type Estado, type ResumenDelAnio,
@@ -55,7 +55,10 @@ function modal(html: string, alCerrar?: () => void) {
   m.className = 'modal';
   m.innerHTML = `<div class="ficha">${html}</div>`;
   document.body.appendChild(m);
-  m.querySelectorAll<HTMLElement>('[data-cerrar]').forEach((b) => (b.onclick = () => { m.remove(); alCerrar?.(); }));
+  const cerrar = () => { if (!m.isConnected) return; m.remove(); alCerrar?.(); };
+  m.querySelectorAll<HTMLElement>('[data-cerrar]').forEach((b) => (b.onclick = cerrar));
+  // Tocar por fuera de la tarjeta también la cierra.
+  m.addEventListener('click', (ev) => { if (ev.target === m) cerrar(); });
   return m;
 }
 
@@ -284,8 +287,10 @@ function cajon() {
     caj.querySelector<HTMLButtonElement>('[data-info]')!.onclick = (ev) => { ev.stopPropagation(); info(s.id, id); };
     return;
   }
+  const abiertas = new Set(e.desbloqueadas);
   const opciones = solucionesDisponibles(e).filter((s) => compatible(s, c.bioma));
-  if (!opciones.length) { caj.innerHTML = `${cab}<p class="vacio">${t('nada_aqui')}</p>`; return; }
+  const cerradas = SOLUCIONES.filter((s) => !abiertas.has(s.id) && compatible(s, c.bioma));
+  if (!opciones.length && !cerradas.length) { caj.innerHTML = `${cab}<p class="vacio">${t('nada_aqui')}</p>`; return; }
   // Primero lo que alcanza, después por impacto. Las trampas se ven igual que el resto: así enseñan.
   opciones.sort((a, b) => {
     const ca = costoConstruir(e, a.id), cb = costoConstruir(e, b.id);
@@ -299,8 +304,13 @@ function cajon() {
       ${s.juego.objeto_juego && idioma === 'es' ? `<span class="obj">${esc(s.juego.objeto_juego)}</span>` : ''}
       ${impacto(s)}
       <span class="costo">${costoTxt(costoConstruir(e, s.id))}</span>
+    </div>`).join('')}${cerradas.map((s) => `
+    <div class="sol bloqueada" aria-disabled="true">
+      <span class="fila-ico">${ico('candado')}<button class="info" data-info="${s.id}" aria-label="info">${ico('info')}</button></span>
+      <b>${esc(nombre(s))}</b>
+      <span class="obj">${t('bloqueada_txt')}</span>
     </div>`).join('')}</div>`;
-  caj.querySelectorAll<HTMLElement>('.sol').forEach((el) => {
+  caj.querySelectorAll<HTMLElement>('.sol:not(.bloqueada)').forEach((el) => {
     const hacer = () => {
       const r = construir(e, id, el.dataset.s!);
       mensaje = r ? t('err_' + r) : '';
@@ -341,7 +351,7 @@ function info(solId: string, celdaId: string) {
     s.juego.efecto_vida > 0 ? `${ico('vida')} ${t('info_vida')}` : '',
     s.juego.efecto_comunidad > 0 ? `${ico('esperanza')} ${t('info_esp')}` : '',
   ].filter(Boolean);
-  const emp = s.emprendimientos?.filter((x) => !x.startsWith('(')).slice(0, 3);
+  const emp = s.emprendimientos?.filter((x) => !x.startsWith('(') && !x.includes('por-verificar')).slice(0, 3);
   modal(`<div class="ceiba-cab"><img class="retrato-chico" src="${sprite('ceiba')}" alt=""><div><small>${t('info_titulo')}</small><h2>${esc(nombre(s))}</h2></div></div>
     <p class="frase">${frase}</p>
     <h3>${t('info_drawdown')}</h3>
@@ -358,7 +368,7 @@ function comercio() {
   const e = estado!;
   const tasa = tasaComercio(e);
   const m = modal(`<h2>${ico('comercio', 'ico g')} ${t('comerciar')}</h2>
-    <p>${t('comerciar_txt', { n: P.recursos.comercio.normal, p: P.recursos.comercio.puerto })}</p>
+    <p>${t('comerciar_txt', { n: tasa })}</p>
     <p class="nums"><span>${ico('rayo')} <b id="c-e">${Math.round(e.energia)}</b></span><span>${ico('materiales')} <b id="c-m">${Math.round(e.materiales)}</b></span></p>
     <button id="c1" style="width:100%">${t('dar_energia', { n: tasa })}</button>
     <button id="c2" style="width:100%;margin-top:8px">${t('dar_materiales', { n: tasa })}</button>
@@ -414,7 +424,11 @@ function resumen(r: ResumenDelAnio) {
   const e = estado!;
   const flecha = (x: number) => (x < -0.005 ? '▼' : x > 0.005 ? '▲' : '=');
   const items: string[] = [];
-  if (r.desbloqueoEra2) items.push(`<li class="bueno">${ico('candado')}<span>${t('era2')}</span></li>`);
+  if (r.enso.fase !== 'neutro') items.push(`<li>${ico(r.enso.fase === 'nino' ? 'temperatura' : 'hielo')}<span>${t('enso_' + r.enso.fase, { t: fmt(Math.abs(r.enso.anom), 2) })}</span></li>`);
+  if (r.desbloqueadas.length) {
+    const nombres = r.desbloqueadas.slice(0, 3).map((id) => esc(nombre(SOL_POR_ID.get(id)!)));
+    items.push(`<li class="bueno">${ico('candado')}<span>${t('nuevas', { lista: nombres.join(', ') })}${r.desbloqueadas.length > 3 ? ' ' + t('y_mas', { n: r.desbloqueadas.length - 3 }) : ''}</span></li>`);
+  }
   for (const id of r.reveladas) items.push(`<li class="malo">${ico('trampa')}<span>${t('revelada', { nombre: esc(nombre(SOL_POR_ID.get(id)!)) })}</span></li>`);
   for (const i of r.inflexiones) items.push(`<li class="malo">${ico('hielo')}<span>${t('inf_' + i)}</span></li>`);
   if (r.choqueAerosoles) items.push(`<li class="malo">${ico('geoingenieria')}<span>${t('choque')}</span></li>`);
@@ -427,7 +441,7 @@ function resumen(r: ResumenDelAnio) {
     dato = s.potencial_gt_min != null && s.potencial_gt_max != null
       ? t('dato', { nombre: esc(nombre(s)), a: fmt(s.potencial_gt_min, 2), b: fmt(s.potencial_gt_max, 2) })
       : t('dato_sin', { nombre: esc(nombre(s)) });
-    const emp = s.emprendimientos?.filter((x) => !x.startsWith('('));
+    const emp = s.emprendimientos?.filter((x) => !x.startsWith('(') && !x.includes('por-verificar'));
     if (emp?.length) dato += ' ' + t('dato_emp', { lista: esc(emp.slice(0, 3).join(', ')) });
   }
   const desg = (lista: [string, number][], icono: string) => lista.length ? `<div class="desglose">${ico(icono)}<span>${lista

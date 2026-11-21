@@ -61,17 +61,11 @@ export const CELDAS = (mapaJson as any).celdas as Celda[];
 export const CELDA_POR_ID = new Map(CELDAS.map((c) => [c.id, c]));
 export const SOL_POR_ID = new Map(SOLUCIONES.map((s) => [s.id, s]));
 
-/** Las soluciones del MVP: era 1 sin trampas + extras + trampas elegidas + el resto de la era 2 (bloqueada al inicio). */
-export function solucionesMvp(): { inicio: Solucion[]; era2: Solucion[] } {
+/** Las soluciones con las que arranca la partida: la era 1 sin trampas, unas extras y unas trampas. El resto se desbloquea. */
+export function solucionesIniciales(): Solucion[] {
   const extras = new Set<string>(P.soluciones_mvp.extras_inicio);
   const trampas = new Set<string>(P.soluciones_mvp.trampas);
-  const inicio = SOLUCIONES.filter(
-    (s) => (s.juego.era === 1 && !s.juego.es_trampa) || extras.has(s.id) || trampas.has(s.id),
-  );
-  const ids = new Set(inicio.map((s) => s.id));
-  const extras2 = new Set<string>(P.soluciones_mvp.extras_era2 ?? []);
-  const era2 = SOLUCIONES.filter((s) => ((s.juego.era === 2 && !s.juego.es_trampa) || extras2.has(s.id)) && !ids.has(s.id));
-  return { inicio, era2 };
+  return SOLUCIONES.filter((s) => (s.juego.era === 1 && !s.juego.es_trampa) || extras.has(s.id) || trampas.has(s.id));
 }
 
 /** Sector del modelo de emisiones al que reduce una solución. */

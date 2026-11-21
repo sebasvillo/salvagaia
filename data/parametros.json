@@ -62,7 +62,12 @@
     "niveles_saturacion": 5,
     "r": 0.9,
     "arranque": 0.25,
-    "fuente": "SUPUESTO: curva en S; 5 niveles construidos de una solución llevan su adopción global al 100 % del potencial de Drawdown"
+    "fuente": "SUPUESTO: curva en S; 5 niveles construidos de una solución llevan su adopción global al 100 % del potencial de Drawdown",
+    "r_dificultad": {
+      "facil": 0.9,
+      "medio": 0.7,
+      "dificil": 0.5
+    }
   },
   "aprendizaje_b": {
     "valor": 0.15,
@@ -126,8 +131,21 @@
     },
     "comercio": {
       "normal": 3,
-      "puerto": 2,
-      "_fuente": "SUPUESTO inspirado en Catan: 3 de un recurso por 1 del otro; 2 por 1 si tienes un edificio en la costa (puerto)"
+      "_fuente": "SUPUESTO: 3 de un recurso por 1 del otro"
+    },
+    "base_dificultad": {
+      "facil": {
+        "energia": 26,
+        "materiales": 46
+      },
+      "medio": {
+        "energia": 20,
+        "materiales": 36
+      },
+      "dificil": {
+        "energia": 15,
+        "materiales": 28
+      }
     }
   },
   "vida": {
@@ -336,17 +354,54 @@
       "deploy-direct-air-capture",
       "deploy-stratospheric-aerosol-injection",
       "expand-livestock-grazing"
-    ],
-    "extras_era2": [
-      "deploy-ocean-alkalinity-enhancement",
-      "deploy-ocean-electrochemistry",
-      "deploy-seaweed-farming-for-food",
-      "deploy-enhanced-rock-weathering"
     ]
   },
   "adaptacion_ids": [
     "protect-coastal-wetlands-mangrove-ecosystems",
     "restore-mangrove-ecosystems",
     "restore-salt-marsh-ecosystems"
-  ]
+  ],
+  "desbloqueo": {
+    "_fuente": "SUPUESTO: árbol tecnológico implícito. Cada año se abren varias soluciones; las de la misma categoría que más has desarrollado salen antes. Las eras de Drawdown frenan las más inmaduras",
+    "por_anio": {
+      "facil": 8,
+      "medio": 7,
+      "dificil": 6
+    },
+    "penalidad_era": {
+      "1": 0,
+      "2": 0.6,
+      "3": 1.6,
+      "4": 2.6,
+      "5": 8
+    },
+    "peso_similitud": 5,
+    "azar": 1.5,
+    "era5_desde": 2055
+  },
+  "inercia": {
+    "tau_anios": 4,
+    "_fuente": "SUPUESTO para dar drama: la temperatura alcanza su valor de equilibrio con unos años de rezago (inercia de los océanos), así que sigue subiendo un rato después de cortar emisiones"
+  },
+  "enso": {
+    "_fuente": "El Niño y La Niña mueven la temperatura media global unas décimas de grado (WMO; el Niño 2023-24 ayudó a que 2024 pasara 1,5 °C). Amplitudes y probabilidades: SUPUESTO",
+    "nino": {
+      "min": 0.08,
+      "max": 0.18
+    },
+    "nina": {
+      "min": -0.14,
+      "max": -0.06
+    },
+    "eventos": {
+      "nino": {
+        "sequia": 1.6,
+        "incendio": 1.5
+      },
+      "nina": {
+        "inundacion": 1.5,
+        "huracan": 1.3
+      }
+    }
+  }
 }

@@ -35,3 +35,12 @@ Todo lo que no sale de una fuente. Los valores viven en `data/parametros.json`; 
 
 ## Victoria
 - Para ganar, la temperatura tiene que bajar 10 años seguidos **y** las emisiones netas tienen que ser negativas en cada uno de esos años. Sin esta segunda condición se podía "ganar" solo cortando el metano, con el CO₂ todavía subiendo.
+
+## Cambios del 21 nov 2026 (tarde)
+- **Arranque en 1,5 °C** (decisión de Sebas; 2024 fue el primer año por encima de 1,5, según Copernicus y la WMO). Para que no salten de una, los umbrales de los corales y del permafrost quedaron un poco más arriba, dentro del rango de Armstrong McKay et al. (2022).
+- **Inercia térmica:** la temperatura de fondo se acerca a su valor de equilibrio con un rezago de 4 años. Sigue subiendo un rato después de cortar emisiones.
+- **El Niño y La Niña:** fases de 1 o 2 años. El Niño suma entre 0,08 y 0,18 °C (y trae más sequías e incendios); La Niña resta entre 0,06 y 0,14 °C (y trae más inundaciones y huracanes). La victoria, la derrota por calor y el pico usan la temperatura **de fondo**, sin esos saltos.
+- **Desbloqueo año a año (árbol tecnológico implícito):** cada año se abren 8, 7 o 6 soluciones (fácil, medio, difícil). Las de la categoría que más has desarrollado salen primero, y las eras de Drawdown frenan las más inmaduras. La fusión no aparece antes de 2055.
+- **Rendimiento del terreno:** bosques, cultivos, turberas y montañas dan materiales; pastos, mar, costa y ríos dan energía, y los desiertos el doble. Nivel 1-2 da 1, nivel 3-4 da 2 y nivel 5 da 3.
+- **Comercio:** siempre 3 por 1.
+- **Dificultad:** la adopción va más lenta en difícil (r = 0,9; 0,7; 0,5) y los recursos base son menores (⚡ 26/20/15 y ⛏ 46/36/28).

@@ -1,12 +1,13 @@
 // Un año completo de simulación (estilo BitLife): se aplica todo y se devuelve el resumen del año.
-import { CELDAS, CELDA_POR_ID, P, SOL_POR_ID } from './datos';
-import { calcularEmisiones, justicia, nivelesDe, rendimiento, type Estado, type EventoAnio, type ResumenDelAnio } from './juego';
+import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID } from './datos';
+import { calcularEmisiones, justicia, migrar, nivelesDe, rendimiento, type Estado, type EventoAnio, type ResumenDelAnio } from './juego';
 import { siguiente } from './rng';
 
 const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 
 function actualizarAdopcion(e: Estado) {
-  const { niveles_saturacion: sat, r, arranque } = P.adopcion;
+  const { niveles_saturacion: sat, arranque } = P.adopcion;
+  const r = P.adopcion.r_dificultad?.[e.dificultad] ?? P.adopcion.r;
   const ids = new Set([...Object.keys(e.adopcion), ...Object.values(e.edificios).map((b) => b.sol)]);
   for (const id of ids) {
     const meta = Math.min(1, nivelesDe(e, id) / sat);
@@ -34,7 +35,8 @@ function eventos(e: Estado, resumen: ResumenDelAnio, dv: (k: string, v: number) 
   const calor = Math.max(0, e.temperatura - 1.2) * ev.calor_k;
   const adaptacion = new Set<string>(P.adaptacion_ids);
   for (const [tipo, t] of Object.entries(ev.tipos) as [string, any][]) {
-    const prob = t.prob * ev.multiplicador[e.dificultad] * (t.sin_calor ? 1 : 1 + calor);
+    const ensoMult = (P.enso.eventos[e.enso.fase] ?? {})[tipo] ?? 1;
+    const prob = t.prob * ev.multiplicador[e.dificultad] * (t.sin_calor ? 1 : 1 + calor) * ensoMult;
     if (siguiente(e) >= Math.min(0.95, prob)) continue;
     const candidatas = CELDAS.filter((c) => t.biomas.includes(c.bioma) && (!t.lat_max || Math.abs(c.lat) <= t.lat_max));
     if (!candidatas.length) continue;
@@ -90,12 +92,38 @@ function inflexiones(e: Estado, resumen: ResumenDelAnio, dv: (k: string, v: numb
   }
 }
 
+/** Árbol tecnológico implícito: cada año se abren soluciones; las parecidas a lo que más desarrollas, primero. */
+function desbloquear(e: Estado, resumen: ResumenDelAnio) {
+  const D = P.desbloqueo;
+  const abiertas = new Set(e.desbloqueadas);
+  const porCat: Record<string, number> = {};
+  let total = 0;
+  for (const b of Object.values(e.edificios)) { const c = SOL_POR_ID.get(b.sol)!.categoria_juego; porCat[c] = (porCat[c] ?? 0) + b.nivel; total += b.nivel; }
+  const candidatas = SOLUCIONES.filter((s) => !abiertas.has(s.id) && (s.juego.era < 5 || e.anio >= D.era5_desde))
+    .map((s) => ({ s, v: -D.penalidad_era[String(s.juego.era)] + (total ? (D.peso_similitud * (porCat[s.categoria_juego] ?? 0)) / total : 0) + siguiente(e) * D.azar }))
+    .sort((a, b) => b.v - a.v);
+  for (const { s } of candidatas.slice(0, D.por_anio[e.dificultad])) { e.desbloqueadas.push(s.id); resumen.desbloqueadas.push(s.id); }
+}
+
+/** El Niño y La Niña: fases de 1 o 2 años que suben o bajan la temperatura unas décimas. */
+function enso(e: Estado) {
+  const C = P.enso;
+  e.enso.anios--;
+  if (e.enso.anios > 0) return;
+  const r = siguiente(e);
+  const f = e.enso.fase;
+  const nueva = f === 'neutro' ? (r < 0.35 ? 'nino' : r < 0.7 ? 'nina' : 'neutro') : (r < 0.6 ? 'neutro' : r < 0.85 ? (f === 'nino' ? 'nina' : 'nino') : f);
+  const rango = nueva === 'neutro' ? null : C[nueva];
+  e.enso = { fase: nueva, anios: 1 + (siguiente(e) < 0.4 ? 1 : 0), anom: rango ? rango.min + siguiente(e) * (rango.max - rango.min) : 0 };
+}
+
 export function siguienteAnio(e: Estado): ResumenDelAnio {
+  migrar(e);
   if (e.fin) throw new Error('La partida terminó');
   const tAntes = e.temperatura;
   const resumen: ResumenDelAnio = {
     anio: e.anio, emisiones: 0, deltaEmisiones: 0, temperatura: 0, deltaTemperatura: 0, energia: 0, materiales: 0,
-    vida: 0, esperanza: 0, eventos: [], reveladas: [], inflexiones: [], choqueAerosoles: false, desbloqueoEra2: false,
+    vida: 0, esperanza: 0, eventos: [], reveladas: [], inflexiones: [], choqueAerosoles: false, desbloqueadas: [], enso: { fase: 'neutro', anom: 0 },
     dato: null, fin: null, desglose: { vida: [], esperanza: [] }, produccion: { energia: 0, materiales: 0 },
   };
   const dv = (k: string, v: number) => { if (Math.abs(v) >= 0.05) resumen.desglose.vida.push([k, v]); e.vida += v; };
@@ -119,13 +147,20 @@ export function siguienteAnio(e: Estado): ResumenDelAnio {
   const aerMeta = nivAer * P.trampas.aerosol_enfriamiento_por_nivel;
   if (aerMeta < e.aerosol - 0.05) { resumen.choqueAerosoles = true; dv('choque', P.trampas.choque_vida); }
   e.aerosol = aerMeta;
-  e.temperatura = tco2 + e.tSlcf - e.aerosol;
+  const tBaseAntes = e.tBase;
+  if (e.tInercia === undefined) e.tInercia = e.tBase + e.aerosol;
+  e.tInercia += (tco2 + e.tSlcf - e.tInercia) / P.inercia.tau_anios; // SUPUESTO: inercia térmica
+  e.tBase = e.tInercia - e.aerosol; // los aerosoles enmascaran al instante (y su choque también es instantáneo)
+  enso(e);
+  e.temperatura = e.tBase + e.enso.anom;
+  resumen.enso = { fase: e.enso.fase, anom: e.enso.anom };
 
   // 4. Puntos de inflexión.
   inflexiones(e, resumen, dv);
 
   // 5. Recursos (con tope: lo que no se usa, se pierde).
-  let pe = P.recursos.energia.base, pm = P.recursos.materiales.base;
+  const baseD = P.recursos.base_dificultad?.[e.dificultad];
+  let pe = baseD?.energia ?? P.recursos.energia.base, pm = baseD?.materiales ?? P.recursos.materiales.base;
   let prodE = 0, prodM = 0;
   for (const [cid, b] of Object.entries(e.edificios)) {
     const s = SOL_POR_ID.get(b.sol)!;
@@ -150,7 +185,7 @@ export function siguienteAnio(e: Estado): ResumenDelAnio {
   de('soluciones', ganE);
   de('desanimo', -E.erosion_anual * Math.max(0, em.neta / P.emisiones_inicio_gt.valor)); // SUPUESTO: el desánimo baja con las emisiones
   de(em.neta < e.ultimaEmision ? 'emisiones_bajan' : 'emisiones_suben', em.neta < e.ultimaEmision - 0.05 ? E.si_bajan_emisiones : em.neta > e.ultimaEmision + 0.05 ? E.si_suben_emisiones : 0);
-  if (e.temperatura < tAntes) de('temperatura_baja', E.si_baja_temperatura);
+  if (e.tBase < tBaseAntes) de('temperatura_baja', E.si_baja_temperatura);
   if (Object.keys(e.edificios).length >= 6 && justicia(e) < E.injusticia_umbral) de('injusticia', -E.injusticia_castigo);
 
   // 7. Eventos de la Tierra y trampas que se revelan.
@@ -159,19 +194,18 @@ export function siguienteAnio(e: Estado): ResumenDelAnio {
   e.vida = clamp(e.vida, 0, 100);
   e.esperanza = clamp(e.esperanza, 0, 100);
 
-  // 8. Desbloqueo de la era 2.
-  const niveles = Object.values(e.edificios).reduce((s, b) => s + b.nivel, 0);
-  if (!e.era2 && (e.anio + 1 >= P.eras.era2_anio || niveles >= P.eras.era2_niveles)) { e.era2 = true; resumen.desbloqueoEra2 = true; }
+  // 8. Soluciones nuevas.
+  desbloquear(e, resumen);
 
   // 9. Victoria y derrota.
   const vic = P.victoria;
-  e.tPico = Math.max(e.tPico, e.temperatura);
-  const bajando = e.temperatura < tAntes && (!vic.requiere_emisiones_netas_negativas || em.neta < 0);
+  e.tPico = Math.max(e.tPico, e.tBase);
+  const bajando = e.tBase < tBaseAntes && (!vic.requiere_emisiones_netas_negativas || em.neta < 0);
   e.racha = bajando ? e.racha + 1 : 0;
   if (e.racha >= vic.anios_bajando) e.fin = 'victoria';
   else if (e.vida <= 0) e.fin = 'derrota_vida';
   else if (e.esperanza <= 0) e.fin = 'derrota_esperanza';
-  else if (e.temperatura >= P.derrota.temperatura_max) e.fin = 'derrota_calor';
+  else if (e.tBase >= P.derrota.temperatura_max) e.fin = 'derrota_calor';
   else if (e.anio + 1 >= P.anio_fin) e.fin = 'derrota_tiempo';
 
   // 10. Registro.

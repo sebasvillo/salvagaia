@@ -241,3 +241,5 @@ table.preguntas td.no { color: var(--terracota); font-weight: 700; }
 .ceiba-dice p { margin: 0; font-size: 15px; }
 .ficha .mundo .prim { width: auto; margin: 0; padding: 6px 12px; }
 .ficha .mundo .link { padding: 4px 6px; }
+.sol.bloqueada { opacity: .55; filter: grayscale(1); cursor: default; box-shadow: none; border-style: dashed; }
+.sol.bloqueada .info { filter: none; }

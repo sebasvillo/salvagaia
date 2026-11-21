@@ -1,5 +1,5 @@
 // El estado de la partida y las acciones del jugador. TypeScript puro, sin DOM, determinista con semilla.
-import { CELDAS, CELDA_POR_ID, P, SOL_POR_ID, compatible, sectorDe, solucionesMvp, type Dificultad, type Solucion } from './datos';
+import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID, compatible, sectorDe, solucionesIniciales, type Dificultad, type Solucion } from './datos';
 import { entre, semillaDeTexto, siguiente } from './rng';
 
 export const SECTORES = Object.keys(P.sectores).filter((k) => !k.startsWith('_'));
@@ -44,7 +44,13 @@ export interface Estado {
   nivelesHistoricos: Record<string, number>;
   reveladas: string[];
   degradadas: string[];
-  era2: boolean;
+  /** Ids de las soluciones ya desbloqueadas. */
+  desbloqueadas: string[];
+  /** Temperatura sin El Niño ni La Niña (la tendencia de fondo). */
+  tBase: number;
+  /** Parte de la temperatura que responde con inercia (sin aerosoles ni El Niño). */
+  tInercia?: number;
+  enso: { fase: 'nino' | 'nina' | 'neutro'; anios: number; anom: number };
   politicas: Record<string, number>;
   inflexiones: Record<string, boolean>;
   historia: Punto[];
@@ -76,7 +82,9 @@ export interface ResumenDelAnio {
   reveladas: string[];
   inflexiones: string[];
   choqueAerosoles: boolean;
-  desbloqueoEra2: boolean;
+  /** Soluciones que se desbloquearon este año. */
+  desbloqueadas: string[];
+  enso: { fase: 'nino' | 'nina' | 'neutro'; anom: number };
   dato: string | null;
   fin: Fin;
   /** Por qué cambiaron la Vida y la Esperanza este año (para enseñar). */
@@ -98,7 +106,7 @@ export function nuevaPartida(semilla: string, dificultad: Dificultad): Estado {
     vida: P.vida.inicio[dificultad], esperanza: P.esperanza.inicio,
     temperatura: P.temperatura_inicio.valor, tCo2Base: 0, tSlcf: 0, aerosol: 0, cumCo2: 0,
     base, tendenciaExtra: 0, degradacionMult: 1, adopcion: {}, edificios: {}, nivelesHistoricos: {},
-    reveladas: [], degradadas: [], era2: false, politicas: {}, inflexiones: {}, historia: [],
+    reveladas: [], degradadas: [], desbloqueadas: solucionesIniciales().map((s) => s.id), tBase: P.temperatura_inicio.valor, enso: { fase: 'neutro', anios: 1, anom: 0 }, politicas: {}, inflexiones: {}, historia: [],
     tPico: P.temperatura_inicio.valor, racha: 0, ultimaEmision: 0, fin: null, acciones: 0,
   };
   // La semilla perturba el estado inicial, no la geografía: qué celdas de tierra arrancan degradadas.
@@ -118,8 +126,20 @@ export function nuevaPartida(semilla: string, dificultad: Dificultad): Estado {
 // ---------- Consultas ----------
 
 export function solucionesDisponibles(e: Estado): Solucion[] {
-  const { inicio, era2 } = solucionesMvp();
-  return e.era2 ? [...inicio, ...era2] : inicio;
+  migrar(e);
+  const abiertas = new Set(e.desbloqueadas);
+  return SOLUCIONES.filter((s) => abiertas.has(s.id));
+}
+
+/** Partidas guardadas con versiones anteriores. */
+export function migrar(e: Estado) {
+  if (!e.desbloqueadas) {
+    const ini = solucionesIniciales().map((s) => s.id);
+    const extra = (e as any).era2 ? SOLUCIONES.filter((s) => s.juego.era === 2 && !s.juego.es_trampa).map((s) => s.id) : [];
+    e.desbloqueadas = [...new Set([...ini, ...extra])];
+  }
+  if (e.tBase === undefined) e.tBase = e.temperatura;
+  if (!e.enso) e.enso = { fase: 'neutro', anios: 1, anom: 0 };
 }
 
 export function esTrampa(id: string) {
@@ -238,10 +258,9 @@ export function aplicarPolitica(e: Estado, id: string): string | null {
   return null;
 }
 
-/** Tasa de cambio: 3 por 1, o 2 por 1 si tienes un edificio en la costa (como los puertos de Catan). */
-export function tasaComercio(e: Estado): number {
-  const puerto = Object.keys(e.edificios).some((cid) => CELDA_POR_ID.get(cid)!.bioma === 'costa');
-  return puerto ? P.recursos.comercio.puerto : P.recursos.comercio.normal;
+/** Tasa de cambio: 3 de un recurso por 1 del otro. */
+export function tasaComercio(_e?: Estado): number {
+  return P.recursos.comercio.normal;
 }
 
 export function comerciar(e: Estado, de: 'energia' | 'materiales'): string | null {
