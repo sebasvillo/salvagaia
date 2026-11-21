@@ -14,6 +14,19 @@
   - Las fichas dicen "Evita hasta X Gt al año" y muestran el objeto concreto ("Techo solar comunitario").
   - **Tabla de mundos compartida:** artifact de Claude con base de datos → https://claude.ai/artifact/Gp976b6GhFK42sfux2JvBb. Cada jugador guarda solo su mejor puntaje, en un documento con su id, y nadie puede escribir el de otro. La versión de GitHub Pages guarda la tabla en el dispositivo y enlaza a la compartida. Build: `npm run build:artifact`.
 
+- **21 nov 2026 (tarde): ronda de cambios de Sebas.**
+  - Portada: lema nuevo sin fondo, "Nombre del mundo" (el nombre es la semilla), **varios mundos guardados a la vez**, con lista para jugar o borrar. Se guardan en el navegador (localStorage).
+  - "Cómo se juega" con íconos: meta, GEI y Gt, turnos, recursos, Vida, Esperanza, trampas sin decir cuáles, políticas, Drawdown y qué significa cada color.
+  - Ficha "i" en cada solución, contada por Ceiba: la frase de la ficha del cuaderno (117 fichas, `tools/fichas.py`), los números de Drawdown, la evaluación sí/no cuando no hay número, quién lo hace, link a Drawdown y lo que hace en tu mundo. Nunca dice "trampa".
+  - Recursos tipo Catan: cada terreno produce algo (bosques y cultivos dan materiales; desiertos, pastos y mar, energía), más con el nivel. Comercio 3 por 1, o 2 por 1 con puerto en la costa.
+  - La tarjeta del año explica por qué cambiaron la Vida y la Esperanza, cuánto produjeron tus edificios, y trae un comentario de Ceiba.
+  - Barra de arriba: temperatura y emisiones en grande, con cuánto subieron o bajaron; los recursos, compactos. Íconos de 12×12 y una Ceiba de 16×16.
+  - Arranque en 1,5 °C; tutorial que enseña GEI. Se distingue "en tu mundo" de "en el mundo real".
+  - Fauna migratoria (aguja colipinta, charrán ártico, golondrina, monarca, ballena jorobada, tortuga laúd): al tocarla, Ceiba cuenta su ruta. `data/fauna.json`.
+  - Sugerencia tras 60 s quieto (como Polytopia): resalta una casilla, un edificio, el comercio o "Pasar el año".
+  - CDR marino: alcalinizar el océano, captura electroquímica, cultivo de algas y meteorización mejorada entran en la era 2. Resumen de The State of CDR en `data/cdr/STATE_OF_CDR.md`.
+  - `ESTRATEGIA.md`: cómo gana el bot y qué revela del balance.
+
 ## Lo que falta
 - Scoreboard público de verdad (sin cuenta de Claude): Cloudflare D1 o Supabase, con tu cuenta.
 - Biomas reales (WWF) y macrocuencas (HydroBASINS); las eras 3 a 5.
@@ -22,6 +35,8 @@
 - Comparar `soluciones.json` contra el CSV oficial de Drawdown.
 
 ## Preguntas para Sebas
+0. **Balance:** las soluciones de comida y tierra están demasiado baratas (ver `ESTRATEGIA.md`). ¿Las encarecemos?
+0b. **Mundos en varios dispositivos:** hoy viven en el navegador. En la versión de claude.ai se podrían guardar en tu espacio privado de la base de datos del artifact y verse desde cualquier dispositivo. ¿Lo hacemos?
 1. **El pico se queda bajo** (~1,4 °C) si juegas bien, porque cortar metano enfría rápido. Es bastante honesto (el AR6 lo dice), pero hay poco drama. ¿Lo dejamos así o subimos la inercia?
 2. **Victoria:** hoy pide 10 años bajando **con emisiones netas negativas**. ¿Te parece la definición correcta de "revertir"?
 3. **Las políticas** (cerrar el carbón y compañía) son invento mío para que la industria y el transporte se puedan bajar con la era 1-2. ¿Te gustan?
