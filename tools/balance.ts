@@ -8,7 +8,7 @@ for (const dif of ['facil', 'medio', 'dificil'] as Dificultad[]) {
     const fines: Record<string, number> = {};
     const anios: number[] = [];
     let tp = 0, pts = 0;
-    const N = 4;
+    const N = 6;
     for (let i = 0; i < N; i++) {
       const e = simular('s' + i, dif, estilo);
       fines[e.fin ?? 'sigue'] = (fines[e.fin ?? 'sigue'] ?? 0) + 1;

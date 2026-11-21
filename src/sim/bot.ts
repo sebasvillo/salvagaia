@@ -54,6 +54,13 @@ function jugarAnio(e: Estado, estilo: Estilo) {
   for (let paso = 0; paso < pf.acciones; paso++) {
     const em = calcularEmisiones(e);
     const deficit = regionMasPobre(e);
+    // Casillas libres por bioma, de la región con más déficit a la de menos.
+    const libres = new Map<string, { id: string; df: number }[]>();
+    for (const x of CELDAS) {
+      if (e.edificios[x.id]) continue;
+      const l = libres.get(x.bioma) ?? []; l.push({ id: x.id, df: deficit[x.region] ?? -1 }); libres.set(x.bioma, l);
+    }
+    for (const l of libres.values()) l.sort((a, b) => b.df - a.df);
     let mejor: { valor: number; hacer: () => void } | null = null;
     for (const s of solucionesDisponibles(e)) {
       const trampa = esTrampa(s.id);
@@ -83,10 +90,10 @@ function jugarAnio(e: Estado, estilo: Estilo) {
       const c = costoConstruir(e, s.id);
       if (c.energia > e.energia || c.materiales > e.materiales) continue;
       let celda: string | null = null, mejorDef = -Infinity;
-      for (const x of CELDAS) {
-        if (e.edificios[x.id] || !compatible(s, x.bioma)) continue;
-        const df = (deficit[x.region] ?? -1) + (e.degradadas.includes(x.id) && s.tipo === 'secuestrar' ? 0.05 : 0);
-        if (df > mejorDef) { mejorDef = df; celda = x.id; }
+      for (const [bioma, lista] of libres) {
+        if (!compatible(s, bioma as any) || !lista.length) continue;
+        const x = lista[0];
+        if (x.df > mejorDef) { mejorDef = x.df; celda = x.id; }
       }
       if (!celda) continue;
       const v = (gan / (c.energia + c.materiales)) * (niveles > 0 ? pf.mejorar : 1.05);

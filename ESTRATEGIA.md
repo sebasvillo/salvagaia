@@ -29,3 +29,22 @@ Sale de mirar cómo juega el bot "sensato" en dificultad media (`npm run balance
 1. **Las de comida y tierra están demasiado baratas** para lo que evitan. El bot las pone primero siempre. Hay que subirles el costo, o hacer que exijan casillas de cultivo, que son pocas.
 2. **El bot construye ~150 edificios.** Un humano construirá 40-60, así que una partida humana durará más (2060-2075). Está bien para una primera partida, pero hay que jugarlo.
 3. **El pico ya es casi el arranque (1,53 °C),** porque se empieza en 1,5. Si quieres más drama, que la inercia térmica haga subir la temperatura unos años aunque cortes de una.
+
+## Corridas del 21 nov (tarde), con desbloqueo, inercia y El Niño (6 mundos por casilla)
+| | fácil | medio | difícil |
+|---|---|---|---|
+| sensato (todo) | gana ~2050 | gana ~2054 | gana ~2058 |
+| humano (4 jugadas al año, cae a veces en trampas) | gana ~2100 | gana 5 de 6, ~2128 | **pierde** (se acaba el tiempo) |
+| min-max sin políticas | gana ~2053 | gana ~2061 | **pierde** (5 por Esperanza, 1 por calor) |
+| diverso | gana ~2051 | gana ~2053 | gana ~2063 |
+| energía primero | gana ~2056 | gana ~2060 | gana ~2067 |
+| naturaleza primero | gana ~2050 | gana ~2053 | gana ~2058 |
+| sin políticas | gana ~2053 | **pierde** (tiempo) | **pierde** (Esperanza) |
+| solo trampas | pierde ~2030 | pierde ~2031 | pierde ~2031 |
+| no hacer nada | pierde ~2061 | pierde ~2054 | pierde ~2050 |
+
+**Lo que dicen las corridas:**
+- **Sin políticas no se gana** en medio ni en difícil: la industria y el transporte no bajan solo con soluciones.
+- En difícil, **min-max pierde**: sube pocas soluciones al máximo, la Esperanza se cae y no alcanza a pagar nada.
+- **Diverso y naturaleza** sacan los mejores puntajes en difícil (~1.900), con un pico más bajo.
+- Un humano que hace pocas jugadas al año pierde en difícil: lo que falta es la cantidad de jugadas, no la estrategia.
