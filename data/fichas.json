@@ -1,0 +1,1605 @@
+{
+ "improve-steel-production": {
+  "frase": "Hacer acero con hidrógeno verde, electricidad o hornos de arco eléctrico en vez de carbón.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-steel-production",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "improve-aquaculture": {
+  "frase": "Criar peces y mariscos con menos alimento, energía y contaminación.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-aquaculture",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "use-feed-additives": {
+  "frase": "Agregar al alimento del ganado sustancias (como algas *Asparagopsis*) que reducen su metano.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/use-feed-additives",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "deploy-stratospheric-aerosol-injection": {
+  "frase": "Inyectar partículas en la estratósfera para reflejar luz solar. Enfría pero no baja el CO₂, y detenerlo es peligroso.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-stratospheric-aerosol-injection",
+  "preguntas": {
+   "¿Puede funcionar?": "No",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Es riesgosa?": "Sí"
+  }
+ },
+ "deploy-agrivoltaics": {
+  "frase": "Poner paneles solares sobre cultivos o pastos, de modo que la misma tierra dé comida y energía.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.1,
+  "alcanzable_bajo_gt": 1.8,
+  "alcanzable_alto_gt": 4.1,
+  "pct_emisiones": "0.17%",
+  "url": "https://drawdown.org/explorer/deploy-agrivoltaics",
+  "preguntas": null
+ },
+ "deploy-alternative-insulation-materials": {
+  "frase": "Aislar edificios con materiales de bajo carbono (fibra de madera, cáñamo, celulosa) en vez de espumas fósiles.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.022,
+  "alcanzable_bajo_gt": 0.05,
+  "alcanzable_alto_gt": 0.12,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-alternative-insulation-materials",
+  "preguntas": null
+ },
+ "deploy-ocean-alkalinity-enhancement": {
+  "frase": "Agregar minerales alcalinos al mar para que absorba y guarde más CO₂ como bicarbonato.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-ocean-alkalinity-enhancement",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí"
+  }
+ },
+ "improve-rice-production": {
+  "frase": "Cultivar arroz con riego intermitente y mejor manejo para reducir el metano de los arrozales.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.1,
+  "alcanzable_bajo_gt": 0.1,
+  "alcanzable_alto_gt": 0.16,
+  "pct_emisiones": "0.17%",
+  "url": "https://drawdown.org/explorer/improve-rice-production",
+  "preguntas": null
+ },
+ "improve-fishing-vessel-efficiency": {
+  "frase": "Barcos pesqueros con mejores motores, cascos y rutas para gastar menos combustible.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "mobilize-electric-bicycles-private": {
+  "frase": "Bicicletas eléctricas, propias o compartidas, para viajes urbanos.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.05%",
+  "url": "https://drawdown.org/explorer/mobilize-electric-scooters-",
+  "preguntas": null
+ },
+ "mobilize-electric-bicycles-shared": {
+  "frase": "Bicicletas eléctricas, propias o compartidas, para viajes urbanos.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.05%",
+  "url": "https://drawdown.org/explorer/mobilize-electric-scooters-",
+  "preguntas": null
+ },
+ "use-biochar": {
+  "frase": "Convertir residuos orgánicos en carbón por pirólisis y ponerlo en el suelo, donde guarda carbono por siglos.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.0,
+  "alcanzable_bajo_gt": 0.13,
+  "alcanzable_alto_gt": 0.47,
+  "pct_emisiones": "0.00%",
+  "url": "https://drawdown.org/explorer/use-biochar",
+  "preguntas": null
+ },
+ "deploy-methane-digesters": {
+  "frase": "Fermentar estiércol y residuos orgánicos sin oxígeno para producir biogás y abono.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-methane-digesters",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-plastic-alternatives-bioplastics": {
+  "frase": "Materiales de base biológica que reemplazan plásticos fósiles. Su impacto depende de la materia prima y del fin de vida.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-plastic-alternatives-bioplastics",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "use-heat-pumps": {
+  "frase": "Calentar y enfriar con bombas de calor, que mueven calor en vez de generarlo.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.13,
+  "alcanzable_bajo_gt": 0.58,
+  "alcanzable_alto_gt": 0.93,
+  "pct_emisiones": "0.21%",
+  "url": "https://drawdown.org/explorer/use-heat-pumps",
+  "preguntas": null
+ },
+ "deploy-electric-irrigation-pumps": {
+  "frase": "Bombear agua de riego con motores eléctricos, idealmente solares, en vez de diésel.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-electric-irrigation-pumps",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "improve-district-heating-buildings": {
+  "frase": "Calentar barrios con redes de agua caliente alimentadas por fuentes limpias.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.02,
+  "alcanzable_bajo_gt": 0.06,
+  "alcanzable_alto_gt": 0.12,
+  "pct_emisiones": "0.04%",
+  "url": "https://drawdown.org/explorer/improve-district-heating-buildings",
+  "preguntas": null
+ },
+ "improve-district-heating-industry": {
+  "frase": "Llevar calor limpio de redes distritales a procesos industriales.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-district-heating-industry",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "improve-nonmotorized-transportation": {
+  "frase": "Ciudades para caminar y pedalear: ciclorrutas, andenes y calles seguras.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.642,
+  "alcanzable_bajo_gt": 1.43,
+  "alcanzable_alto_gt": 1.89,
+  "pct_emisiones": "1.09%",
+  "url": "https://drawdown.org/explorer/improve-nonmotorized-transportation",
+  "preguntas": null
+ },
+ "carbon-capture-storage-on-fossil-fuel-power-plants": {
+  "frase": "Capturar el CO₂ de las térmicas fósiles. Alarga la vida del carbón y del gas, y captura menos de lo prometido.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/use-carbon-capture-storage-on-fossil-fuel-power-plants",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "Sí",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-direct-air-capture": {
+  "frase": "Máquinas que filtran CO₂ del aire con ventiladores y químicos y lo inyectan bajo tierra.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-direct-air-capture",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "Sí",
+   "¿Es barata?": "No"
+  }
+ },
+ "advance-cultivated-meat": {
+  "frase": "Producir carne a partir de células animales cultivadas en biorreactores, sin criar ni sacrificar animales.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/advance-cultivated-meat",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-grass-finished-beef": {
+  "frase": "Engordar el ganado solo con pasto, sin granos. Suena natural, pero emite más por kilo de carne.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-grass-",
+  "preguntas": {
+   "¿Puede funcionar?": "No",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "increase-carpooling": {
+  "frase": "Compartir el carro para que viaje más gente en menos vehículos.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.0,
+  "alcanzable_bajo_gt": 0.25,
+  "alcanzable_alto_gt": 0.96,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/increase-carpooling",
+  "preguntas": null
+ },
+ "mobilize-electric-cars": {
+  "frase": "Carros eléctricos en vez de gasolina, mejor si la red es limpia.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.04,
+  "alcanzable_bajo_gt": 1.26,
+  "alcanzable_alto_gt": 2.3,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/mobilize-electric-cars",
+  "preguntas": null
+ },
+ "mobilize-hybrid-cars": {
+  "frase": "Carros híbridos que combinan motor eléctrico y de gasolina.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.038,
+  "alcanzable_bajo_gt": 0.34,
+  "alcanzable_alto_gt": 0.86,
+  "pct_emisiones": "0.06%",
+  "url": "https://drawdown.org/explorer/mobilize-hybrid-cars",
+  "preguntas": null
+ },
+ "improve-cement-production-clinker-substitution": {
+  "frase": "Hacer cemento con menos clínker, combustibles alternativos y más eficiencia en el horno.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "1.14%",
+  "url": "https://drawdown.org/explorer/improve-cement-production",
+  "preguntas": null
+ },
+ "improve-cement-production-alternative-fuels": {
+  "frase": "Hacer cemento con menos clínker, combustibles alternativos y más eficiencia en el horno.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "1.14%",
+  "url": "https://drawdown.org/explorer/improve-cement-production",
+  "preguntas": null
+ },
+ "improve-cement-production-efficiency-upgrades": {
+  "frase": "Hacer cemento con menos clínker, combustibles alternativos y más eficiencia en el horno.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "1.14%",
+  "url": "https://drawdown.org/explorer/improve-cement-production",
+  "preguntas": null
+ },
+ "reduce-food-loss-waste": {
+  "frase": "Evitar que se pierda o se bote comida en la finca, el transporte, la tienda y la casa.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.0,
+  "alcanzable_bajo_gt": 1.23,
+  "alcanzable_alto_gt": 2.47,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/reduce-food-loss-waste",
+  "preguntas": null
+ },
+ "deploy-electric-cooking-equipment": {
+  "frase": "Cocinar con estufas eléctricas o de inducción en vez de gas, leña o carbón.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-electric-cooking-equipment",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "deploy-sustainable-aviation-fuel": {
+  "frase": "Combustible de aviación hecho de residuos, aceites usados o con electricidad y CO₂.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-sustainable-aviation-fuel",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "increase-decentralized-composting": {
+  "frase": "Compostar donde se produce el residuo: casas, barrios, plazas de mercado (pacas digestoras).",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/increase-decentralized-composting",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "increase-centralized-composting": {
+  "frase": "Recoger los residuos orgánicos de la ciudad y compostarlos a escala industrial.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.3,
+  "alcanzable_bajo_gt": 0.78,
+  "alcanzable_alto_gt": 1.2,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/increase-decentralized-composting",
+  "preguntas": null
+ },
+ "deploy-seaweed-farming-for-food": {
+  "frase": "Cultivar algas en el mar como alimento, sin fertilizantes ni agua dulce.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-ocean-biomass-sinking",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado"
+  }
+ },
+ "improve-annual-cropping": {
+  "frase": "Prácticas agrícolas que guardan carbono en el suelo: sin labranza, coberturas y rotaciones.",
+  "velocidad": "Retrasada",
+  "impacto_actual_gt": 0.31,
+  "alcanzable_bajo_gt": 0.43,
+  "alcanzable_alto_gt": 1.09,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-annual-cropping",
+  "preguntas": null
+ },
+ "improve-diets": {
+  "frase": "Comer más plantas y menos carne de res y lácteos.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": 1.4,
+  "alcanzable_alto_gt": 2.8,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-diets",
+  "preguntas": null
+ },
+ "deploy-building-automation-systems": {
+  "frase": "Sistemas que encienden, apagan y regulan la luz y el clima de un edificio según su uso real.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.11,
+  "alcanzable_bajo_gt": 0.18,
+  "alcanzable_alto_gt": 0.36,
+  "pct_emisiones": "0.19%",
+  "url": "https://drawdown.org/explorer/deploy-building-automation-systems",
+  "preguntas": null
+ },
+ "boost-appliance-equipment-efficiency": {
+  "frase": "Usar electrodomésticos y equipos que hacen lo mismo con menos electricidad.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/boost-appliance-equipment-efficiency",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "deploy-ocean-electrochemistry": {
+  "frase": "Usar electricidad para cambiar la química del agua de mar y sacarle o guardarle CO₂.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-ocean-electrochemistry",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-district-cooling": {
+  "frase": "Enfriar barrios enteros con una red de agua fría central en vez de un aire acondicionado por edificio.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-district-cooling",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "bury-biomass": {
+  "frase": "Enterrar madera y residuos vegetales en condiciones que impiden que se pudran, para guardar su carbono.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/bury-biomass",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "improve-building-envelopes": {
+  "frase": "Aislar paredes, techos y pisos para que el edificio pierda menos calor o frío.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-building-envelopes",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "improve-fuel-burning-cooking-equipment": {
+  "frase": "Estufas de leña o carbón mejoradas que queman mejor y echan menos humo.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-fuel-burning-cooking-equipment",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "use-corn-ethanol": {
+  "frase": "Hacer combustible de maíz. Compite por tierra y alimento y apenas reduce emisiones.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/use-corn-ethanol",
+  "preguntas": {
+   "¿Puede funcionar?": "No",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "expand-livestock-grazing": {
+  "frase": "Ampliar la ganadería sobre más tierra. Deforesta y emite metano.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/expand-livestock-grazing",
+  "preguntas": {
+   "¿Puede funcionar?": "No",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-offshore-wind-turbines": {
+  "frase": "Turbinas eólicas en el mar, donde el viento es más fuerte y constante.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.14,
+  "alcanzable_bajo_gt": 1.9,
+  "alcanzable_alto_gt": 3.04,
+  "pct_emisiones": "0.23%",
+  "url": "https://drawdown.org/explorer/deploy-offshore-wind-turbines",
+  "preguntas": null
+ },
+ "deploy-ocean-fertilization": {
+  "frase": "Echar hierro u otros nutrientes al mar para provocar floraciones de plancton. Riesgoso y poco verificable.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-ocean-fertilization",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "Sí"
+  }
+ },
+ "deploy-nuclear-fusion": {
+  "frase": "Producir energía uniendo núcleos de hidrógeno, como el sol. Todavía no da energía neta comercial.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-nuclear-fusion",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-advanced-geothermal-energy": {
+  "frase": "Sacar calor profundo de la roca con técnicas de perforación del petróleo, en lugares sin geotermia natural.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-advanced-geothermal-energy",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-insect-farming-for-food-and-feed": {
+  "frase": "Criar insectos para alimento humano o animal. Su balance climático real es dudoso.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-insect-farming-for-food-and-feed",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "Sí",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-vertical-farms": {
+  "frase": "Cultivar en pisos apilados bajo luces LED. Gasta mucha energía para lo que ahorra.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-vertical-farms",
+  "preguntas": {
+   "¿Puede funcionar?": "No",
+   "¿Está lista?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "use-low-flow-fixtures": {
+  "frase": "Duchas y grifos que usan menos agua caliente.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/use-low-",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "produce-blue-hydrogen": {
+  "frase": "Hidrógeno de gas natural con captura de carbono. Las fugas de metano lo hacen muy dudoso.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/produce-blue-hydrogen",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "Sí",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "deploy-industrial-green-hydrogen": {
+  "frase": "Producir hidrógeno partiendo agua con electricidad renovable para usarlo en industria pesada.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.0,
+  "alcanzable_bajo_gt": 0.31,
+  "alcanzable_alto_gt": 0.6,
+  "pct_emisiones": "0.00%",
+  "url": "https://drawdown.org/explorer/deploy-industrial-green-hydrogen",
+  "preguntas": null
+ },
+ "mobilize-green-hydrogen-for-aviation-and-trucking": {
+  "frase": "Usar hidrógeno verde en camiones y aviones donde las baterías no alcanzan.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/mobilize-green-hydrogen-for-aviation-and-trucking",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-ocean-biomass-sinking": {
+  "frase": "Cultivar algas y hundirlas al fondo del mar para guardar su carbono. Muy difícil de medir y riesgoso.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-ocean-biomass-sinking",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "Sí"
+  }
+ },
+ "deploy-led-lighting": {
+  "frase": "Cambiar bombillos por LED, que dan la misma luz con mucha menos energía.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.36,
+  "alcanzable_bajo_gt": 0.62,
+  "alcanzable_alto_gt": 0.65,
+  "pct_emisiones": "0.61%",
+  "url": "https://drawdown.org/explorer/deploy-led-lighting",
+  "preguntas": null
+ },
+ "deploy-waste-to-energy": {
+  "frase": "Quemar basura para generar electricidad. Emite CO₂ fósil del plástico y desincentiva reciclar.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-waste-to-energy",
+  "preguntas": {
+   "¿Puede funcionar?": "No",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "improve-manure-management": {
+  "frase": "Manejar el estiércol para que no emita metano ni óxido nitroso (cubrirlo, compostarlo, digerirlo).",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-manure-management",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "improve-nutrient-management": {
+  "frase": "Usar el fertilizante justo, en el momento y lugar correctos, para reducir el óxido nitroso.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.06,
+  "alcanzable_bajo_gt": 0.42,
+  "alcanzable_alto_gt": 0.54,
+  "pct_emisiones": "0.11%",
+  "url": "https://drawdown.org/explorer/improve-nutrient-management",
+  "preguntas": null
+ },
+ "improve-ruminant-breeding": {
+  "frase": "Criar vacas y ovejas que emiten menos metano por kilo de producto.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-ruminant-breeding",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-enhanced-rock-weathering": {
+  "frase": "Moler rocas como el basalto y regarlas en cultivos para que reaccionen con el CO₂ y lo atrapen como mineral.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-enhanced-rock-weathering",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-micro-wind-turbines": {
+  "frase": "Turbinas eólicas pequeñas para casas, fincas o edificios.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-micro-wind-turbines",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "mobilize-electric-seated-scooters-motorcycles": {
+  "frase": "Motos y scooters eléctricos, clave en ciudades del Sur Global.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.05,
+  "alcanzable_bajo_gt": 0.31,
+  "alcanzable_alto_gt": 0.41,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/mobilize-electric-seated-scooters-motorcycles",
+  "preguntas": null
+ },
+ "reduce-crop-residue-burning": {
+  "frase": "No quemar los residuos de cosecha en el campo, sino aprovecharlos o incorporarlos al suelo.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.0,
+  "alcanzable_bajo_gt": 0.11,
+  "alcanzable_alto_gt": 0.39,
+  "pct_emisiones": "0.00%",
+  "url": "https://drawdown.org/explorer/reduce-crop-residue-burning",
+  "preguntas": null
+ },
+ "use-atmospheric-oxidation-enhancement": {
+  "frase": "Liberar químicos en el aire para acelerar la destrucción del metano. No probado y riesgoso.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-landfill-management",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Es riesgosa?": "Sí",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-alternative-grazing": {
+  "frase": "Mover el ganado entre potreros con descansos largos para que el pasto se recupere y el suelo guarde carbono.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-alternative-grazing",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "reduce-grazing-intensity": {
+  "frase": "Menos animales por hectárea para que la tierra se recupere.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/reduce-grazing-intensity",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "protect-forests-boreal": {
+  "frase": "Proteger bosques con áreas protegidas y con la titulación de tierras indígenas.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.24%",
+  "url": "https://drawdown.org/explorer/protect-forests",
+  "preguntas": null
+ },
+ "protect-forests-temperate": {
+  "frase": "Proteger bosques con áreas protegidas y con la titulación de tierras indígenas.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.24%",
+  "url": "https://drawdown.org/explorer/protect-forests",
+  "preguntas": null
+ },
+ "protect-forests-subtropical": {
+  "frase": "Proteger bosques con áreas protegidas y con la titulación de tierras indígenas.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.24%",
+  "url": "https://drawdown.org/explorer/protect-forests",
+  "preguntas": null
+ },
+ "protect-seaweed-ecosystems": {
+  "frase": "Proteger los bosques de algas marinas.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.03,
+  "alcanzable_bajo_gt": 0.07,
+  "alcanzable_alto_gt": 0.1,
+  "pct_emisiones": "0.04%",
+  "url": "https://drawdown.org/explorer/deploy-seaweed-farming-for-food",
+  "preguntas": null
+ },
+ "protect-seafloors": {
+  "frase": "Proteger el fondo marino de la pesca de arrastre y la minería, que remueven sedimentos con carbono.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/protect-seafloors",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "protect-coastal-wetlands-mangrove-ecosystems": {
+  "frase": "Proteger manglares, pastos marinos y marismas, que guardan mucho carbono en su suelo.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/protect-coastal-wetlands",
+  "preguntas": null
+ },
+ "protect-coastal-wetlands-salt-marsh-ecosystems": {
+  "frase": "Proteger manglares, pastos marinos y marismas, que guardan mucho carbono en su suelo.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/protect-coastal-wetlands",
+  "preguntas": null
+ },
+ "protect-coastal-wetlands-seagrass-ecosystems": {
+  "frase": "Proteger manglares, pastos marinos y marismas, que guardan mucho carbono en su suelo.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/protect-coastal-wetlands",
+  "preguntas": null
+ },
+ "protect-grasslands-savannas-boreal": {
+  "frase": "Proteger pastizales y sabanas, que guardan casi todo su carbono bajo tierra.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.52%",
+  "url": "https://drawdown.org/explorer/protect-coastal-wetlands",
+  "preguntas": null
+ },
+ "protect-grasslands-savannas-subtropical": {
+  "frase": "Proteger pastizales y sabanas, que guardan casi todo su carbono bajo tierra.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.52%",
+  "url": "https://drawdown.org/explorer/protect-coastal-wetlands",
+  "preguntas": null
+ },
+ "protect-grasslands-savannas-temperate": {
+  "frase": "Proteger pastizales y sabanas, que guardan casi todo su carbono bajo tierra.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.52%",
+  "url": "https://drawdown.org/explorer/protect-coastal-wetlands",
+  "preguntas": null
+ },
+ "protect-peatlands-boreal": {
+  "frase": "Proteger turberas, el ecosistema terrestre que más carbono guarda por hectárea.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.08%",
+  "url": "https://drawdown.org/explorer/restore-peatlands",
+  "preguntas": null
+ },
+ "protect-peatlands-temperate": {
+  "frase": "Proteger turberas, el ecosistema terrestre que más carbono guarda por hectárea.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.08%",
+  "url": "https://drawdown.org/explorer/restore-peatlands",
+  "preguntas": null
+ },
+ "protect-peatlands-subtropical": {
+  "frase": "Proteger turberas, el ecosistema terrestre que más carbono guarda por hectárea.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.08%",
+  "url": "https://drawdown.org/explorer/restore-peatlands",
+  "preguntas": null
+ },
+ "deploy-leaf-protein-concentrates": {
+  "frase": "Extraer la proteína de hojas (alfalfa, lenteja de agua) para comida humana.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-leaf-protein-concentrates",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "deploy-small-modular-nuclear-reactors": {
+  "frase": "Reactores nucleares pequeños, fabricados en serie y modulares.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-small-modular-nuclear-reactors",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "increase-recycling-metals": {
+  "frase": "Recuperar metales, papel, plásticos y vidrio para no producirlos desde cero.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "1.85%",
+  "url": "https://drawdown.org/explorer/increase-centralized-",
+  "preguntas": null
+ },
+ "increase-recycling-paper-and-cardboard": {
+  "frase": "Recuperar metales, papel, plásticos y vidrio para no producirlos desde cero.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "1.85%",
+  "url": "https://drawdown.org/explorer/increase-centralized-",
+  "preguntas": null
+ },
+ "increase-recycling-plastics": {
+  "frase": "Recuperar metales, papel, plásticos y vidrio para no producirlos desde cero.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "1.85%",
+  "url": "https://drawdown.org/explorer/increase-centralized-",
+  "preguntas": null
+ },
+ "use-methane-oxidizing-coatings": {
+  "frase": "Recubrimientos con catalizadores que destruyen metano del aire.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/use-methane-oxidizing-coatings",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "reduce-airplane-contrails": {
+  "frase": "Desviar vuelos para evitar las estelas de condensación que atrapan calor.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/reduce-airplane-contrails",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "reduce-overfishing": {
+  "frase": "Pescar menos de lo que el mar repone, con cuotas y áreas de veda.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/reduce-over",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "deploy-alternative-refrigerants": {
+  "frase": "Cambiar los gases refrigerantes que calientan miles de veces más que el CO₂ por otros naturales o de bajo impacto.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": 0.2,
+  "alcanzable_bajo_gt": 2.5,
+  "alcanzable_alto_gt": 2.7,
+  "pct_emisiones": "0.34%",
+  "url": "https://drawdown.org/explorer/deploy-alternative-refrigerants",
+  "preguntas": null
+ },
+ "improve-landfill-management-methane-capture": {
+  "frase": "Capturar el metano de los rellenos sanitarios o cubrirlos con capas biológicas que lo oxidan.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.08%",
+  "url": "https://drawdown.org/explorer/improve-landfill-management",
+  "preguntas": null
+ },
+ "improve-landfill-management-biocovers": {
+  "frase": "Capturar el metano de los rellenos sanitarios o cubrirlos con capas biológicas que lo oxidan.",
+  "velocidad": "Freno de emergencia",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.08%",
+  "url": "https://drawdown.org/explorer/improve-landfill-management",
+  "preguntas": null
+ },
+ "restore-whale-populations": {
+  "frase": "Proteger y recuperar las ballenas, que mueven nutrientes y carbono en el océano.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-whale-populations",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "restore-forests-boreal": {
+  "frase": "Restaurar bosques degradados o talados, idealmente dejando que se regeneren solos.",
+  "velocidad": "Retrasada",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-forests",
+  "preguntas": null
+ },
+ "restore-forests-temperate": {
+  "frase": "Restaurar bosques degradados o talados, idealmente dejando que se regeneren solos.",
+  "velocidad": "Retrasada",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-forests",
+  "preguntas": null
+ },
+ "restore-forests-subtropical": {
+  "frase": "Restaurar bosques degradados o talados, idealmente dejando que se regeneren solos.",
+  "velocidad": "Retrasada",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-forests",
+  "preguntas": null
+ },
+ "restore-seaweed-ecosystems": {
+  "frase": "Recuperar bosques de algas, por ejemplo quitando erizos que se los comen.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-seaweed-ecosystems",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "No"
+  }
+ },
+ "restore-large-herbivores": {
+  "frase": "Devolver herbívoros grandes (bisontes, elefantes) que mantienen sanos los ecosistemas.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-large-herbivores",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "restore-mangrove-ecosystems": {
+  "frase": "Volver a sembrar y recuperar el agua de los manglares perdidos.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-mangrove-ecosystems",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "restore-salt-marsh-ecosystems": {
+  "frase": "Recuperar marismas costeras.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-salt-marsh-ecosystems",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Sí",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "restore-grasslands-savannas": {
+  "frase": "Recuperar pastizales y sabanas degradados con especies nativas.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-grasslands-savannas",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "restore-seagrass-ecosystems": {
+  "frase": "Volver a sembrar praderas de pastos marinos.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/restore-seagrass-ecosystems",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No"
+  }
+ },
+ "restore-peatlands-boreal": {
+  "frase": "Volver a mojar turberas drenadas para que dejen de emitir.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.00%",
+  "url": "https://drawdown.org/explorer/restore-mangrove-ecosystems",
+  "preguntas": null
+ },
+ "restore-peatlands-subtropical": {
+  "frase": "Volver a mojar turberas drenadas para que dejen de emitir.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.00%",
+  "url": "https://drawdown.org/explorer/restore-mangrove-ecosystems",
+  "preguntas": null
+ },
+ "restore-peatlands-temperate": {
+  "frase": "Volver a mojar turberas drenadas para que dejen de emitir.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.00%",
+  "url": "https://drawdown.org/explorer/restore-mangrove-ecosystems",
+  "preguntas": null
+ },
+ "improve-irrigation-water-use-efficiency": {
+  "frase": "Regar mejor (goteo, sensores) para gastar menos agua y energía.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/improve-irrigation-water-use-efficiency",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "deploy-silvopasture": {
+  "frase": "Combinar árboles con pastos y ganado en la misma tierra.",
+  "velocidad": "Retrasada",
+  "impacto_actual_gt": 0.35,
+  "alcanzable_bajo_gt": 0.4,
+  "alcanzable_alto_gt": 0.98,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-silvopasture",
+  "preguntas": null
+ },
+ "deploy-distributed-solar-pv": {
+  "frase": "Paneles solares en techos de casas, empresas y comunidades, cerca de donde se usa la energía.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.46,
+  "alcanzable_bajo_gt": 2.8,
+  "alcanzable_alto_gt": 3.5,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-distributed-solar-pv",
+  "preguntas": null
+ },
+ "deploy-artificial-upwelling": {
+  "frase": "Bombear agua profunda y rica en nutrientes a la superficie del mar para alimentar al plancton.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-artificial-upwelling",
+  "preguntas": {
+   "¿Está lista?": "No",
+   "¿Hay datos para evaluarla?": "No",
+   "¿Funciona de forma consistente?": "No",
+   "¿Es riesgosa?": "Sí",
+   "¿Es barata?": "No"
+  }
+ },
+ "deploy-cool-roofs": {
+  "frase": "Pintar o cubrir los techos de blanco o de materiales reflectivos para que el edificio se caliente menos.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-cool-roofs",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "deploy-green-roofs": {
+  "frase": "Techos cubiertos de vegetación que aíslan, retienen lluvia y bajan la temperatura del edificio.",
+  "velocidad": null,
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": null,
+  "url": "https://drawdown.org/explorer/deploy-green-roofs",
+  "preguntas": {
+   "¿Puede funcionar?": "Sí",
+   "¿Está lista?": "Sí",
+   "¿Hay datos para evaluarla?": "Limitado",
+   "¿Funciona de forma consistente?": "Sí",
+   "¿Es lo bastante grande?": "No",
+   "¿Es riesgosa?": "No",
+   "¿Es barata?": "Sí"
+  }
+ },
+ "use-smart-programmable-thermostats-heating": {
+  "frase": "Termostatos que ajustan la calefacción o el aire acondicionado según horarios y presencia.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.05%",
+  "url": "https://drawdown.org/explorer/use-smart-programmable-thermostats",
+  "preguntas": null
+ },
+ "use-smart-programmable-thermostats-cooling": {
+  "frase": "Termostatos que ajustan la calefacción o el aire acondicionado según horarios y presencia.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": null,
+  "alcanzable_bajo_gt": null,
+  "alcanzable_alto_gt": null,
+  "pct_emisiones": "0.05%",
+  "url": "https://drawdown.org/explorer/use-smart-programmable-thermostats",
+  "preguntas": null
+ },
+ "enhance-public-transit": {
+  "frase": "Más y mejores buses, metros y trenes para que la gente deje el carro.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 0.395,
+  "alcanzable_bajo_gt": 0.7,
+  "alcanzable_alto_gt": 1.03,
+  "pct_emisiones": "0.67%",
+  "url": "https://drawdown.org/explorer/enhance-public-transit",
+  "preguntas": null
+ },
+ "improve-windows-glass": {
+  "frase": "Ventanas de doble o triple vidrio que aíslan mejor.",
+  "velocidad": "Gradual",
+  "impacto_actual_gt": 1.3,
+  "alcanzable_bajo_gt": 2.1,
+  "alcanzable_alto_gt": 2.6,
+  "pct_emisiones": "2.19%",
+  "url": "https://drawdown.org/explorer/improve-windows-glass",
+  "preguntas": null
+ }
+}

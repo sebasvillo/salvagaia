@@ -193,3 +193,51 @@ tr.tot td { font: 700 20px var(--texto); border: none; padding-top: 8px; }
 .leyenda .lt { color: #b85a2c; font-weight: 700; }
 .leyenda .le { color: var(--turquesa); font-weight: 700; }
 a { color: var(--turquesa); font-weight: 700; }
+
+/* ---------- v3: barra de arriba con lo importante grande ---------- */
+#hud { grid-template-columns: auto 1fr; grid-template-areas: "sello grandes" "chicos chicos"; }
+#hud .sello { grid-area: sello; }
+.grandes { grid-area: grandes; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.chicos { grid-area: chicos; display: flex; gap: 6px; }
+.chicos .med { padding: 2px 6px; font-size: 14px; }
+.chicos .vida, .chicos .esp { flex: 1; }
+.med.grande { padding: 4px 6px; gap: 6px; align-items: center; }
+.med.grande > div { display: flex; flex-direction: column; line-height: 1.05; min-width: 0; }
+.med.grande .valor { font: 700 19px var(--texto); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.med.grande small { font: 11px var(--texto); color: var(--tinta2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.delta { font: 700 12px var(--texto); }
+button.med { box-shadow: none; padding: 2px 6px; background: var(--mostaza); }
+.lema { font: 18px/1.3 var(--texto); margin: 4px 0 8px; max-width: 32ch; }
+.lema span { background: none !important; }
+.mundos { display: flex; flex-direction: column; gap: 6px; }
+.mundo { display: flex; align-items: center; gap: 8px; border-bottom: 2px dotted var(--tinta2); padding: 4px 0; }
+.mundo > div { flex: 1; min-width: 0; }
+.mundo small { display: block; color: var(--tinta2); font-size: 13px; }
+.mundo .prim { font-size: 15px; padding: 6px 12px; }
+.como { display: flex; gap: 10px; align-items: flex-start; margin: 8px 0; }
+.como p { margin: 2px 0 0; }
+.ficha h3 { font: 600 17px var(--pixel); margin: 14px 0 6px; }
+.leyenda-colores { gap: 6px !important; }
+.leyenda-colores li { align-items: center !important; font-size: 14px; }
+.muestra { width: 18px; height: 18px; border: 2px solid var(--tinta); flex: none; }
+button.info { padding: 0; border: none; box-shadow: none; background: none; line-height: 0; }
+button.info img { width: 22px; height: 22px; }
+.fila-ico { display: flex; justify-content: space-between; align-items: center; }
+.sol { cursor: pointer; background: var(--papel2); border: 2px solid var(--tinta); box-shadow: var(--sombra); border-radius: 3px; }
+.sol:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--tinta); }
+.sol:focus-visible { outline: 3px solid var(--turquesa); outline-offset: 2px; }
+.ceiba-cab { display: flex; gap: 10px; align-items: center; margin-bottom: 6px; }
+.ceiba-cab small { font: 12px var(--pixel); color: var(--turquesa); letter-spacing: 1px; }
+.ceiba-cab h2 { margin: 0; }
+.retrato-chico { width: 48px; height: 48px; image-rendering: pixelated; border: 2px solid var(--tinta); background: var(--papel); flex: none; }
+.frase { font-size: 17px; }
+.puntos { list-style: disc !important; padding-left: 20px !important; gap: 4px !important; display: block !important; }
+.puntos li { display: list-item !important; margin: 3px 0; }
+table.preguntas td { font-size: 14px; }
+table.preguntas td.si { color: var(--verde); font-weight: 700; }
+table.preguntas td.no { color: var(--terracota); font-weight: 700; }
+.desglose { display: flex; gap: 6px; align-items: flex-start; font-size: 14px; margin: 4px 0; }
+.ceiba-dice { display: flex; gap: 10px; align-items: center; margin-top: 10px; background: var(--papel); border: 2px solid var(--tinta); padding: 6px 8px; }
+.ceiba-dice p { margin: 0; font-size: 15px; }
+.ficha .mundo .prim { width: auto; margin: 0; padding: 6px 12px; }
+.ficha .mundo .link { padding: 4px 6px; }

@@ -15,6 +15,14 @@ const PALETA: Record<string, string> = {
 };
 
 const SPRITES: Record<string, string[]> = {
+  info: ["....kkkk....", "..kkttttkk..", ".kttttwtttk.", ".kttttttttk.", "kttttwwttttk", "ktttttwttttk", "ktttttwttttk", "ktttttwttttk", ".ktttwwwttk.", ".kttttttttk.", "..kkttttkk..", "....kkkk...."],
+  comercio: ["............", "...k........", "..kk........", ".kkkkkkkkk..", "..kk........", "...k........", "........k...", "........kk..", "..kkkkkkkkk.", "........kk..", "........k...", "............"],
+  esperanza: ["............", "..rr....rr..", ".rrrr..rrrr.", "rrwrrrrrrrrr", "rwrrrrrrrrrr", "rrrrrrrrrrrr", ".rrrrrrrrrr.", "..rrrrrrrr..", "...rrrrrr...", "....rrrr....", ".....rr.....", "............"],
+  vida: ["........ggg.", "......ggggg.", ".....gggGgg.", "....ggGggg..", "....gGggg...", "..gg.G......", ".gggGG......", ".ggg.G......", "..g..G......", ".....G......", "....bbb.....", "...bbbbb...."],
+  temperatura: [".....kk.....", "....kwwk....", "....kwwk....", "....kwwk....", "....krrk....", "....krrk....", "....krrk....", "...krrrrk...", "..krrrrrrk..", "..krrrrrrk..", "...krrrrk...", "....kkkk...."],
+  emisiones: ["......eee...", ".....eeeee..", "....eeeeeee.", "...eeeeeeee.", "....eeeee...", "..kk..e.....", "..kk........", "..kk........", "kkkkkk......", "kkkkkkkk....", "kwkwkwkk....", "kkkkkkkk...."],
+  materiales: ["............", "oooookooooo.", "oooookooooo.", "kkkkkkkkkkk.", "ookoooookoo.", "ookoooookoo.", "kkkkkkkkkkk.", "ooooookoooo.", "ooooookoooo.", "kkkkkkkkkkk.", "............", "............"],
+  rayo: ["......kkkk..", ".....kyyk...", "....kyyk....", "...kyyk.....", "..kyyyyykk..", "..kkkkyyyk..", ".....kyyk...", "....kyyk....", "...kyyk.....", "..kyk.......", "..kk........", "............"],
   energia: ['....y....', '.y..y..y.', '..yyyyy..', '..yyoyy..', 'yyyoooyyy', '..yyoyy..', '..yyyyy..', '.y..y..y.', '....y....'],
   naturaleza: ['...ggg...', '..gggGg..', '.ggGgggg.', '.gggggGg.', '..gGggg..', '...gbg...', '....b....', '....b....', '..bbbbb..'],
   edificios: ['....k....', '...krk...', '..krrrk..', '.krrrrrk.', '..wwwww..', '..wtwbw..', '..wtwbw..', '..wwwbw..', 'kkkkkkkkk'],
@@ -24,12 +32,6 @@ const SPRITES: Record<string, string[]> = {
   remocion_tecnologica: ['.........', 'ee.......', 'kk.......', 'kk..k..k.', 'kkkkkkkkk', 'kykykykyk', 'kkkkkkkkk', 'kykykykyk', 'kkkkkkkkk'],
   geoingenieria: ['.........', '...eee...', '..eeeee..', '.eeeeeee.', 'eeeeeeeee', 'eeeeeeeee', '.........', '..e.e.e..', '.e.e.e...'],
   trampa: ['....r....', '...rrr...', '...rwr...', '..rrwrr..', '..rrwrr..', '.rrrrrrr.', '.rrrwrrr.', 'rrrrrrrrr', '.........'],
-  temperatura: ['....k....', '...kwk...', '...kwk...', '...krk...', '...krk...', '...krk...', '..krrrk..', '..krrrk..', '...kkk...'],
-  emisiones: ['.........', '...eee...', '..eeeee..', '.eekkeee.', 'eekeekeee', 'eekeeekee', '.eekkeee.', '.........', '.........'],
-  rayo: ['....yy...', '...yy....', '..yy.....', '.yyyyyy..', '....yy...', '...yy....', '..yy.....', '.y.......', '.........'],
-  materiales: ['.kkkkkk..', 'k..b...k.', '...b.....', '...b.....', '...b.....', '...b.....', '...b.....', '...b.....', '.........'],
-  vida: ['.....ggg.', '...ggggg.', '..gggggg.', '.gggggGg.', '.ggggGgg.', '.gggGgg..', '..gGgg...', '.G.......', 'G........'],
-  esperanza: ['.........', '.rr...rr.', 'rrrr.rrrr', 'rrrrrrrrr', 'rrrrrrrrr', '.rrrrrrr.', '..rrrrr..', '...rrr...', '....r....'],
   huracan: ['..ttttt..', '.t.....t.', 't..ttt...', 't.t...t.t', 't.t.t.t.t', 't.t...t.t', '...ttt..t', '.t.....t.', '..ttttt..'],
   candado: ['...kkk...', '..k...k..', '..k...k..', '.yyyyyyy.', '.yyykyyy.', '.yyykyyy.', '.yyyyyyy.', '.yyyyyyy.', '.........'],
   hielo: ['....t....', '.t..t..t.', '..t.t.t..', '...ttt...', 'ttttttttt', '...ttt...', '..t.t.t..', '.t..t..t.', '....t....'],
@@ -37,20 +39,7 @@ const SPRITES: Record<string, string[]> = {
 };
 
 // La guía (nombre provisional: Ceiba). 12×12.
-const CEIBA = [
-  '...gGgGg....',
-  '..gGgggGg...',
-  '.gGbbbbbGg..',
-  '.gbbssssbg..',
-  '.gbskssksb..',
-  '..bssssssb..',
-  '..bsspppsb..',
-  '...bssssb...',
-  '....tttt....',
-  '...tytttt...',
-  '..tttttttt..',
-  '..tt.tt.tt..',
-];
+const CEIBA = [".....g.G.g......", "...gGgGgGgGg....", "..gGgyGgGgyGg...", "..GbbbbbbbbbG...", ".gbbssssssbbbg..", ".gbsssssssssbg..", ".bsskksskksssb..", ".bsskwsskwsssb..", ".bspssssssspsb..", "..bssssbssssb...", "...bssssssbb....", "....ttttttt.....", "...ttyttttyt....", "..ttttttttttt...", "..sttttttttts...", "...tt.....tt...."];
 
 const cache = new Map<string, string>();
 

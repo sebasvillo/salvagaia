@@ -4531,7 +4531,7 @@
    "biomas": [
     "cultivo"
    ],
-   "potencial_gt_usado": 0.3,
+   "potencial_gt_usado": 1.0,
    "potencial_es_supuesto": true,
    "costo": {
     "energia": 1,
@@ -4547,7 +4547,8 @@
    "efectos_ocultos": {},
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Molino de basalto para cultivos"
+   "objeto_juego": "Molino de basalto para cultivos",
+   "nota_potencial": "SUPUESTO: estimado bajo típico de 1 Gt/año (The State of CDR, 3.ª ed., 2026)"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Meteorización mejorada de rocas (Drawdown)",
@@ -4661,7 +4662,7 @@
    "biomas": [
     "oceano"
    ],
-   "potencial_gt_usado": 0.3,
+   "potencial_gt_usado": 1.0,
    "potencial_es_supuesto": true,
    "costo": {
     "energia": 1,
@@ -4677,7 +4678,8 @@
    "efectos_ocultos": {},
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Planta de alcalinización oceánica"
+   "objeto_juego": "Planta de alcalinización oceánica",
+   "nota_potencial": "SUPUESTO: estimado bajo típico de 1 Gt/año (The State of CDR, 3.ª ed., 2026)"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Alcalinizar el océano (Drawdown)",
@@ -4705,7 +4707,7 @@
    "biomas": [
     "oceano"
    ],
-   "potencial_gt_usado": 0.3,
+   "potencial_gt_usado": 1.0,
    "potencial_es_supuesto": true,
    "costo": {
     "energia": 1,
@@ -4721,7 +4723,8 @@
    "efectos_ocultos": {},
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Planta electroquímica marina"
+   "objeto_juego": "Planta electroquímica marina",
+   "nota_potencial": "SUPUESTO: estimado bajo típico de 1 Gt/año (The State of CDR, 3.ª ed., 2026)"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Electroquímica oceánica (Drawdown)",
@@ -4900,7 +4903,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Térmica con captura (trampa)"
+   "objeto_juego": "Térmica con captura"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Captura de carbono en térmicas fósiles (Drawdown)",
@@ -4948,7 +4951,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Incineradora (trampa)"
+   "objeto_juego": "Incineradora"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Incineración de basura con energía (Drawdown)",
@@ -4996,7 +4999,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Planta de hidrógeno azul (trampa)"
+   "objeto_juego": "Planta de hidrógeno azul"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Hidrógeno azul (Drawdown)",
@@ -5044,7 +5047,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Destilería de etanol de maíz (trampa)"
+   "objeto_juego": "Destilería de etanol de maíz"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Etanol de maíz (Drawdown)",
@@ -5092,7 +5095,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Hacienda de res de pastoreo (trampa)"
+   "objeto_juego": "Hacienda de res de pastoreo"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Carne de res de pastoreo (Drawdown)",
@@ -5142,7 +5145,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Granja de insectos (trampa)"
+   "objeto_juego": "Granja de insectos"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Granjas de insectos (Drawdown)",
@@ -5191,7 +5194,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Granja vertical (trampa)"
+   "objeto_juego": "Granja vertical"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Granjas verticales (Drawdown)",
@@ -5240,7 +5243,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Bomba oceánica de surgencia (trampa)"
+   "objeto_juego": "Bomba oceánica de surgencia"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Surgencia artificial (Drawdown)",
@@ -5288,7 +5291,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Potrero nuevo (trampa)"
+   "objeto_juego": "Potrero nuevo"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Expandir la ganadería (Drawdown)",
@@ -5335,7 +5338,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Hundidor de algas (trampa)"
+   "objeto_juego": "Hundidor de algas"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Hundir biomasa en el océano (Drawdown)",
@@ -5383,7 +5386,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Fertilizador oceánico (trampa)"
+   "objeto_juego": "Fertilizador oceánico"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Fertilizar el océano (Drawdown)",
@@ -5430,7 +5433,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Rociador atmosférico (trampa)"
+   "objeto_juego": "Rociador atmosférico"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Oxidación atmosférica (Drawdown)",
@@ -5478,7 +5481,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Torre de captura directa del aire (trampa)"
+   "objeto_juego": "Torre de captura directa del aire"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Captura directa del aire (Drawdown)",
@@ -5527,7 +5530,7 @@
    },
    "niveles": 5,
    "adopcion": "curva_s",
-   "objeto_juego": "Avión de aerosoles (trampa)"
+   "objeto_juego": "Avión de aerosoles"
   },
   "fuente": "Project Drawdown, Drawdown Explorer (actualizado 22 sep 2025), transcrito el 7 nov 2026; verificar contra el CSV oficial",
   "ficha": "Aerosoles en la estratósfera (Drawdown)",

@@ -79,6 +79,10 @@ export interface ResumenDelAnio {
   desbloqueoEra2: boolean;
   dato: string | null;
   fin: Fin;
+  /** Por qué cambiaron la Vida y la Esperanza este año (para enseñar). */
+  desglose: { vida: [string, number][]; esperanza: [string, number][] };
+  /** Lo que produjeron tus edificios este año. */
+  produccion: { energia: number; materiales: number };
 }
 
 const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
@@ -232,6 +236,33 @@ export function aplicarPolitica(e: Estado, id: string): string | null {
   if (p.vida) e.vida = clamp(e.vida + p.vida, 0, 100);
   e.acciones++;
   return null;
+}
+
+/** Tasa de cambio: 3 por 1, o 2 por 1 si tienes un edificio en la costa (como los puertos de Catan). */
+export function tasaComercio(e: Estado): number {
+  const puerto = Object.keys(e.edificios).some((cid) => CELDA_POR_ID.get(cid)!.bioma === 'costa');
+  return puerto ? P.recursos.comercio.puerto : P.recursos.comercio.normal;
+}
+
+export function comerciar(e: Estado, de: 'energia' | 'materiales'): string | null {
+  if (e.fin) return 'fin';
+  const tasa = tasaComercio(e);
+  const a = de === 'energia' ? 'materiales' : 'energia';
+  if (e[de] < tasa) return 'recursos';
+  if (e[a] >= P.recursos[a].tope) return 'tope';
+  e[de] -= tasa; e[a] += 1;
+  return null;
+}
+
+/** Rendimiento del terreno (Catan): nivel 1-2 da 1, 3-4 da 2, 5 da 3. */
+export function rendimiento(e: Estado, celdaId: string): { energia: number; materiales: number } {
+  const b = e.edificios[celdaId];
+  const r = { energia: 0, materiales: 0 };
+  if (!b) return r;
+  const base = P.recursos.rendimiento_bioma[CELDA_POR_ID.get(celdaId)!.bioma] ?? {};
+  const k = Math.floor((b.nivel + 1) / 2);
+  r.energia = (base.energia ?? 0) * k; r.materiales = (base.materiales ?? 0) * k;
+  return r;
 }
 
 // ---------- El modelo de emisiones ----------

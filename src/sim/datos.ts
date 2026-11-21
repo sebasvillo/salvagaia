@@ -37,6 +37,7 @@ export interface Solucion {
     niveles: number;
     adopcion: string;
     objeto_juego?: string;
+    nota_potencial?: string;
   };
   fuente: string;
   ficha?: string;
@@ -68,7 +69,8 @@ export function solucionesMvp(): { inicio: Solucion[]; era2: Solucion[] } {
     (s) => (s.juego.era === 1 && !s.juego.es_trampa) || extras.has(s.id) || trampas.has(s.id),
   );
   const ids = new Set(inicio.map((s) => s.id));
-  const era2 = SOLUCIONES.filter((s) => s.juego.era === 2 && !s.juego.es_trampa && !ids.has(s.id));
+  const extras2 = new Set<string>(P.soluciones_mvp.extras_era2 ?? []);
+  const era2 = SOLUCIONES.filter((s) => ((s.juego.era === 2 && !s.juego.es_trampa) || extras2.has(s.id)) && !ids.has(s.id));
   return { inicio, era2 };
 }
 

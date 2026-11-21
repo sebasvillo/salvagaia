@@ -1,0 +1,47 @@
+{
+  "_nota": "Animales que migran sobre el planeta (easter eggs). Rutas aproximadas (lat, lng). Las cifras llevan fuente; las marcadas #por-verificar hay que confirmarlas.",
+  "animales": [
+    {
+      "id": "aguja", "tipo": "ave", "color": "#c98d5e", "velocidad": 0.004,
+      "ruta": [[61, -162], [45, -172], [20, -178], [-5, 178], [-25, 172], [-41, 147]],
+      "es": { "nombre": "Aguja colipinta", "dato": "En 2022 una aguja colipinta joven voló 13.560 km sin parar, de Alaska a Tasmania, en 11 días: sin comer, sin beber y sin posarse. Es el vuelo sin escalas más largo registrado en un ave." },
+      "en": { "nombre": "Bar-tailed godwit", "dato": "In 2022 a young bar-tailed godwit flew 13,560 km nonstop from Alaska to Tasmania in 11 days: no food, no water, no landing. It's the longest nonstop bird flight on record." },
+      "fuente": "Guinness World Records / BirdLife (2022) #por-verificar"
+    },
+    {
+      "id": "charran", "tipo": "ave", "color": "#fafaf0", "velocidad": 0.005,
+      "ruta": [[72, -30], [55, -25], [30, -20], [0, -15], [-30, -5], [-55, 5], [-66, 15]],
+      "es": { "nombre": "Charrán ártico", "dato": "Va y vuelve cada año del Ártico a la Antártida: unos 70.900 km en promedio. Vive dos veranos al año y, en una vida, recorre como tres viajes a la Luna." },
+      "en": { "nombre": "Arctic tern", "dato": "It flies from the Arctic to Antarctica and back every year: about 70,900 km on average. It lives two summers a year and, in a lifetime, flies roughly three trips to the Moon." },
+      "fuente": "Egevang et al. (2010), PNAS"
+    },
+    {
+      "id": "golondrina", "tipo": "ave", "color": "#2a4a7a", "velocidad": 0.004,
+      "ruta": [[52, 5], [40, 2], [25, 3], [10, 8], [-5, 18], [-26, 28]],
+      "es": { "nombre": "Golondrina común", "dato": "Las golondrinas de Europa pasan el invierno en el sur de África: unos 10.000 km, cruzando el Sahara. Viajan de día y comen insectos al vuelo." },
+      "en": { "nombre": "Barn swallow", "dato": "Europe's swallows spend the winter in southern Africa: about 10,000 km, crossing the Sahara. They travel by day and catch insects on the wing." },
+      "fuente": "RSPB #por-verificar"
+    },
+    {
+      "id": "monarca", "tipo": "mariposa", "color": "#e8822f", "velocidad": 0.003,
+      "ruta": [[46, -78], [40, -88], [32, -97], [25, -100], [19.6, -100.3]],
+      "es": { "nombre": "Mariposa monarca", "dato": "Vuela hasta unos 4.000 km, de Canadá a los bosques de oyamel de Michoacán, en México. La generación que migra vive unos 8 meses; las demás, pocas semanas. Ninguna hace el viaje de ida y vuelta completo." },
+      "en": { "nombre": "Monarch butterfly", "dato": "It flies up to about 4,000 km, from Canada to the fir forests of Michoacán, Mexico. The migrating generation lives about 8 months; the others, a few weeks. None makes the full round trip." },
+      "fuente": "U.S. Fish & Wildlife Service #por-verificar"
+    },
+    {
+      "id": "jorobada", "tipo": "ballena", "color": "#3b4a5a", "velocidad": 0.002,
+      "ruta": [[-64, -62], [-50, -75], [-30, -80], [-12, -82], [2, -79.5], [6.2, -77.6]],
+      "es": { "nombre": "Ballena jorobada", "dato": "Nada unos 8.000 km desde la Antártida hasta el Pacífico colombiano, donde llega entre julio y octubre a parir y criar en aguas tibias, como las de Bahía Solano y Nuquí." },
+      "en": { "nombre": "Humpback whale", "dato": "It swims about 8,000 km from Antarctica to Colombia's Pacific coast, arriving between July and October to give birth in warm waters like those of Bahía Solano and Nuquí." },
+      "fuente": "Fundación Macuáticos Colombia #por-verificar"
+    },
+    {
+      "id": "laud", "tipo": "tortuga", "color": "#2e5b2a", "velocidad": 0.0015,
+      "ruta": [[-1, 132], [10, 160], [25, 180], [35, -155], [44, -128]],
+      "es": { "nombre": "Tortuga laúd", "dato": "Una tortuga laúd con transmisor nadó 20.558 km, de Indonesia a la costa de Oregón. Es la tortuga más grande del mundo y come casi solo medusas." },
+      "en": { "nombre": "Leatherback turtle", "dato": "A tagged leatherback swam 20,558 km from Indonesia to the coast of Oregon. It's the world's largest turtle and eats almost nothing but jellyfish." },
+      "fuente": "NOAA / Shillinger et al. (2008) #por-verificar"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 // Jugadores automáticos para probar el balance (no se usan en la interfaz).
 import { CELDAS, CELDA_POR_ID, P, SOL_POR_ID, compatible, sectorDe } from './datos';
 import {
-  aplicarPolitica, POLITICAS, calcularEmisiones, construir, costoConstruir, costoMejorar, costoPolitica, esTrampa, mejorar,
+  aplicarPolitica, POLITICAS, calcularEmisiones, comerciar, construir, costoConstruir, costoMejorar, costoPolitica, esTrampa, mejorar,
   nivelesDe, nuevaPartida, solucionesDisponibles, type Estado,
 } from './juego';
 import { siguienteAnio } from './turno';
@@ -26,6 +26,11 @@ function jugarAnio(e: Estado, estilo: Estilo) {
       const c = costoPolitica(e, id);
       if (c !== null && e.esperanza > c + (id === 'fin_subsidios' ? 15 : 35)) aplicarPolitica(e, id);
     }
+  }
+  // Comercio: si sobra energía y faltan materiales (o al revés), cambia.
+  if (estilo === 'bueno') {
+    for (let i = 0; i < 40 && e.energia > e.materiales * 0.7 + 10; i++) if (comerciar(e, 'energia')) break;
+    for (let i = 0; i < 40 && e.materiales > e.energia * 3.5 + 10; i++) if (comerciar(e, 'materiales')) break;
   }
   for (let paso = 0; paso < 40; paso++) {
     const em = calcularEmisiones(e);

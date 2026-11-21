@@ -1,6 +1,6 @@
 // Un año completo de simulación (estilo BitLife): se aplica todo y se devuelve el resumen del año.
 import { CELDAS, CELDA_POR_ID, P, SOL_POR_ID } from './datos';
-import { calcularEmisiones, justicia, nivelesDe, type Estado, type EventoAnio, type ResumenDelAnio } from './juego';
+import { calcularEmisiones, justicia, nivelesDe, rendimiento, type Estado, type EventoAnio, type ResumenDelAnio } from './juego';
 import { siguiente } from './rng';
 
 const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
@@ -29,7 +29,7 @@ function nivelesPorEfecto(e: Estado, campo: 'efecto_vida' | 'efecto_comunidad'):
   return t;
 }
 
-function eventos(e: Estado, resumen: ResumenDelAnio) {
+function eventos(e: Estado, resumen: ResumenDelAnio, dv: (k: string, v: number) => void, de: (k: string, v: number) => void) {
   const ev = P.eventos;
   const calor = Math.max(0, e.temperatura - 1.2) * ev.calor_k;
   const adaptacion = new Set<string>(P.adaptacion_ids);
@@ -52,36 +52,38 @@ function eventos(e: Estado, resumen: ResumenDelAnio) {
         if (b.nivel > 1) b.nivel--; else delete e.edificios[z];
       }
     }
-    e.esperanza += Math.max(-3, P.esperanza.por_edificio_danado * evento.danados.length); // SUPUESTO: tope por evento
-    if (tipo === 'incendio') e.vida -= 0.5;
+    if (evento.danados.length) de('desastres', Math.max(-3, P.esperanza.por_edificio_danado * evento.danados.length)); // SUPUESTO: tope por evento
+    if (tipo === 'incendio') dv('incendios', -0.5);
     resumen.eventos.push(evento);
   }
 }
 
-function revelarTrampas(e: Estado, resumen: ResumenDelAnio) {
+function revelarTrampas(e: Estado, resumen: ResumenDelAnio, dv: (k: string, v: number) => void, de: (k: string, v: number) => void) {
   for (const b of Object.values(e.edificios)) {
     if (b.revelaAnio !== undefined && b.revelaAnio <= e.anio && !e.reveladas.includes(b.sol)) {
       e.reveladas.push(b.sol);
       resumen.reveladas.push(b.sol);
-      e.esperanza += P.trampas.esperanza_al_revelar;
+      de('trampa_descubierta', P.trampas.esperanza_al_revelar);
     }
   }
   // Las trampas reveladas siguen costando Vida cada año mientras existan.
+  let dano = 0;
   for (const b of Object.values(e.edificios)) {
     if (!e.reveladas.includes(b.sol)) continue;
     const s = SOL_POR_ID.get(b.sol)!;
-    e.vida += (s.juego.efectos_ocultos.vida ?? 0) * P.trampas.vida_por_nivel_revelada * b.nivel;
+    dano += (s.juego.efectos_ocultos.vida ?? 0) * P.trampas.vida_por_nivel_revelada * b.nivel;
   }
+  dv('trampas', dano);
 }
 
-function inflexiones(e: Estado, resumen: ResumenDelAnio) {
+function inflexiones(e: Estado, resumen: ResumenDelAnio, dv: (k: string, v: number) => void) {
   const inf = P.inflexion;
   const dif = e.dificultad;
   if (!e.inflexiones.permafrost && e.temperatura >= inf.permafrost.umbral[dif]) {
     e.inflexiones.permafrost = true; resumen.inflexiones.push('permafrost');
   }
   if (!e.inflexiones.corales && e.temperatura >= inf.corales.umbral[dif]) {
-    e.inflexiones.corales = true; resumen.inflexiones.push('corales'); e.vida += inf.corales.vida;
+    e.inflexiones.corales = true; resumen.inflexiones.push('corales'); dv('corales', inf.corales.vida);
   }
   if (!e.inflexiones.amazonia && (e.temperatura >= inf.amazonia.umbral[dif] || e.vida < inf.amazonia.vida_minima)) {
     e.inflexiones.amazonia = true; resumen.inflexiones.push('amazonia');
@@ -94,8 +96,10 @@ export function siguienteAnio(e: Estado): ResumenDelAnio {
   const resumen: ResumenDelAnio = {
     anio: e.anio, emisiones: 0, deltaEmisiones: 0, temperatura: 0, deltaTemperatura: 0, energia: 0, materiales: 0,
     vida: 0, esperanza: 0, eventos: [], reveladas: [], inflexiones: [], choqueAerosoles: false, desbloqueoEra2: false,
-    dato: null, fin: null,
+    dato: null, fin: null, desglose: { vida: [], esperanza: [] }, produccion: { energia: 0, materiales: 0 },
   };
+  const dv = (k: string, v: number) => { if (Math.abs(v) >= 0.05) resumen.desglose.vida.push([k, v]); e.vida += v; };
+  const de = (k: string, v: number) => { if (Math.abs(v) >= 0.05) resumen.desglose.esperanza.push([k, v]); e.esperanza += v; };
 
   // 1. La línea base de emisiones (la economía fósil) sigue su tendencia.
   const tend = P.tendencia_emisiones[e.dificultad] + e.tendenciaExtra;
@@ -113,38 +117,45 @@ export function siguienteAnio(e: Estado): ResumenDelAnio {
   let nivAer = 0;
   for (const b of Object.values(e.edificios)) if (SOL_POR_ID.get(b.sol)!.categoria_juego === 'geoingenieria') nivAer += b.nivel;
   const aerMeta = nivAer * P.trampas.aerosol_enfriamiento_por_nivel;
-  if (aerMeta < e.aerosol - 0.05) { resumen.choqueAerosoles = true; e.vida += P.trampas.choque_vida; }
+  if (aerMeta < e.aerosol - 0.05) { resumen.choqueAerosoles = true; dv('choque', P.trampas.choque_vida); }
   e.aerosol = aerMeta;
   e.temperatura = tco2 + e.tSlcf - e.aerosol;
 
   // 4. Puntos de inflexión.
-  inflexiones(e, resumen);
+  inflexiones(e, resumen, dv);
 
   // 5. Recursos (con tope: lo que no se usa, se pierde).
   let pe = P.recursos.energia.base, pm = P.recursos.materiales.base;
-  for (const b of Object.values(e.edificios)) {
+  let prodE = 0, prodM = 0;
+  for (const [cid, b] of Object.entries(e.edificios)) {
     const s = SOL_POR_ID.get(b.sol)!;
-    pe += s.juego.produce.energia * b.nivel;
-    pm += s.juego.produce.materiales * b.nivel;
-    if (s.id === 'deploy-direct-air-capture') pe -= 4 * b.nivel; // SUPUESTO: la captura directa se come la energía
+    const r = rendimiento(e, cid);
+    prodE += s.juego.produce.energia * b.nivel + r.energia;
+    prodM += s.juego.produce.materiales * b.nivel + r.materiales;
+    if (s.id === 'deploy-direct-air-capture') prodE -= 4 * b.nivel; // SUPUESTO: la captura directa se come la energía
   }
+  pe += prodE; pm += prodM;
+  resumen.produccion = { energia: prodE, materiales: prodM };
   e.energia = clamp(e.energia + pe, 0, P.recursos.energia.tope);
   e.materiales = clamp(e.materiales + pm, 0, P.recursos.materiales.tope);
 
   // 6. Vida y Esperanza.
   const V = P.vida;
   const ganV = Math.min(V.tope_ganancia_anual, nivelesPorEfecto(e, 'efecto_vida') * V.k_efecto);
-  e.vida += ganV - V.degradacion_anual * e.degradacionMult - Math.max(0, e.temperatura - V.calor_umbral) * V.calor_k;
+  dv('soluciones', ganV);
+  dv('degradacion', -V.degradacion_anual * e.degradacionMult);
+  dv('calor', -Math.max(0, e.temperatura - V.calor_umbral) * V.calor_k);
   const E = P.esperanza;
   const ganE = Math.min(E.tope_ganancia_anual, nivelesPorEfecto(e, 'efecto_comunidad') * E.k_efecto);
-  e.esperanza += ganE - E.erosion_anual * Math.max(0, em.neta / P.emisiones_inicio_gt.valor); // SUPUESTO: el desánimo baja con las emisiones
-  e.esperanza += em.neta < e.ultimaEmision - 0.05 ? E.si_bajan_emisiones : em.neta > e.ultimaEmision + 0.05 ? E.si_suben_emisiones : 0;
-  if (e.temperatura < tAntes) e.esperanza += E.si_baja_temperatura;
-  if (Object.keys(e.edificios).length >= 6 && justicia(e) < E.injusticia_umbral) e.esperanza -= E.injusticia_castigo;
+  de('soluciones', ganE);
+  de('desanimo', -E.erosion_anual * Math.max(0, em.neta / P.emisiones_inicio_gt.valor)); // SUPUESTO: el desánimo baja con las emisiones
+  de(em.neta < e.ultimaEmision ? 'emisiones_bajan' : 'emisiones_suben', em.neta < e.ultimaEmision - 0.05 ? E.si_bajan_emisiones : em.neta > e.ultimaEmision + 0.05 ? E.si_suben_emisiones : 0);
+  if (e.temperatura < tAntes) de('temperatura_baja', E.si_baja_temperatura);
+  if (Object.keys(e.edificios).length >= 6 && justicia(e) < E.injusticia_umbral) de('injusticia', -E.injusticia_castigo);
 
   // 7. Eventos de la Tierra y trampas que se revelan.
-  eventos(e, resumen);
-  revelarTrampas(e, resumen);
+  eventos(e, resumen, dv, de);
+  revelarTrampas(e, resumen, dv, de);
   e.vida = clamp(e.vida, 0, 100);
   e.esperanza = clamp(e.esperanza, 0, 100);
 

@@ -163,6 +163,20 @@ export class Guia {
     });
   }
 
+  saltarSiTutorial() { this.limpiar(); this.paso = -1; this.actual = null; }
+
+  get ocupada() { return this.paso >= 0 || this.actual !== null; }
+
+  /** Ceiba dice algo cualquiera (sugerencias, animales). */
+  decir(html: string, donde: 'arriba' | 'abajo' = 'abajo') {
+    if (this.paso >= 0) return;
+    this.actual = 'decir';
+    this.limpiar();
+    this.globo(html, { donde, boton: this.t('g_entendido'), alBoton: () => { this.actual = null; this.limpiar(); this.planeta.resaltar.clear(); this.siguienteAviso(); } });
+  }
+
+  callar() { if (this.actual === 'decir' || this.actual === 'tip') { this.actual = null; this.limpiar(); } }
+
   /** Explicación corta de un medidor (al tocarlo). */
   explicar(clave: string) {
     if (this.paso >= 0) return;

@@ -7,8 +7,8 @@
     "fuente": "UNEP, Emissions Gap Report 2024: 57,1 GtCO2e en 2023, con cambio de uso del suelo"
   },
   "temperatura_inicio": {
-    "valor": 1.35,
-    "fuente": "SUPUESTO #por-verificar: calentamiento de largo plazo ~1,3-1,4 °C sobre 1850-1900 hacia 2026 (WMO, State of the Global Climate)"
+    "valor": 1.5,
+    "fuente": "Copernicus/WMO: 2024 fue el primer año calendario por encima de 1,5 °C sobre 1850-1900 (~1,55-1,6 °C). El promedio de largo plazo aún es menor (~1,3-1,4 °C); el juego arranca en 1,5 por decisión de Sebas"
   },
   "tcre": {
     "facil": 0.35,
@@ -80,7 +80,55 @@
       "tope": 200,
       "base": 40
     },
-    "fuente": "SUPUESTO de juego"
+    "fuente": "SUPUESTO de juego",
+    "rendimiento_bioma": {
+      "_fuente": "SUPUESTO inspirado en Catan: cada terreno da un recurso distinto, y los edificios mejorados dan más (nivel 1-2: 1, 3-4: 2, 5: 3)",
+      "selva_tropical": {
+        "materiales": 1
+      },
+      "bosque_subtropical": {
+        "materiales": 1
+      },
+      "bosque_templado": {
+        "materiales": 1
+      },
+      "boreal": {
+        "materiales": 1
+      },
+      "cultivo": {
+        "materiales": 1
+      },
+      "montaña": {
+        "materiales": 1
+      },
+      "turbera": {
+        "materiales": 1
+      },
+      "pastizal": {
+        "energia": 1
+      },
+      "desierto": {
+        "energia": 2
+      },
+      "costa": {
+        "energia": 1
+      },
+      "oceano_costero": {
+        "energia": 1
+      },
+      "oceano": {
+        "energia": 1
+      },
+      "rio": {
+        "energia": 1
+      },
+      "ciudad": {}
+    },
+    "comercio": {
+      "normal": 3,
+      "puerto": 2,
+      "_fuente": "SUPUESTO inspirado en Catan: 3 de un recurso por 1 del otro; 2 por 1 si tienes un edificio en la costa (puerto)"
+    }
   },
   "vida": {
     "inicio": {
@@ -91,7 +139,7 @@
     "degradacion_anual": 0.8,
     "k_efecto": 0.12,
     "tope_ganancia_anual": 4,
-    "calor_umbral": 1.5,
+    "calor_umbral": 1.6,
     "calor_k": 3,
     "fuente": "SUPUESTO de juego"
   },
@@ -114,20 +162,20 @@
     "fuente": "SUPUESTO: con poca Vida los sumideros naturales (que hoy absorben cerca de la mitad del CO2, Global Carbon Budget) capturan menos"
   },
   "inflexion": {
-    "_fuente": "Armstrong McKay et al. (2022), Science: umbrales centrales (#por-verificar); los efectos son SUPUESTO",
+    "_fuente": "Armstrong McKay et al. (2022), Science: corales ~1,5 °C (1-2), permafrost abrupto ~1,5 (1-2,3), Amazonía ~3,5 (2-6). Como el juego arranca en 1,5, los umbrales se ponen dentro del rango, un poco arriba (SUPUESTO)",
     "permafrost": {
       "umbral": {
-        "facil": 1.8,
-        "medio": 1.6,
-        "dificil": 1.5
+        "facil": 2.0,
+        "medio": 1.8,
+        "dificil": 1.7
       },
       "extra_gt": 0.8
     },
     "corales": {
       "umbral": {
-        "facil": 1.7,
-        "medio": 1.5,
-        "dificil": 1.4
+        "facil": 1.9,
+        "medio": 1.7,
+        "dificil": 1.6
       },
       "vida": -8
     },
@@ -288,6 +336,12 @@
       "deploy-direct-air-capture",
       "deploy-stratospheric-aerosol-injection",
       "expand-livestock-grazing"
+    ],
+    "extras_era2": [
+      "deploy-ocean-alkalinity-enhancement",
+      "deploy-ocean-electrochemistry",
+      "deploy-seaweed-farming-for-food",
+      "deploy-enhanced-rock-weathering"
     ]
   },
   "adaptacion_ids": [

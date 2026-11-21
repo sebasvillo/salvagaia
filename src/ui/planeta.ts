@@ -3,6 +3,10 @@
 import { CELDAS, CELDA_POR_ID, SOL_POR_ID, type Celda } from '../sim/datos';
 import type { Estado } from '../sim/juego';
 import { imagen } from './sprites';
+import faunaJson from '../../data/fauna.json';
+
+interface Animal { id: string; tipo: string; color: string; velocidad: number; ruta: [number, number][] }
+const FAUNA = (faunaJson as any).animales as Animal[];
 
 const RAD = Math.PI / 180;
 
@@ -35,6 +39,8 @@ export class Planeta {
   seleccion: string | null = null;
   resaltar = new Set<string>();
   onTocar: (id: string | null) => void = () => {};
+  onAnimal: (id: string) => void = () => {};
+  private posAnimales = new Map<string, { x: number; y: number }>();
   private t = 0;
 
   constructor(private canvas: HTMLCanvasElement, private estado: () => Estado | null) {
@@ -59,7 +65,11 @@ export class Planeta {
       this.arrastrando = false;
       if (this.movido < 8) {
         const r = canvas.getBoundingClientRect();
-        const id = this.celdaEn(ev.clientX - r.left, ev.clientY - r.top);
+        const px = ev.clientX - r.left, py = ev.clientY - r.top;
+        for (const [aid, p] of this.posAnimales) {
+          if (Math.hypot(p.x - px, p.y - py) < 16) { this.onAnimal(aid); return; }
+        }
+        const id = this.celdaEn(px, py);
         this.seleccion = id;
         this.vel = 0;
         this.onTocar(id);
@@ -200,16 +210,38 @@ export class Planeta {
         b.closePath(); b.stroke();
       }
     }
-    // Aves cuando la Vida está alta.
-    if (vida > 0.62) {
-      b.fillStyle = TINTA;
-      const n = Math.round((vida - 0.62) * 24);
-      for (let i = 0; i < n; i++) {
-        const a = this.t * 0.006 + i * 2.4;
-        const x = Math.round(cx + Math.cos(a) * R * (1.12 + (i % 3) * 0.05)), y = Math.round(cy + Math.sin(a * 1.4) * R * 0.75);
-        const ala = (this.t >> 4) % 2;
-        b.fillRect(x - 1, y - ala, 1, 1); b.fillRect(x, y, 1, 1); b.fillRect(x + 1, y - ala, 1, 1);
-      }
+    // Fauna migratoria (easter eggs): siguen rutas reales de ida y vuelta. Con más Vida, hay más.
+    this.posAnimales.clear();
+    if (!this.portada) {
+      const visibles = Math.max(2, Math.round(FAUNA.length * Math.min(1, vida + 0.2)));
+      FAUNA.slice(0, visibles).forEach((a, n) => {
+        const L = a.ruta.length - 1;
+        const fase = (this.t * a.velocidad + n * 0.37) % (2 * L);
+        const u = fase <= L ? fase : 2 * L - fase;
+        const i0 = Math.min(L - 1, Math.floor(u)), f = u - i0;
+        const [la0, lo0] = a.ruta[i0], [la1, lo1] = a.ruta[i0 + 1];
+        let dlo = lo1 - lo0; if (dlo > 180) dlo -= 360; if (dlo < -180) dlo += 360;
+        const [x, y, cc] = this.proyectar(la0 + (la1 - la0) * f, lo0 + dlo * f, R);
+        if (cc < 0.1) return;
+        const ax = Math.round(cx + x), ay = Math.round(cy + y);
+        b.fillStyle = TINTA;
+        if (a.tipo === 'ave') {
+          const ala = (this.t >> 3) % 2;
+          b.fillRect(ax - 2, ay - 1 + ala, 1, 1); b.fillRect(ax + 2, ay - 1 + ala, 1, 1);
+          b.fillStyle = a.color; b.fillRect(ax - 1, ay, 3, 1); b.fillRect(ax, ay - 1, 1, 1);
+        } else if (a.tipo === 'mariposa') {
+          const ala = (this.t >> 2) % 2;
+          b.fillStyle = a.color; b.fillRect(ax - 1 - ala, ay - 1, 1 + ala, 2); b.fillRect(ax + 1, ay - 1, 1 + ala, 2);
+          b.fillStyle = TINTA; b.fillRect(ax, ay - 1, 1, 2);
+        } else if (a.tipo === 'ballena') {
+          b.fillRect(ax - 3, ay, 6, 2); b.fillRect(ax + 3, ay - 1, 1, 1); b.fillRect(ax + 3, ay + 2, 1, 1);
+          b.fillStyle = a.color; b.fillRect(ax - 2, ay, 4, 1);
+          if ((this.t >> 5) % 3 === 0) { b.fillStyle = '#fafaf0'; b.fillRect(ax - 2, ay - 2, 1, 1); b.fillRect(ax - 3, ay - 3, 1, 1); b.fillRect(ax - 1, ay - 3, 1, 1); }
+        } else {
+          b.fillStyle = a.color; b.fillRect(ax - 1, ay - 1, 3, 2); b.fillStyle = TINTA; b.fillRect(ax + 2, ay - 1, 1, 1);
+        }
+        this.posAnimales.set(a.id, { x: CX + x * ESC, y: CY + y * ESC });
+      });
     }
 
     const ctx = this.ctx;
