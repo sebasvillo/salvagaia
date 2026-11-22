@@ -294,5 +294,10 @@
   "y_mas": "and {n} more.",
   "bloqueada_txt": "Not ready yet. It opens sooner if you develop similar solutions.",
   "enso_nino": "El Niño year: the Pacific warmed and added {t} °C to the planet's temperature.",
-  "enso_nina": "La Niña year: the Pacific cooled and took {t} °C off the planet's temperature."
+  "enso_nina": "La Niña year: the Pacific cooled and took {t} °C off the planet's temperature.",
+  "por_anio": "a year",
+  "hoy_evita": "In your world it avoids {g} Gt a year today ({p}% adopted).",
+  "al_mejorar": "Upgrading: adoption in your world heads to {b}% (now heading to {a}%)",
+  "info_produce_niveles": "Produces",
+  "info_terreno_txt": "Includes what its terrain ({b}) gives, which rises at levels 3 and 5."
 }

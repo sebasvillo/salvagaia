@@ -243,3 +243,6 @@ table.preguntas td.no { color: var(--terracota); font-weight: 700; }
 .ficha .mundo .link { padding: 4px 6px; }
 .sol.bloqueada { opacity: .55; filter: grayscale(1); cursor: default; box-shadow: none; border-style: dashed; }
 .sol.bloqueada .info { filter: none; }
+.prod { font: 700 13px var(--texto); color: var(--tinta); display: inline-flex; gap: 4px; align-items: center; }
+.efectos { margin-left: auto; display: inline-flex; gap: 2px; }
+.preview { font-size: 14px; margin: 8px 0 0; padding: 6px 8px; border: 2px dashed var(--tinta2); }

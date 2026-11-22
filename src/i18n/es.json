@@ -294,5 +294,10 @@
   "y_mas": "y {n} más.",
   "bloqueada_txt": "Todavía no está lista. Se abre antes si desarrollas soluciones parecidas.",
   "enso_nino": "Año de El Niño: el Pacífico se calentó y sumó {t} °C a la temperatura del planeta.",
-  "enso_nina": "Año de La Niña: el Pacífico se enfrió y le restó {t} °C a la temperatura del planeta."
+  "enso_nina": "Año de La Niña: el Pacífico se enfrió y le restó {t} °C a la temperatura del planeta.",
+  "por_anio": "al año",
+  "hoy_evita": "En tu mundo hoy evita {g} Gt al año (adopción {p} %).",
+  "al_mejorar": "Al mejorar: la adopción en tu mundo sube hacia {b} % (ahora va hacia {a} %)",
+  "info_produce_niveles": "Produce",
+  "info_terreno_txt": "Incluye lo que da su terreno ({b}), que sube en los niveles 3 y 5."
 }

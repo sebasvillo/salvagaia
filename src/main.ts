@@ -3,10 +3,11 @@ import './estilo.css';
 import es from './i18n/es.json';
 import en from './i18n/en.json';
 import fichasJson from '../data/fichas.json';
+import descripcionesJson from '../data/descripciones.json';
 import faunaJson from '../data/fauna.json';
 import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID, compatible, type Dificultad, type Solucion } from './sim/datos';
 import {
-  POLITICAS, aplicarPolitica, calcularEmisiones, comerciar, construir, costoConstruir, costoMejorar, costoPolitica,
+  POLITICAS, adopcionMeta, aplicarPolitica, aporteActual, produccionEdificio, calcularEmisiones, comerciar, construir, costoConstruir, costoMejorar, costoPolitica,
   demoler, huella, mejorar, nuevaPartida, puntaje, solucionesDisponibles, tasaComercio, type Estado, type ResumenDelAnio,
 } from './sim/juego';
 import { siguienteAnio } from './sim/turno';
@@ -19,6 +20,7 @@ import { borrarMundo, guardarMundo, listar, nombreAlAzar, nuevoId } from './mund
 type Idioma = 'es' | 'en';
 const TEXTOS: Record<Idioma, Record<string, string>> = { es, en };
 const FICHAS = fichasJson as Record<string, any>;
+const DESCRIPCIONES = descripcionesJson as Record<string, any>;
 const FAUNA = (faunaJson as any).animales as any[];
 // Remoción actual por método (MtCO₂/año, 2025), The State of CDR 3.ª ed., capítulo 7.
 const CDR_HOY: Record<string, number> = { 'use-biochar': 1.46, 'deploy-direct-air-capture': 0.0015, 'deploy-ocean-alkalinity-enhancement': 0.0035, 'deploy-enhanced-rock-weathering': 0.0038, 'deploy-ocean-biomass-sinking': 0 };
@@ -249,6 +251,16 @@ function costoTxt(c: { energia: number; materiales: number }) {
   return `<span class="${e.energia >= c.energia ? '' : 'falta'}">${ico('rayo')}${c.energia}</span><span class="${e.materiales >= c.materiales ? '' : 'falta'}">${ico('materiales')}${c.materiales}</span>`;
 }
 
+function prodTxt(p: { energia: number; materiales: number }) {
+  const partes: string[] = [];
+  if (p.energia) partes.push(`${ico('rayo')}${p.energia > 0 ? '+' : ''}${p.energia}`);
+  if (p.materiales) partes.push(`${ico('materiales')}${p.materiales > 0 ? '+' : ''}${p.materiales}`);
+  return partes.length ? `<span class="prod">${partes.join(' ')} ${t('por_anio')}</span>` : '';
+}
+function efectosTxt(s: Solucion) {
+  return `${s.juego.efecto_vida > 0 ? ico('vida') : ''}${s.juego.efecto_comunidad > 0 ? ico('esperanza') : ''}`;
+}
+
 function potencialDe(s: Solucion) { return s.potencial_gt_max ?? s.juego.potencial_gt_usado; }
 function impacto(s: Solucion) {
   const g = potencialDe(s);
@@ -274,10 +286,17 @@ function cajon() {
         ${ico(rev ? 'trampa' : SPRITE_CATEGORIA[s.categoria_juego], 'ico g')}
         <div><b>${esc(nombre(s))}</b> · ${t('nivel', { n: b.nivel })} <button class="info" data-info="${s.id}" aria-label="info">${ico('info')}</button><br>
           ${s.juego.objeto_juego && idioma === 'es' ? `<small><i>${esc(s.juego.objeto_juego)}</i></small><br>` : ''}
-          ${impacto(s)}<br><small>${t('adopcion', { p: Math.round((e.adopcion[s.id] ?? 0) * 100) })}</small>
+          ${impacto(s)}<br>
+          <small>${t('hoy_evita', { g: fmt(aporteActual(e, s.id), 2), p: Math.round((e.adopcion[s.id] ?? 0) * 100) })}</small><br>
+          ${prodTxt(produccionEdificio(id, s.id, b.nivel))} ${efectosTxt(s)}
           ${rev ? `<div class="aviso-trampa"><b>${t('trampa_revelada')}.</b> ${esc(s.juego.efectos_ocultos.riesgo ?? '')}</div>` : ''}
         </div>
       </div>
+      ${cm ? `<p class="preview">${t('al_mejorar', { a: Math.round(adopcionMeta(e, s.id) * 100), b: Math.round(adopcionMeta(e, s.id, 1) * 100) })} ${(() => {
+        const p0 = produccionEdificio(id, s.id, b.nivel), p1 = produccionEdificio(id, s.id, b.nivel + 1);
+        const d = { energia: p1.energia - p0.energia, materiales: p1.materiales - p0.materiales };
+        return d.energia || d.materiales ? '· ' + prodTxt(d) : '';
+      })()}</p>` : ''}
       <div class="acc">
         ${cm ? `<button class="prim" id="mej">${t('mejorar', { n: b.nivel + 1 })} <span class="costo">${costoTxt(cm)}</span></button>` : `<button disabled>${t('nivel_max')}</button>`}
         <button class="peligro" id="dem">${t('demoler')}</button>
@@ -303,7 +322,8 @@ function cajon() {
       <b>${esc(nombre(s))}</b>
       ${s.juego.objeto_juego && idioma === 'es' ? `<span class="obj">${esc(s.juego.objeto_juego)}</span>` : ''}
       ${impacto(s)}
-      <span class="costo">${costoTxt(costoConstruir(e, s.id))}</span>
+      ${prodTxt(produccionEdificio(id, s.id, 1))}
+      <span class="costo">${costoTxt(costoConstruir(e, s.id))}<span class="efectos">${efectosTxt(s)}</span></span>
     </div>`).join('')}${cerradas.map((s) => `
     <div class="sol bloqueada" aria-disabled="true">
       <span class="fila-ico">${ico('candado')}<button class="info" data-info="${s.id}" aria-label="info">${ico('info')}</button></span>
@@ -330,7 +350,7 @@ function info(solId: string, celdaId: string) {
   const f = FICHAS[solId];
   const e = estado!;
   const bioma = CELDA_POR_ID.get(celdaId)!.bioma;
-  const frase = f?.frase ? esc(f.frase) : t('info_sin_ficha', { cat: t('cat_' + s.categoria_juego) });
+  const frase = f?.frase ? esc(f.frase) : DESCRIPCIONES[solId] ? esc(DESCRIPCIONES[solId][idioma]) : t('info_sin_ficha', { cat: t('cat_' + s.categoria_juego) });
   const dd: string[] = [];
   if (f?.impacto_actual_gt != null) dd.push(t('info_hoy', { g: fmt(f.impacto_actual_gt, 2) }));
   if (s.potencial_gt_min != null && s.potencial_gt_max != null) dd.push(t('info_alcanzable', { a: fmt(s.potencial_gt_min, 2), b: fmt(s.potencial_gt_max, 2) }));
@@ -346,8 +366,8 @@ function info(solId: string, celdaId: string) {
   const rend = (P.recursos.rendimiento_bioma as any)[bioma] ?? {};
   const juego = [
     `${t('info_costo')}: ${costoTxt(costoConstruir(e, solId))}`,
-    (s.juego.produce.energia || s.juego.produce.materiales) ? `${t('info_produce')}: ${s.juego.produce.energia ? ico('rayo') + s.juego.produce.energia + ' ' : ''}${s.juego.produce.materiales ? ico('materiales') + s.juego.produce.materiales : ''}` : '',
-    (rend.energia || rend.materiales) ? `${t('info_terreno', { b: t('b_' + bioma) })}: ${rend.energia ? ico('rayo') + rend.energia : ''}${rend.materiales ? ico('materiales') + rend.materiales : ''}` : '',
+    `${t('info_produce_niveles')}: ${[1, 3, 5].map((n) => `${t('nivel', { n })} ${prodTxt(produccionEdificio(celdaId, solId, n)) || '—'}`).join(' · ')}`,
+    (rend.energia || rend.materiales) ? t('info_terreno_txt', { b: t('b_' + bioma) }) : '',
     s.juego.efecto_vida > 0 ? `${ico('vida')} ${t('info_vida')}` : '',
     s.juego.efecto_comunidad > 0 ? `${ico('esperanza')} ${t('info_esp')}` : '',
   ].filter(Boolean);

@@ -37,6 +37,9 @@ export class Planeta {
   private bctx: CanvasRenderingContext2D;
   private ctx: CanvasRenderingContext2D;
   seleccion: string | null = null;
+  zoom = 1;
+  private dedos = new Map<number, { x: number; y: number }>();
+  private distPellizco = 0;
   resaltar = new Set<string>();
   onTocar: (id: string | null) => void = () => {};
   onAnimal: (id: string) => void = () => {};
@@ -47,11 +50,29 @@ export class Planeta {
     this.ctx = canvas.getContext('2d')!;
     this.bajo = document.createElement('canvas');
     this.bctx = this.bajo.getContext('2d')!;
+    canvas.addEventListener('wheel', (ev) => {
+      ev.preventDefault();
+      this.zoom = Math.max(1, Math.min(4, this.zoom * (ev.deltaY < 0 ? 1.12 : 1 / 1.12)));
+    }, { passive: false });
     canvas.addEventListener('pointerdown', (ev) => {
+      this.dedos.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
+      if (this.dedos.size === 2) {
+        const [a, b] = [...this.dedos.values()];
+        this.distPellizco = Math.hypot(a.x - b.x, a.y - b.y);
+        this.movido = 99; // un pellizco nunca es un toque
+      }
       this.arrastrando = true; this.movido = 0; this.meta = null; this.ultimo = { x: ev.clientX, y: ev.clientY };
       canvas.setPointerCapture(ev.pointerId);
     });
     canvas.addEventListener('pointermove', (ev) => {
+      if (this.dedos.has(ev.pointerId)) this.dedos.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
+      if (this.dedos.size === 2) {
+        const [a, b] = [...this.dedos.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (this.distPellizco > 0) this.zoom = Math.max(1, Math.min(4, this.zoom * (d / this.distPellizco)));
+        this.distPellizco = d;
+        return;
+      }
       if (!this.arrastrando || !this.ultimo) return;
       const dx = ev.clientX - this.ultimo.x, dy = ev.clientY - this.ultimo.y;
       this.movido += Math.abs(dx) + Math.abs(dy);
@@ -61,6 +82,8 @@ export class Planeta {
       this.ultimo = { x: ev.clientX, y: ev.clientY };
     });
     canvas.addEventListener('pointerup', (ev) => {
+      this.dedos.delete(ev.pointerId);
+      if (this.dedos.size === 1) { const [p] = [...this.dedos.values()]; this.ultimo = { x: p.x, y: p.y }; return; }
       if (!this.arrastrando) return;
       this.arrastrando = false;
       if (this.movido < 8) {
@@ -75,7 +98,7 @@ export class Planeta {
         this.onTocar(id);
       }
     });
-    canvas.addEventListener('pointercancel', () => (this.arrastrando = false));
+    canvas.addEventListener('pointercancel', (ev) => { this.dedos.delete(ev.pointerId); this.arrastrando = false; });
     const loop = () => { requestAnimationFrame(loop); try { this.dibujar(); } catch (err) { console.error(err); } };
     requestAnimationFrame(loop);
   }
@@ -90,7 +113,7 @@ export class Planeta {
     }
     const arriba = 118, abajo = Math.min(300, h * 0.36);
     const alto = h - arriba - abajo;
-    return { x: w / 2, y: arriba + alto / 2, R: Math.max(80, Math.min(w * 0.44, alto * 0.48)) };
+    return { x: w / 2, y: arriba + alto / 2, R: Math.max(80, Math.min(w * 0.44, alto * 0.48)) * this.zoom };
   }
   private radio() { return this.centro().R; }
 
@@ -189,8 +212,8 @@ export class Planeta {
     // Tramado del lado de noche (luz desde arriba a la izquierda), píxel a píxel.
     b.fillStyle = 'rgba(37,33,28,0.55)';
     const lx = -0.55, ly = -0.6, lz = 0.58;
-    for (let py = Math.floor(cy - R); py <= cy + R; py++) {
-      for (let px = Math.floor(cx - R); px <= cx + R; px++) {
+    for (let py = Math.max(0, Math.floor(cy - R)); py <= Math.min(bh, cy + R); py++) {
+      for (let px = Math.max(0, Math.floor(cx - R)); px <= Math.min(bw, cx + R); px++) {
         const nx = (px - cx) / R, ny = (py - cy) / R, n2 = nx * nx + ny * ny;
         if (n2 > 1) continue;
         const luz = nx * lx + ny * ly + Math.sqrt(1 - n2) * lz;

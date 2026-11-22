@@ -284,6 +284,26 @@ export function rendimiento(e: Estado, celdaId: string): { energia: number; mate
   return r;
 }
 
+/** Cuánto evita o captura hoy esta solución en tu mundo (Gt/año), según su adopción. */
+export function aporteActual(e: Estado, solId: string): number {
+  const s = SOL_POR_ID.get(solId)!;
+  return (e.adopcion[solId] ?? 0) * s.juego.potencial_gt_usado * eficacia(e, s);
+}
+
+/** Adopción a la que tiende la solución con estos niveles construidos (0-1). */
+export function adopcionMeta(e: Estado, solId: string, nivelesExtra = 0): number {
+  return Math.min(1, (nivelesDe(e, solId) + nivelesExtra) / P.adopcion.niveles_saturacion);
+}
+
+/** Lo que produce un edificio al año (solución + terreno) con un nivel dado. */
+export function produccionEdificio(celdaId: string, solId: string, nivel: number): { energia: number; materiales: number } {
+  const s = SOL_POR_ID.get(solId)!;
+  const base = P.recursos.rendimiento_bioma[CELDA_POR_ID.get(celdaId)!.bioma] ?? {};
+  const k = Math.floor((nivel + 1) / 2);
+  const dac = s.id === 'deploy-direct-air-capture' ? -4 * nivel : 0;
+  return { energia: s.juego.produce.energia * nivel + (base.energia ?? 0) * k + dac, materiales: s.juego.produce.materiales * nivel + (base.materiales ?? 0) * k };
+}
+
 // ---------- El modelo de emisiones ----------
 
 export interface Emisiones {
