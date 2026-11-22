@@ -1,0 +1,120 @@
+{
+  "_nota": "Las vidas de Ceiba (IA). En cada mundo sale una al azar según el nombre del mundo. Apagadas hasta que Sebas apruebe los chistes: parametros.json → ceibas_activas.",
+  "ceibas": [
+    {
+      "id": "jardinera",
+      "es": {
+        "rol": "jardinera",
+        "hola": "¡Hola! Soy Ceiba, como el árbol sagrado de muchos pueblos de América, el que une la tierra con el cielo. Te voy a mostrar el juego de a poquitos. Tu tarea es <b>enfriar el planeta</b> con soluciones que ya existen.",
+        "bien": "Las emisiones bajaron este año. Vamos por buen camino.",
+        "sube": "Las emisiones siguen subiendo. Las soluciones tardan en arrancar: mejóralas y construye más.",
+        "trampa": "Antes de construir, lee la i de cada ficha. Ahí está lo que dice la ciencia.",
+        "vida": "La Vida está sufriendo. Protege un bosque o restaura un manglar.",
+        "esp": "La gente se está cansando. Las soluciones de transporte y comida la animan.",
+        "negativas": "Ya capturas más de lo que sueltas. Ahora hay que sostenerlo 10 años."
+      },
+      "en": {
+        "rol": "gardener",
+        "hola": "Hi! I'm Ceiba, like the sacred tree of many peoples of the Americas, the one that joins earth and sky. I'll show you the game one bit at a time. Your job is to <b>cool the planet down</b> with solutions that already exist.",
+        "bien": "Emissions fell this year. We're on the right track.",
+        "sube": "Emissions are still rising. Solutions take time to kick in: upgrade them and build more.",
+        "trampa": "Before building, read each card's i. That's where the science is.",
+        "vida": "Life is suffering. Protect a forest or restore a mangrove.",
+        "esp": "People are getting tired. Transit and food solutions lift their spirits.",
+        "negativas": "You now remove more than you release. Now it has to hold for 10 years."
+      }
+    },
+    {
+      "id": "astronauta",
+      "es": {
+        "rol": "astronauta",
+        "hola": "Ceiba reportándose. Volví de Marte: allá no hay ni un helecho y el aire sabe a lata. Esta es la única casa con atmósfera de fábrica, así que toca arreglarla. Tu misión: <b>enfriar el planeta</b>.",
+        "bien": "Houston, buenas noticias: bajaron las emisiones.",
+        "sube": "Houston, tenemos un problema, y se llama metano. Construye más.",
+        "trampa": "En la estación espacial revisamos todo dos veces antes de prenderlo. Lee la i.",
+        "vida": "Desde la órbita se ve el planeta más café. Protege bosques.",
+        "esp": "La tripulación está desanimada. Dales transporte público y comida rica.",
+        "negativas": "Captura neta positiva. Eso no lo logramos ni en Marte."
+      },
+      "en": {
+        "rol": "astronaut",
+        "hola": "Ceiba reporting. I'm back from Mars: not a single fern there and the air tastes like a can. This is the only home with a factory-installed atmosphere, so let's fix it. Your mission: <b>cool the planet down</b>.",
+        "bien": "Houston, good news: emissions are down.",
+        "sube": "Houston, we have a problem, and it's called methane. Build more.",
+        "trampa": "On the space station we check everything twice before switching it on. Read the i.",
+        "vida": "From orbit the planet looks browner. Protect forests.",
+        "esp": "The crew is losing morale. Give them transit and good food.",
+        "negativas": "Net removal achieved. We never managed that on Mars."
+      }
+    },
+    {
+      "id": "alien",
+      "es": {
+        "rol": "extraterrestre",
+        "hola": "Saludos, terrícola. Soy Ceiba, de la galaxia de al lado. Llevo siglos mirando su planeta por telescopio y ustedes son la especie más rara que he visto: queman el piso para calentarse. Vamos a <b>enfriar este planeta</b>.",
+        "bien": "Interesante: los humanos sí aprenden. Bajaron las emisiones.",
+        "sube": "En mi planeta esto se llamaría «calentar la casa con la casa». Construye más.",
+        "trampa": "Nota para mi informe: los humanos compran cosas por la caja bonita. Lee la i.",
+        "vida": "Sus bosques son lo más bonito del universo conocido. No los dejen secar.",
+        "esp": "Los humanos se desaniman fácil. Comida rica y buses limpios los arreglan.",
+        "negativas": "Ya capturan más de lo que sueltan. Voy a cambiar mi informe: de «raros» a «prometedores»."
+      },
+      "en": {
+        "rol": "alien",
+        "hola": "Greetings, earthling. I'm Ceiba, from the galaxy next door. I've watched your planet through a telescope for centuries, and you're the strangest species I've seen: you burn the floor to keep warm. Let's <b>cool this planet down</b>.",
+        "bien": "Fascinating: humans can learn. Emissions are down.",
+        "sube": "On my planet we'd call this heating the house with the house. Build more.",
+        "trampa": "Note for my report: humans buy things for the shiny box. Read the i.",
+        "vida": "Your forests are the prettiest thing in the known universe. Don't let them dry out.",
+        "esp": "Humans get discouraged easily. Good food and clean buses fix them.",
+        "negativas": "You remove more than you release. Updating my report from “weird” to “promising”."
+      }
+    },
+    {
+      "id": "tortuga",
+      "es": {
+        "rol": "tortuga cósmica",
+        "hola": "Hola. Soy Ceiba, la tortuga que carga este mundo en el caparazón, como en los mitos de la India y de la Isla Tortuga de los lenape. Últimamente el mundo pesa más y está calientico. Ayúdame a <b>enfriarlo</b>.",
+        "bien": "Despacio pero seguro: así se baja una curva.",
+        "sube": "Llevo millones de años cargando esto. Tranquilo, pero construye más.",
+        "trampa": "Las tortugas no nos movemos sin mirar. Lee la i antes.",
+        "vida": "Me pica el caparazón cuando se secan los bosques. Protégelos.",
+        "esp": "La gente anda desanimada. Las cosas lentas y buenas, como una huerta, ayudan.",
+        "negativas": "Ya pesa menos. Gracias. Ahora aguanta así 10 años; yo tengo paciencia."
+      },
+      "en": {
+        "rol": "cosmic turtle",
+        "hola": "Hi. I'm Ceiba, the turtle that carries this world on its shell, like in the myths of India and the Lenape's Turtle Island. Lately the world feels heavier and kind of warm. Help me <b>cool it down</b>.",
+        "bien": "Slow and steady: that's how you bend a curve.",
+        "sube": "I've carried this for millions of years. No rush, but build more.",
+        "trampa": "Turtles don't move without looking. Read the i first.",
+        "vida": "My shell itches when the forests dry out. Protect them.",
+        "esp": "People are feeling down. Slow, good things, like a garden, help.",
+        "negativas": "It weighs less now. Thanks. Hold it there for 10 years; I'm patient."
+      }
+    },
+    {
+      "id": "astrologa",
+      "es": {
+        "rol": "astróloga",
+        "hola": "Hola, soy Ceiba y leo los astros. Dato: «planeta» viene del griego <i>planḗtēs</i>, «el que anda errante». Hoy el que anda errante es el clima. Tu carta astral dice: <b>enfría el planeta</b>.",
+        "bien": "Venus te sonríe: bajaron las emisiones.",
+        "sube": "No le eches la culpa a Mercurio retrógrado. Las emisiones suben por el carbón.",
+        "trampa": "Tu horóscopo de hoy: desconfía de las ofertas baratas. Lee la i.",
+        "vida": "Saturno dice que necesitas anillos… de árboles. Protege los bosques.",
+        "esp": "Luna en cáncer: la gente anda sensible. Dale buses y comida rica.",
+        "negativas": "Alineación perfecta: capturas más de lo que sueltas. Que dure 10 años."
+      },
+      "en": {
+        "rol": "astrologer",
+        "hola": "Hi, I'm Ceiba and I read the stars. Fun fact: “planet” comes from the Greek <i>planḗtēs</i>, “wanderer”. Today the climate is the one wandering off. Your birth chart says: <b>cool the planet down</b>.",
+        "bien": "Venus is smiling at you: emissions are down.",
+        "sube": "Don't blame Mercury retrograde. Emissions are up because of coal.",
+        "trampa": "Today's horoscope: beware of cheap deals. Read the i.",
+        "vida": "Saturn says you need rings… tree rings. Protect the forests.",
+        "esp": "Moon in Cancer: people are sensitive today. Give them buses and good food.",
+        "negativas": "Perfect alignment: you remove more than you release. Make it last 10 years."
+      }
+    }
+  ]
+}

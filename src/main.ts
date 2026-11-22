@@ -5,12 +5,14 @@ import en from './i18n/en.json';
 import fichasJson from '../data/fichas.json';
 import descripcionesJson from '../data/descripciones.json';
 import faunaJson from '../data/fauna.json';
+import ceibasJson from '../data/ceibas.json';
 import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID, compatible, type Dificultad, type Solucion } from './sim/datos';
 import {
   POLITICAS, adopcionMeta, aplicarPolitica, aporteActual, produccionEdificio, calcularEmisiones, comerciar, construir, costoConstruir, costoMejorar, costoPolitica,
   demoler, huella, mejorar, nuevaPartida, puntaje, solucionesDisponibles, tasaComercio, type Estado, type ResumenDelAnio,
 } from './sim/juego';
 import { siguienteAnio } from './sim/turno';
+import { NODOS, RAMAS, eraNodo, nodoAbierto, nodoDe as nodoDeSol, nombreNodo, nombreSolucion } from './sim/arbol';
 import { Planeta, SPRITE_CATEGORIA } from './ui/planeta';
 import { Guia } from './ui/guia';
 import { ico, sprite } from './ui/sprites';
@@ -31,12 +33,16 @@ const guardado = {
 };
 
 let idioma: Idioma = (guardado.leer('idioma') as Idioma) || (navigator.language?.startsWith('es') ? 'es' : 'en');
+const CEIBAS = (ceibasJson as any).ceibas as any[];
+/** La vida de Ceiba de este mundo (la jardinera si no hay otra). */
+function ceibaActual() { return CEIBAS.find((c) => c.id === (estado?.ceiba ?? 'jardinera')) ?? CEIBAS[0]; }
 function t(k: string, vars: Record<string, string | number> = {}): string {
+  if (k === 'g_hola') return ceibaActual()[idioma].hola;
   let s = TEXTOS[idioma][k] ?? TEXTOS.es[k] ?? k;
   for (const [a, b] of Object.entries(vars)) s = s.replaceAll(`{${a}}`, String(b));
   return s;
 }
-const nombre = (s: Solucion) => (idioma === 'es' ? s.nombre_es : s.nombre_en);
+const nombre = (s: Solucion) => nombreSolucion(s.id, idioma);
 const fmt = (x: number, d = 1) => x.toLocaleString(idioma === 'es' ? 'es-CO' : 'en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
 const $ = <T extends HTMLElement>(sel: string) => document.querySelector(sel) as T;
 const esc = (s: string) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
@@ -48,6 +54,7 @@ let mundoNombre = '';
 let mensaje = '';
 const planeta = new Planeta($('#planeta') as HTMLCanvasElement, () => estado);
 const guia = new Guia(planeta, t, () => pintar());
+guia.retrato = () => sprite('ceiba_' + ceibaActual().id);
 
 function guardar() { if (estado && mundoId) guardarMundo(mundoId, mundoNombre, estado); }
 
@@ -177,12 +184,14 @@ function juego() {
     <footer>
       <button id="btn-menu" aria-label="${t('tus_mundos')}">☰</button>
       <button id="btn-pol">${t('politicas')}</button>
+      <button id="btn-arbol" aria-label="${t('arbol')}">${ico('naturaleza')}</button>
       <button id="btn-glo" aria-label="${t('como')}">?</button>
       <button class="prim" id="btn-sig">${t('siguiente')} ▸</button>
     </footer>`;
   $('#btn-sig').onclick = pasarAnio;
   $('#btn-pol').onclick = politicas;
   $('#btn-glo').onclick = comoSeJuega;
+  $('#btn-arbol').onclick = arbol;
   $('#btn-menu').onclick = () => { guardar(); guia.saltarSiTutorial(); portada(); };
   planeta.seleccion = null;
   planeta.onTocar = (id) => { mensaje = ''; ultimaAccion = Date.now(); pintar(); guia.tocar(id); };
@@ -345,11 +354,11 @@ function cajon() {
 }
 
 /** La ficha de una solución, contada por Ceiba. No dice "trampa": muestra lo que dice la ciencia y el jugador decide. */
-function info(solId: string, celdaId: string) {
+function info(solId: string, celdaId: string | null) {
   const s = SOL_POR_ID.get(solId)!;
   const f = FICHAS[solId];
   const e = estado!;
-  const bioma = CELDA_POR_ID.get(celdaId)!.bioma;
+  const bioma = celdaId ? CELDA_POR_ID.get(celdaId)!.bioma : (s.juego.biomas.find((b) => b !== 'cualquiera') ?? 'ciudad') as any;
   const frase = f?.frase ? esc(f.frase) : DESCRIPCIONES[solId] ? esc(DESCRIPCIONES[solId][idioma]) : t('info_sin_ficha', { cat: t('cat_' + s.categoria_juego) });
   const dd: string[] = [];
   if (f?.impacto_actual_gt != null) dd.push(t('info_hoy', { g: fmt(f.impacto_actual_gt, 2) }));
@@ -366,13 +375,13 @@ function info(solId: string, celdaId: string) {
   const rend = (P.recursos.rendimiento_bioma as any)[bioma] ?? {};
   const juego = [
     `${t('info_costo')}: ${costoTxt(costoConstruir(e, solId))}`,
-    `${t('info_produce_niveles')}: ${[1, 3, 5].map((n) => `${t('nivel', { n })} ${prodTxt(produccionEdificio(celdaId, solId, n)) || '—'}`).join(' · ')}`,
+    `${t('info_produce_niveles')}: ${[1, 3, 5].map((n) => `${t('nivel', { n })} ${celdaId ? prodTxt(produccionEdificio(celdaId, solId, n)) || '—' : ''}`).join(' · ')}`,
     (rend.energia || rend.materiales) ? t('info_terreno_txt', { b: t('b_' + bioma) }) : '',
     s.juego.efecto_vida > 0 ? `${ico('vida')} ${t('info_vida')}` : '',
     s.juego.efecto_comunidad > 0 ? `${ico('esperanza')} ${t('info_esp')}` : '',
   ].filter(Boolean);
   const emp = s.emprendimientos?.filter((x) => !x.startsWith('(') && !x.includes('por-verificar')).slice(0, 3);
-  modal(`<div class="ceiba-cab"><img class="retrato-chico" src="${sprite('ceiba')}" alt=""><div><small>${t('info_titulo')}</small><h2>${esc(nombre(s))}</h2></div></div>
+  modal(`<div class="ceiba-cab"><img class="retrato-chico" src="${sprite('ceiba_' + ceibaActual().id)}" alt=""><div><small>${t('info_titulo')}</small><h2>${esc(nombre(s))}</h2></div></div>
     <p class="frase">${frase}</p>
     <h3>${t('info_drawdown')}</h3>
     ${dd.length ? `<ul class="puntos">${dd.map((x) => `<li>${x}</li>`).join('')}</ul>` : ''}
@@ -382,6 +391,31 @@ function info(solId: string, celdaId: string) {
     <h3>${t('info_juego')}</h3>
     <ul class="puntos">${juego.map((x) => `<li>${x}</li>`).join('')}</ul>
     <button class="prim" data-cerrar>${t('cerrar')}</button>`);
+}
+
+/** El árbol de soluciones: qué tienes, qué se puede abrir ya y qué necesita cada cosa. */
+function arbol() {
+  const e = estado!;
+  const abiertas = new Set(e.desbloqueadas);
+  const porRama: Record<string, number> = {};
+  for (const b of Object.values(e.edificios)) { const r = NODOS.get(nodoDeSol(b.sol))!.rama; porRama[r] = (porRama[r] ?? 0) + b.nivel; }
+  const ramas = [...RAMAS].sort((a, b) => (porRama[b.id] ?? 0) - (porRama[a.id] ?? 0));
+  const html = ramas.map((r) => {
+    const n = r.nodos.length, ab = r.nodos.filter((id) => nodoAbierto(abiertas, id)).length;
+    const chips = r.nodos.map((id) => {
+      const nd = NODOS.get(id)!;
+      const abierto = nodoAbierto(abiertas, id);
+      const listo = !abierto && nd.requiere.every((q) => nodoAbierto(abiertas, q));
+      const falta = nd.requiere.filter((q) => !nodoAbierto(abiertas, q)).map((q) => esc(nombreNodo(q, idioma)));
+      const estadoTxt = abierto ? t('arbol_abierta') : listo ? t('arbol_lista') : t('arbol_necesita', { lista: falta.join(', ') });
+      return `<li class="nodo ${abierto ? 'abierto' : listo ? 'listo' : 'cerrado'}" data-sol="${nd.miembros[0]}">
+        <b>${esc(nombreNodo(id, idioma))}</b><small>${estadoTxt}${eraNodo(id) >= 4 && !abierto ? ' · ' + t('arbol_futuro') : ''}</small></li>`;
+    }).join('');
+    return `<section class="rama"><h3>${idioma === 'es' ? r.nombre_es : r.nombre_en} <small>${ab}/${n}</small></h3>
+      <div class="barra-rama"><i style="width:${Math.round((ab / n) * 100)}%"></i></div><ul class="nodos">${chips}</ul></section>`;
+  }).join('');
+  const m = modal(`<h2>${ico('naturaleza', 'ico g')} ${t('arbol')}</h2><p>${t('arbol_txt')}</p>${html}<button class="prim" data-cerrar>${t('cerrar')}</button>`);
+  m.querySelectorAll<HTMLElement>('.nodo').forEach((li) => (li.onclick = () => { m.remove(); info(li.dataset.sol!, null); }));
 }
 
 function comercio() {
@@ -433,11 +467,12 @@ function pasarAnio() {
 }
 
 function comentarioCeiba(r: ResumenDelAnio, e: Estado): string {
-  if (r.reveladas.length) return t('ceiba_trampa');
-  if (r.emisiones < 0) return t('ceiba_negativas');
-  if (e.vida < 40) return t('ceiba_vida');
-  if (e.esperanza < 35) return t('ceiba_esp');
-  return t(r.deltaEmisiones < 0 ? 'ceiba_bien' : 'ceiba_sube');
+  const c = ceibaActual()[idioma];
+  if (r.reveladas.length) return c.trampa;
+  if (r.emisiones < 0) return c.negativas;
+  if (e.vida < 40) return c.vida;
+  if (e.esperanza < 35) return c.esp;
+  return r.deltaEmisiones < 0 ? c.bien : c.sube;
 }
 
 function resumen(r: ResumenDelAnio) {
@@ -446,7 +481,7 @@ function resumen(r: ResumenDelAnio) {
   const items: string[] = [];
   if (r.enso.fase !== 'neutro') items.push(`<li>${ico(r.enso.fase === 'nino' ? 'temperatura' : 'hielo')}<span>${t('enso_' + r.enso.fase, { t: fmt(Math.abs(r.enso.anom), 2) })}</span></li>`);
   if (r.desbloqueadas.length) {
-    const nombres = r.desbloqueadas.slice(0, 3).map((id) => esc(nombre(SOL_POR_ID.get(id)!)));
+    const nombres = r.desbloqueadas.slice(0, 3).map((id) => esc(nombreNodo(id, idioma)));
     items.push(`<li class="bueno">${ico('candado')}<span>${t('nuevas', { lista: nombres.join(', ') })}${r.desbloqueadas.length > 3 ? ' ' + t('y_mas', { n: r.desbloqueadas.length - 3 }) : ''}</span></li>`);
   }
   for (const id of r.reveladas) items.push(`<li class="malo">${ico('trampa')}<span>${t('revelada', { nombre: esc(nombre(SOL_POR_ID.get(id)!)) })}</span></li>`);
@@ -478,7 +513,7 @@ function resumen(r: ResumenDelAnio) {
     ${(r.desglose.vida.length || r.desglose.esperanza.length) ? `<h3>${t('por_que')}</h3>${desg(r.desglose.vida, 'vida')}${desg(r.desglose.esperanza, 'esperanza')}` : ''}
     ${items.length ? `<ul>${items.join('')}</ul>` : ''}
     ${dato ? `<p class="dato">${dato}</p>` : ''}
-    <div class="ceiba-dice"><img class="retrato-chico" src="${sprite('ceiba')}" alt=""><p>${comentarioCeiba(r, e)}</p></div>
+    <div class="ceiba-dice"><img class="retrato-chico" src="${sprite('ceiba_' + ceibaActual().id)}" alt=""><p>${comentarioCeiba(r, e)}</p></div>
     <button class="prim" data-cerrar>${t('resumen_ok')}</button>`;
   modal(html, () => { if (e.fin) fin(); else guia.cerroResumen(); });
 }

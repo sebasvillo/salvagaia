@@ -1,6 +1,9 @@
 // El estado de la partida y las acciones del jugador. TypeScript puro, sin DOM, determinista con semilla.
 import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID, compatible, sectorDe, solucionesIniciales, type Dificultad, type Solucion } from './datos';
 import { entre, semillaDeTexto, siguiente } from './rng';
+import { expandir, nodosIniciales } from './arbol';
+import ceibasJson from '../../data/ceibas.json';
+const CEIBAS_IDS: string[] = (ceibasJson as any).ceibas.map((c: any) => c.id);
 
 export const SECTORES = Object.keys(P.sectores).filter((k) => !k.startsWith('_'));
 
@@ -59,6 +62,8 @@ export interface Estado {
   ultimaEmision: number;
   fin: Fin;
   acciones: number;
+  /** Qué vida de Ceiba acompaña este mundo. */
+  ceiba?: string;
 }
 
 export interface EventoAnio {
@@ -82,7 +87,7 @@ export interface ResumenDelAnio {
   reveladas: string[];
   inflexiones: string[];
   choqueAerosoles: boolean;
-  /** Soluciones que se desbloquearon este año. */
+  /** Nodos del árbol (soluciones o familias) que se desbloquearon este año. */
   desbloqueadas: string[];
   enso: { fase: 'nino' | 'nina' | 'neutro'; anom: number };
   dato: string | null;
@@ -106,7 +111,7 @@ export function nuevaPartida(semilla: string, dificultad: Dificultad): Estado {
     vida: P.vida.inicio[dificultad], esperanza: P.esperanza.inicio,
     temperatura: P.temperatura_inicio.valor, tCo2Base: 0, tSlcf: 0, aerosol: 0, cumCo2: 0,
     base, tendenciaExtra: 0, degradacionMult: 1, adopcion: {}, edificios: {}, nivelesHistoricos: {},
-    reveladas: [], degradadas: [], desbloqueadas: solucionesIniciales().map((s) => s.id), tBase: P.temperatura_inicio.valor, enso: { fase: 'neutro', anios: 1, anom: 0 }, politicas: {}, inflexiones: {}, historia: [],
+    reveladas: [], degradadas: [], desbloqueadas: expandir(nodosIniciales()), tBase: P.temperatura_inicio.valor, enso: { fase: 'neutro', anios: 1, anom: 0 }, politicas: {}, inflexiones: {}, historia: [],
     tPico: P.temperatura_inicio.valor, racha: 0, ultimaEmision: 0, fin: null, acciones: 0,
   };
   // La semilla perturba el estado inicial, no la geografía: qué celdas de tierra arrancan degradadas.
@@ -115,6 +120,7 @@ export function nuevaPartida(semilla: string, dificultad: Dificultad): Estado {
     if (siguiente(e) < 0.25) e.degradadas.push(c.id);
   }
   e.vida = clamp(e.vida + entre(e, -4, 4), 1, 100);
+  if (P.ceibas_activas) e.ceiba = CEIBAS_IDS[entre(e, 0, CEIBAS_IDS.length - 1)];
   const em = calcularEmisiones(e);
   e.tSlcf = P.slcf.c_por_gt * em.slcf;
   e.tCo2Base = e.temperatura - e.tSlcf; // SUPUESTO: el resto del calentamiento inicial se atribuye al CO2 acumulado
@@ -134,7 +140,7 @@ export function solucionesDisponibles(e: Estado): Solucion[] {
 /** Partidas guardadas con versiones anteriores. */
 export function migrar(e: Estado) {
   if (!e.desbloqueadas) {
-    const ini = solucionesIniciales().map((s) => s.id);
+    const ini = expandir(nodosIniciales());
     const extra = (e as any).era2 ? SOLUCIONES.filter((s) => s.juego.era === 2 && !s.juego.es_trampa).map((s) => s.id) : [];
     e.desbloqueadas = [...new Set([...ini, ...extra])];
   }

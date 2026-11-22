@@ -299,5 +299,11 @@
   "hoy_evita": "En tu mundo hoy evita {g} Gt al año (adopción {p} %).",
   "al_mejorar": "Al mejorar: la adopción en tu mundo sube hacia {b} % (ahora va hacia {a} %)",
   "info_produce_niveles": "Produce",
-  "info_terreno_txt": "Incluye lo que da su terreno ({b}), que sube en los niveles 3 y 5."
+  "info_terreno_txt": "Incluye lo que da su terreno ({b}), que sube en los niveles 3 y 5.",
+  "arbol": "Árbol de soluciones",
+  "arbol_txt": "Cada año se abren soluciones nuevas cuyos requisitos ya tienes. Salen antes las de la rama que más desarrollas. Toca una para ver qué es.",
+  "arbol_abierta": "ya la tienes",
+  "arbol_lista": "se puede abrir pronto",
+  "arbol_necesita": "necesita: {lista}",
+  "arbol_futuro": "tecnología en desarrollo"
 }

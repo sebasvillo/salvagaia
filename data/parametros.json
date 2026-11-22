@@ -345,7 +345,8 @@
       "deploy-distributed-solar-pv",
       "deploy-onshore-wind-turbines",
       "use-biochar",
-      "restore-forests-tropical"
+      "restore-forests-tropical",
+      "mobilize-hybrid-cars"
     ],
     "trampas": [
       "carbon-capture-storage-on-fossil-fuel-power-plants",
@@ -403,5 +404,7 @@
         "huracan": 1.3
       }
     }
-  }
+  },
+  "ceibas_activas": false,
+  "_ceibas": "Cuando Sebas apruebe los chistes de data/ceibas.json, poner ceibas_activas en true"
 }

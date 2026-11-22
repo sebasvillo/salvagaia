@@ -33,6 +33,8 @@ export class Guia {
   private el: HTMLDivElement;
   private ciudad: string;
 
+  retrato = () => sprite('ceiba');
+
   constructor(private planeta: Planeta, private t: (k: string, v?: Record<string, string | number>) => string, private alCambiar: () => void) {
     this.vistos = new Set(JSON.parse(leer('guia') ?? '[]'));
     this.el = document.createElement('div');
@@ -89,7 +91,7 @@ export class Guia {
     this.el.style.top = top ? 'calc(130px + env(safe-area-inset-top))' : '';
     this.el.style.bottom = top ? '' : 'calc(86px + env(safe-area-inset-bottom))';
     this.el.innerHTML = `
-      <img class="retrato" src="${sprite('ceiba')}" alt="">
+      <img class="retrato" src="${this.retrato()}" alt="">
       <div class="globo" role="dialog" aria-live="polite">
         <b class="quien">CEIBA</b>
         <div>${texto}</div>

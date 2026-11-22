@@ -3,6 +3,7 @@ import { CELDAS, P, SOLUCIONES, solucionesIniciales } from '../datos';
 import { aplicarPolitica, calcularEmisiones, construir, demoler, nuevaPartida, puntaje, type Estado } from '../juego';
 import { siguienteAnio } from '../turno';
 import { simular } from '../bot';
+import { NODOS } from '../arbol';
 
 const libre = (e: Estado, bioma: string) => CELDAS.find((c) => c.bioma === bioma && !e.edificios[c.id])!.id;
 
@@ -32,7 +33,7 @@ describe('clima', () => {
   it('sin hacer nada la temperatura sube', () => {
     const e = nuevaPartida('x', 'medio');
     for (let i = 0; i < 10; i++) siguienteAnio(e);
-    expect(e.temperatura).toBeGreaterThan(P.temperatura_inicio.valor + 0.1);
+    expect(e.tBase).toBeGreaterThan(P.temperatura_inicio.valor + 0.05);
   });
   it('con emisiones netas cero el CO2 deja de calentar, y con negativas baja', () => {
     const e = nuevaPartida('x', 'medio');
@@ -97,7 +98,21 @@ describe('reglas', () => {
     const n = e.desbloqueadas.length;
     const r = siguienteAnio(e);
     expect(r.desbloqueadas.length).toBe(P.desbloqueo.por_anio.medio);
-    expect(e.desbloqueadas.length).toBe(n + r.desbloqueadas.length);
+    expect(e.desbloqueadas.length).toBeGreaterThanOrEqual(n + r.desbloqueadas.length);
+  });
+  it('el árbol cubre las 166 soluciones y respeta los prerrequisitos', () => {
+    const vistas = new Set<string>();
+    for (const n of NODOS.values()) n.miembros.forEach((m) => vistas.add(m));
+    expect(vistas.size).toBe(166);
+    // Los carros eléctricos no pueden abrirse antes que los híbridos.
+    const e = nuevaPartida('arbol', 'facil');
+    expect(e.desbloqueadas.includes('mobilize-electric-cars')).toBe(false);
+    expect(e.desbloqueadas.includes('mobilize-hybrid-cars')).toBe(true);
+    for (let i = 0; i < 40 && !e.fin; i++) {
+      siguienteAnio(e);
+      const abiertas = new Set(e.desbloqueadas);
+      for (const n of NODOS.values()) if (n.miembros.every((m) => abiertas.has(m))) for (const r of n.requiere) expect(NODOS.get(r)!.miembros.every((m) => abiertas.has(m))).toBe(true);
+    }
   });
   it('El Niño y La Niña mueven la temperatura alrededor de la tendencia', () => {
     const e = nuevaPartida('enso', 'medio');

@@ -1,0 +1,889 @@
+{
+ "_fuente": "(IA) Árbol de soluciones con prerrequisitos lógicos, agrupado por los sectores de Project Drawdown. SUPUESTO de juego",
+ "familias": {
+  "proteger-bosques": {
+   "nombre_es": "Proteger bosques",
+   "nombre_en": "Protect forests",
+   "miembros": [
+    "protect-forests-boreal",
+    "protect-forests-temperate",
+    "protect-forests-subtropical",
+    "protect-forests-tropical"
+   ]
+  },
+  "proteger-pastizales": {
+   "nombre_es": "Proteger pastizales y sabanas",
+   "nombre_en": "Protect grasslands and savannas",
+   "miembros": [
+    "protect-grasslands-savannas-boreal",
+    "protect-grasslands-savannas-temperate",
+    "protect-grasslands-savannas-subtropical",
+    "protect-grasslands-savannas-tropical"
+   ]
+  },
+  "proteger-turberas": {
+   "nombre_es": "Proteger turberas",
+   "nombre_en": "Protect peatlands",
+   "miembros": [
+    "protect-peatlands-boreal",
+    "protect-peatlands-temperate",
+    "protect-peatlands-subtropical",
+    "protect-peatlands-tropical"
+   ]
+  },
+  "restaurar-bosques": {
+   "nombre_es": "Restaurar bosques",
+   "nombre_en": "Restore forests",
+   "miembros": [
+    "restore-forests-boreal",
+    "restore-forests-temperate",
+    "restore-forests-subtropical",
+    "restore-forests-tropical"
+   ]
+  },
+  "restaurar-turberas": {
+   "nombre_es": "Restaurar turberas",
+   "nombre_en": "Restore peatlands",
+   "miembros": [
+    "restore-peatlands-boreal",
+    "restore-peatlands-temperate",
+    "restore-peatlands-subtropical",
+    "restore-peatlands-tropical"
+   ]
+  }
+ },
+ "ramas": [
+  {
+   "id": "energia",
+   "nombre_es": "Energía",
+   "nombre_en": "Energy",
+   "nodos": [
+    {
+     "id": "deploy-led-lighting",
+     "requiere": []
+    },
+    {
+     "id": "deploy-distributed-solar-pv",
+     "requiere": [
+      "deploy-led-lighting"
+     ]
+    },
+    {
+     "id": "deploy-onshore-wind-turbines",
+     "requiere": []
+    },
+    {
+     "id": "deploy-utility-scale-solar-pv",
+     "requiere": [
+      "deploy-distributed-solar-pv"
+     ]
+    },
+    {
+     "id": "deploy-agrivoltaics",
+     "requiere": [
+      "deploy-utility-scale-solar-pv"
+     ]
+    },
+    {
+     "id": "deploy-concentrated-solar",
+     "requiere": [
+      "deploy-utility-scale-solar-pv"
+     ]
+    },
+    {
+     "id": "deploy-offshore-wind-turbines",
+     "requiere": [
+      "deploy-onshore-wind-turbines"
+     ]
+    },
+    {
+     "id": "deploy-micro-wind-turbines",
+     "requiere": [
+      "deploy-onshore-wind-turbines"
+     ]
+    },
+    {
+     "id": "improve-grid-efficiency",
+     "requiere": [
+      "deploy-utility-scale-solar-pv"
+     ]
+    },
+    {
+     "id": "deploy-cool-roofs",
+     "requiere": []
+    },
+    {
+     "id": "deploy-small-hydropower",
+     "requiere": []
+    },
+    {
+     "id": "deploy-utility-scale-hydropower",
+     "requiere": [
+      "deploy-small-hydropower"
+     ]
+    },
+    {
+     "id": "deploy-ocean-power",
+     "requiere": [
+      "deploy-offshore-wind-turbines"
+     ]
+    },
+    {
+     "id": "deploy-geothermal-power",
+     "requiere": []
+    },
+    {
+     "id": "deploy-advanced-geothermal-energy",
+     "requiere": [
+      "deploy-geothermal-power"
+     ]
+    },
+    {
+     "id": "deploy-nuclear-power",
+     "requiere": [
+      "improve-grid-efficiency"
+     ]
+    },
+    {
+     "id": "deploy-small-modular-nuclear-reactors",
+     "requiere": [
+      "deploy-nuclear-power"
+     ]
+    },
+    {
+     "id": "deploy-nuclear-fusion",
+     "requiere": [
+      "deploy-small-modular-nuclear-reactors"
+     ]
+    },
+    {
+     "id": "manage-coal-mine-methane",
+     "requiere": []
+    },
+    {
+     "id": "manage-oil-gas-methane",
+     "requiere": [
+      "manage-coal-mine-methane"
+     ]
+    },
+    {
+     "id": "deploy-methane-digesters",
+     "requiere": [
+      "increase-centralized-composting"
+     ]
+    },
+    {
+     "id": "deploy-district-cooling",
+     "requiere": [
+      "improve-district-heating-buildings"
+     ]
+    },
+    {
+     "id": "boost-industrial-efficiency",
+     "requiere": []
+    },
+    {
+     "id": "deploy-bioelectricity-with-carbon-capture-storage",
+     "requiere": [
+      "deploy-biomass-crops-on-degraded-land"
+     ]
+    },
+    {
+     "id": "carbon-capture-storage-on-fossil-fuel-power-plants",
+     "requiere": []
+    },
+    {
+     "id": "deploy-waste-to-energy",
+     "requiere": []
+    }
+   ]
+  },
+  {
+   "id": "edificios",
+   "nombre_es": "Edificios",
+   "nombre_en": "Buildings",
+   "nodos": [
+    {
+     "id": "deploy-alternative-insulation-materials",
+     "requiere": []
+    },
+    {
+     "id": "improve-windows-glass",
+     "requiere": []
+    },
+    {
+     "id": "improve-building-envelopes",
+     "requiere": [
+      "deploy-alternative-insulation-materials"
+     ]
+    },
+    {
+     "id": "use-smart-programmable-thermostats-heating",
+     "requiere": []
+    },
+    {
+     "id": "use-smart-programmable-thermostats-cooling",
+     "requiere": [
+      "use-smart-programmable-thermostats-heating"
+     ]
+    },
+    {
+     "id": "deploy-building-automation-systems",
+     "requiere": []
+    },
+    {
+     "id": "boost-appliance-equipment-efficiency",
+     "requiere": [
+      "deploy-building-automation-systems"
+     ]
+    },
+    {
+     "id": "use-heat-pumps",
+     "requiere": []
+    },
+    {
+     "id": "deploy-heat-pump-water-heaters",
+     "requiere": [
+      "use-heat-pumps"
+     ]
+    },
+    {
+     "id": "deploy-solar-hot-water-heaters",
+     "requiere": [
+      "deploy-distributed-solar-pv"
+     ]
+    },
+    {
+     "id": "improve-fuel-burning-cooking-equipment",
+     "requiere": []
+    },
+    {
+     "id": "deploy-electric-cooking-equipment",
+     "requiere": [
+      "improve-fuel-burning-cooking-equipment",
+      "use-heat-pumps"
+     ]
+    },
+    {
+     "id": "deploy-alternative-refrigerants",
+     "requiere": []
+    },
+    {
+     "id": "improve-refrigerant-management-leak-reduction",
+     "requiere": [
+      "deploy-alternative-refrigerants"
+     ]
+    },
+    {
+     "id": "improve-refrigerant-management-end-of-life-management",
+     "requiere": [
+      "improve-refrigerant-management-leak-reduction"
+     ]
+    },
+    {
+     "id": "improve-district-heating-buildings",
+     "requiere": [
+      "use-heat-pumps"
+     ]
+    },
+    {
+     "id": "deploy-green-roofs",
+     "requiere": [
+      "deploy-cool-roofs"
+     ]
+    },
+    {
+     "id": "use-low-flow-fixtures",
+     "requiere": []
+    }
+   ]
+  },
+  {
+   "id": "movilidad",
+   "nombre_es": "Movilidad",
+   "nombre_en": "Mobility",
+   "nodos": [
+    {
+     "id": "improve-nonmotorized-transportation",
+     "requiere": []
+    },
+    {
+     "id": "mobilize-electric-bicycles-private",
+     "requiere": [
+      "improve-nonmotorized-transportation"
+     ]
+    },
+    {
+     "id": "mobilize-electric-bicycles-shared",
+     "requiere": [
+      "mobilize-electric-bicycles-private"
+     ]
+    },
+    {
+     "id": "enhance-public-transit",
+     "requiere": []
+    },
+    {
+     "id": "mobilize-electric-buses",
+     "requiere": [
+      "enhance-public-transit"
+     ]
+    },
+    {
+     "id": "mobilize-electric-trains",
+     "requiere": [
+      "mobilize-electric-buses"
+     ]
+    },
+    {
+     "id": "enhance-high-speed-rail",
+     "requiere": [
+      "mobilize-electric-trains"
+     ]
+    },
+    {
+     "id": "increase-carpooling",
+     "requiere": []
+    },
+    {
+     "id": "mobilize-hybrid-cars",
+     "requiere": []
+    },
+    {
+     "id": "mobilize-electric-cars",
+     "requiere": [
+      "mobilize-hybrid-cars"
+     ]
+    },
+    {
+     "id": "mobilize-electric-seated-scooters-motorcycles",
+     "requiere": [
+      "mobilize-electric-bicycles-private"
+     ]
+    },
+    {
+     "id": "improve-truck-efficiency",
+     "requiere": []
+    },
+    {
+     "id": "mobilize-electric-trucks",
+     "requiere": [
+      "mobilize-electric-cars",
+      "improve-truck-efficiency"
+     ]
+    },
+    {
+     "id": "improve-routing-logistics",
+     "requiere": []
+    },
+    {
+     "id": "improve-supply-chain-efficiency",
+     "requiere": [
+      "improve-routing-logistics"
+     ]
+    },
+    {
+     "id": "hold-virtual-meetings",
+     "requiere": []
+    },
+    {
+     "id": "improve-aviation-efficiency",
+     "requiere": []
+    },
+    {
+     "id": "reduce-airplane-contrails",
+     "requiere": [
+      "improve-aviation-efficiency"
+     ]
+    },
+    {
+     "id": "deploy-sustainable-aviation-fuel",
+     "requiere": [
+      "improve-aviation-efficiency"
+     ]
+    },
+    {
+     "id": "mobilize-green-hydrogen-for-aviation-and-trucking",
+     "requiere": [
+      "deploy-sustainable-aviation-fuel",
+      "deploy-industrial-green-hydrogen"
+     ]
+    },
+    {
+     "id": "improve-ocean-shipping-efficiency",
+     "requiere": []
+    },
+    {
+     "id": "improve-fishing-vessel-efficiency",
+     "requiere": [
+      "improve-ocean-shipping-efficiency"
+     ]
+    },
+    {
+     "id": "deploy-advanced-biofuels",
+     "requiere": [
+      "deploy-biomass-crops-on-degraded-land"
+     ]
+    },
+    {
+     "id": "use-corn-ethanol",
+     "requiere": []
+    }
+   ]
+  },
+  {
+   "id": "industria",
+   "nombre_es": "Industria y residuos",
+   "nombre_en": "Industry and waste",
+   "nodos": [
+    {
+     "id": "increase-recycling-metals",
+     "requiere": []
+    },
+    {
+     "id": "increase-recycling-paper-and-cardboard",
+     "requiere": []
+    },
+    {
+     "id": "increase-recycling-plastics",
+     "requiere": []
+    },
+    {
+     "id": "increase-recycling-glass",
+     "requiere": [
+      "increase-recycling-plastics"
+     ]
+    },
+    {
+     "id": "improve-cement-production-efficiency-upgrades",
+     "requiere": []
+    },
+    {
+     "id": "improve-cement-production-alternative-fuels",
+     "requiere": [
+      "improve-cement-production-efficiency-upgrades"
+     ]
+    },
+    {
+     "id": "improve-cement-production-clinker-substitution",
+     "requiere": [
+      "improve-cement-production-alternative-fuels"
+     ]
+    },
+    {
+     "id": "improve-other-building-materials",
+     "requiere": [
+      "improve-cement-production-clinker-substitution"
+     ]
+    },
+    {
+     "id": "increase-building-deconstruction-recycling",
+     "requiere": [
+      "increase-recycling-metals"
+     ]
+    },
+    {
+     "id": "increase-centralized-composting",
+     "requiere": []
+    },
+    {
+     "id": "increase-decentralized-composting",
+     "requiere": [
+      "increase-centralized-composting"
+     ]
+    },
+    {
+     "id": "improve-landfill-management-methane-capture",
+     "requiere": []
+    },
+    {
+     "id": "improve-landfill-management-biocovers",
+     "requiere": [
+      "improve-landfill-management-methane-capture"
+     ]
+    },
+    {
+     "id": "increase-industrial-electrification",
+     "requiere": [
+      "boost-industrial-efficiency"
+     ]
+    },
+    {
+     "id": "improve-steel-production",
+     "requiere": [
+      "increase-industrial-electrification"
+     ]
+    },
+    {
+     "id": "deploy-industrial-green-hydrogen",
+     "requiere": [
+      "deploy-utility-scale-solar-pv"
+     ]
+    },
+    {
+     "id": "improve-district-heating-industry",
+     "requiere": [
+      "improve-district-heating-buildings"
+     ]
+    },
+    {
+     "id": "deploy-low-emission-industrial-feedstocks",
+     "requiere": [
+      "increase-recycling-plastics"
+     ]
+    },
+    {
+     "id": "deploy-plastic-alternatives-bioplastics",
+     "requiere": [
+      "deploy-low-emission-industrial-feedstocks"
+     ]
+    },
+    {
+     "id": "use-nitrous-oxide-removal",
+     "requiere": [
+      "boost-industrial-efficiency"
+     ]
+    },
+    {
+     "id": "produce-blue-hydrogen",
+     "requiere": []
+    }
+   ]
+  },
+  {
+   "id": "comida",
+   "nombre_es": "Comida",
+   "nombre_en": "Food",
+   "nodos": [
+    {
+     "id": "improve-diets",
+     "requiere": []
+    },
+    {
+     "id": "reduce-food-loss-waste",
+     "requiere": []
+    },
+    {
+     "id": "improve-nutrient-management",
+     "requiere": []
+    },
+    {
+     "id": "improve-rice-production",
+     "requiere": []
+    },
+    {
+     "id": "reduce-crop-residue-burning",
+     "requiere": []
+    },
+    {
+     "id": "improve-manure-management",
+     "requiere": [
+      "improve-nutrient-management"
+     ]
+    },
+    {
+     "id": "use-feed-additives",
+     "requiere": [
+      "improve-manure-management"
+     ]
+    },
+    {
+     "id": "improve-ruminant-breeding",
+     "requiere": [
+      "use-feed-additives"
+     ]
+    },
+    {
+     "id": "deploy-electric-irrigation-pumps",
+     "requiere": [
+      "improve-nutrient-management"
+     ]
+    },
+    {
+     "id": "improve-irrigation-water-use-efficiency",
+     "requiere": [
+      "deploy-electric-irrigation-pumps"
+     ]
+    },
+    {
+     "id": "deploy-precision-fermentation",
+     "requiere": [
+      "improve-diets"
+     ]
+    },
+    {
+     "id": "advance-cultivated-meat",
+     "requiere": [
+      "deploy-precision-fermentation"
+     ]
+    },
+    {
+     "id": "deploy-leaf-protein-concentrates",
+     "requiere": [
+      "deploy-precision-fermentation"
+     ]
+    },
+    {
+     "id": "improve-aquaculture",
+     "requiere": []
+    },
+    {
+     "id": "deploy-seaweed-farming-for-food",
+     "requiere": [
+      "improve-aquaculture"
+     ]
+    },
+    {
+     "id": "reduce-overfishing",
+     "requiere": []
+    },
+    {
+     "id": "protect-seafloors",
+     "requiere": [
+      "reduce-overfishing"
+     ]
+    },
+    {
+     "id": "deploy-grass-finished-beef",
+     "requiere": []
+    },
+    {
+     "id": "deploy-insect-farming-for-food-and-feed",
+     "requiere": []
+    },
+    {
+     "id": "deploy-vertical-farms",
+     "requiere": []
+    }
+   ]
+  },
+  {
+   "id": "naturaleza",
+   "nombre_es": "Naturaleza",
+   "nombre_en": "Nature",
+   "nodos": [
+    {
+     "id": "proteger-bosques",
+     "requiere": []
+    },
+    {
+     "id": "restaurar-bosques",
+     "requiere": [
+      "proteger-bosques"
+     ]
+    },
+    {
+     "id": "proteger-turberas",
+     "requiere": []
+    },
+    {
+     "id": "restaurar-turberas",
+     "requiere": [
+      "proteger-turberas"
+     ]
+    },
+    {
+     "id": "proteger-pastizales",
+     "requiere": []
+    },
+    {
+     "id": "restore-grasslands-savannas",
+     "requiere": [
+      "proteger-pastizales"
+     ]
+    },
+    {
+     "id": "protect-coastal-wetlands-mangrove-ecosystems",
+     "requiere": []
+    },
+    {
+     "id": "restore-mangrove-ecosystems",
+     "requiere": [
+      "protect-coastal-wetlands-mangrove-ecosystems"
+     ]
+    },
+    {
+     "id": "protect-coastal-wetlands-salt-marsh-ecosystems",
+     "requiere": [
+      "protect-coastal-wetlands-mangrove-ecosystems"
+     ]
+    },
+    {
+     "id": "restore-salt-marsh-ecosystems",
+     "requiere": [
+      "protect-coastal-wetlands-salt-marsh-ecosystems"
+     ]
+    },
+    {
+     "id": "protect-coastal-wetlands-seagrass-ecosystems",
+     "requiere": []
+    },
+    {
+     "id": "restore-seagrass-ecosystems",
+     "requiere": [
+      "protect-coastal-wetlands-seagrass-ecosystems"
+     ]
+    },
+    {
+     "id": "protect-seaweed-ecosystems",
+     "requiere": []
+    },
+    {
+     "id": "restore-seaweed-ecosystems",
+     "requiere": [
+      "protect-seaweed-ecosystems"
+     ]
+    },
+    {
+     "id": "deploy-silvopasture",
+     "requiere": []
+    },
+    {
+     "id": "reduce-grazing-intensity",
+     "requiere": [
+      "deploy-silvopasture"
+     ]
+    },
+    {
+     "id": "deploy-alternative-grazing",
+     "requiere": [
+      "reduce-grazing-intensity"
+     ]
+    },
+    {
+     "id": "restore-large-herbivores",
+     "requiere": [
+      "restore-grasslands-savannas"
+     ]
+    },
+    {
+     "id": "restore-whale-populations",
+     "requiere": [
+      "reduce-overfishing"
+     ]
+    },
+    {
+     "id": "improve-annual-cropping",
+     "requiere": []
+    },
+    {
+     "id": "deploy-perennial-crops",
+     "requiere": [
+      "improve-annual-cropping"
+     ]
+    },
+    {
+     "id": "deploy-agroforestry-trees-on-cropland",
+     "requiere": [
+      "improve-annual-cropping"
+     ]
+    },
+    {
+     "id": "deploy-agroforestry-multi-strata",
+     "requiere": [
+      "deploy-agroforestry-trees-on-cropland"
+     ]
+    },
+    {
+     "id": "manage-increase-urban-trees",
+     "requiere": []
+    },
+    {
+     "id": "restore-abandoned-farmland",
+     "requiere": [
+      "restaurar-bosques"
+     ]
+    },
+    {
+     "id": "improve-forest-management-integrated-fire-management",
+     "requiere": [
+      "proteger-bosques"
+     ]
+    },
+    {
+     "id": "improve-forest-management-sustainable-forest-management",
+     "requiere": [
+      "proteger-bosques"
+     ]
+    },
+    {
+     "id": "deploy-biomass-crops-on-degraded-land",
+     "requiere": [
+      "restore-abandoned-farmland"
+     ]
+    },
+    {
+     "id": "expand-livestock-grazing",
+     "requiere": []
+    },
+    {
+     "id": "deploy-artificial-upwelling",
+     "requiere": []
+    },
+    {
+     "id": "deploy-ocean-fertilization",
+     "requiere": []
+    },
+    {
+     "id": "deploy-ocean-biomass-sinking",
+     "requiere": []
+    }
+   ]
+  },
+  {
+   "id": "remocion",
+   "nombre_es": "Remoción de carbono",
+   "nombre_en": "Carbon removal",
+   "nodos": [
+    {
+     "id": "use-biochar",
+     "requiere": []
+    },
+    {
+     "id": "produce-bio-oils",
+     "requiere": [
+      "use-biochar"
+     ]
+    },
+    {
+     "id": "bury-biomass",
+     "requiere": [
+      "use-biochar"
+     ]
+    },
+    {
+     "id": "deploy-enhanced-rock-weathering",
+     "requiere": [
+      "use-biochar"
+     ]
+    },
+    {
+     "id": "deploy-ocean-alkalinity-enhancement",
+     "requiere": []
+    },
+    {
+     "id": "deploy-ocean-electrochemistry",
+     "requiere": [
+      "deploy-ocean-alkalinity-enhancement"
+     ]
+    },
+    {
+     "id": "use-methane-oxidizing-coatings",
+     "requiere": []
+    },
+    {
+     "id": "deploy-direct-air-capture",
+     "requiere": []
+    },
+    {
+     "id": "use-atmospheric-oxidation-enhancement",
+     "requiere": []
+    },
+    {
+     "id": "deploy-stratospheric-aerosol-injection",
+     "requiere": []
+    }
+   ]
+  }
+ ]
+}

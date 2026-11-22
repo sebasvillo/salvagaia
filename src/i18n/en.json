@@ -299,5 +299,11 @@
   "hoy_evita": "In your world it avoids {g} Gt a year today ({p}% adopted).",
   "al_mejorar": "Upgrading: adoption in your world heads to {b}% (now heading to {a}%)",
   "info_produce_niveles": "Produces",
-  "info_terreno_txt": "Includes what its terrain ({b}) gives, which rises at levels 3 and 5."
+  "info_terreno_txt": "Includes what its terrain ({b}) gives, which rises at levels 3 and 5.",
+  "arbol": "Solution tree",
+  "arbol_txt": "Every year, new solutions whose requirements you already have open up. The ones in the branch you develop most come first. Tap one to see what it is.",
+  "arbol_abierta": "unlocked",
+  "arbol_lista": "can open soon",
+  "arbol_necesita": "needs: {lista}",
+  "arbol_futuro": "technology in development"
 }

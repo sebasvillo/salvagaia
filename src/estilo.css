@@ -246,3 +246,14 @@ table.preguntas td.no { color: var(--terracota); font-weight: 700; }
 .prod { font: 700 13px var(--texto); color: var(--tinta); display: inline-flex; gap: 4px; align-items: center; }
 .efectos { margin-left: auto; display: inline-flex; gap: 2px; }
 .preview { font-size: 14px; margin: 8px 0 0; padding: 6px 8px; border: 2px dashed var(--tinta2); }
+.rama h3 { display: flex; justify-content: space-between; align-items: baseline; }
+.rama h3 small { font: 700 14px var(--texto); }
+.barra-rama { height: 8px; border: 2px solid var(--tinta); background: var(--papel); margin-bottom: 6px; }
+.barra-rama i { display: block; height: 100%; background: var(--verde); }
+.nodos { display: grid !important; grid-template-columns: 1fr 1fr; gap: 6px !important; }
+.nodo { display: flex !important; flex-direction: column; gap: 1px; padding: 5px 7px; border: 2px solid var(--tinta); font-size: 13px; cursor: pointer; line-height: 1.2; }
+.nodo small { color: var(--tinta2); font-size: 11px; }
+.nodo.abierto { background: #dfeccf; }
+.nodo.listo { border-style: dashed; background: var(--papel2); }
+.nodo.cerrado { opacity: .55; border-style: dotted; }
+footer button { padding: 9px 10px; }

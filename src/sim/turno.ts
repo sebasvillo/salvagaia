@@ -2,6 +2,7 @@
 import { CELDAS, CELDA_POR_ID, P, SOLUCIONES, SOL_POR_ID } from './datos';
 import { calcularEmisiones, justicia, migrar, nivelesDe, rendimiento, type Estado, type EventoAnio, type ResumenDelAnio } from './juego';
 import { siguiente } from './rng';
+import { NODOS, eraNodo, listosParaAbrir, ramaDe } from './arbol';
 
 const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 
@@ -92,17 +93,21 @@ function inflexiones(e: Estado, resumen: ResumenDelAnio, dv: (k: string, v: numb
   }
 }
 
-/** Árbol tecnológico implícito: cada año se abren soluciones; las parecidas a lo que más desarrollas, primero. */
+/** Árbol de soluciones: cada año se abren nodos cuyos prerrequisitos ya están abiertos; los de la rama que más desarrollas, primero. */
 function desbloquear(e: Estado, resumen: ResumenDelAnio) {
   const D = P.desbloqueo;
   const abiertas = new Set(e.desbloqueadas);
-  const porCat: Record<string, number> = {};
+  const porRama: Record<string, number> = {};
   let total = 0;
-  for (const b of Object.values(e.edificios)) { const c = SOL_POR_ID.get(b.sol)!.categoria_juego; porCat[c] = (porCat[c] ?? 0) + b.nivel; total += b.nivel; }
-  const candidatas = SOLUCIONES.filter((s) => !abiertas.has(s.id) && (s.juego.era < 5 || e.anio >= D.era5_desde))
-    .map((s) => ({ s, v: -D.penalidad_era[String(s.juego.era)] + (total ? (D.peso_similitud * (porCat[s.categoria_juego] ?? 0)) / total : 0) + siguiente(e) * D.azar }))
+  for (const b of Object.values(e.edificios)) { const r = ramaDe(b.sol); porRama[r] = (porRama[r] ?? 0) + b.nivel; total += b.nivel; }
+  const candidatos = listosParaAbrir(abiertas)
+    .filter((id) => eraNodo(id) < 5 || e.anio >= D.era5_desde)
+    .map((id) => ({ id, v: -D.penalidad_era[String(eraNodo(id))] + (total ? (D.peso_similitud * (porRama[NODOS.get(id)!.rama] ?? 0)) / total : 0) + siguiente(e) * D.azar }))
     .sort((a, b) => b.v - a.v);
-  for (const { s } of candidatas.slice(0, D.por_anio[e.dificultad])) { e.desbloqueadas.push(s.id); resumen.desbloqueadas.push(s.id); }
+  for (const { id } of candidatos.slice(0, D.por_anio[e.dificultad])) {
+    for (const m of NODOS.get(id)!.miembros) if (!abiertas.has(m)) e.desbloqueadas.push(m);
+    resumen.desbloqueadas.push(id);
+  }
 }
 
 /** El Niño y La Niña: fases de 1 o 2 años que suben o bajan la temperatura unas décimas. */
