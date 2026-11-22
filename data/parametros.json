@@ -405,6 +405,5 @@
       }
     }
   },
-  "ceibas_activas": false,
-  "_ceibas": "Cuando Sebas apruebe los chistes de data/ceibas.json, poner ceibas_activas en true"
+  "ceibas_activas": true
 }
